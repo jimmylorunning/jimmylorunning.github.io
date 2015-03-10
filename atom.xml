@@ -4,7 +4,7 @@
  <title>jlc</title>
  <link href="http://jimmylocoding.com/atom.xml" rel="self"/>
  <link href="http://jimmylocoding.com/"/>
- <updated>2015-03-10T10:32:43-04:00</updated>
+ <updated>2015-03-10T12:09:32-04:00</updated>
  <id>http://jimmylocoding.com</id>
  <author>
    <name>Jimmy Lo</name>
@@ -22,15 +22,13 @@
 
 &lt;h3&gt;Why Change?&lt;/h3&gt;
 
-&lt;p&gt;In January, I was learning some new things (Rails, Ruby, Agile, etc.) and I had no time to customize a blog the way I liked it. Nevertheless, I needed some place to document what I&amp;#39;ve learned and connect with people. So I decided to put up a blog as quickly as possible. The only requirement was that it required almost no time to set up. I was already familiar with WordPress, and have set several WordPress blogs up before. So I set it up, downloaded a free theme, and voila! I was in business.&lt;/p&gt;
+&lt;p&gt;In January, I was learning some new things (Rails, Ruby, Agile, etc.) and I had no time to customize a blog the way I liked it. Nevertheless, I needed some place to document what I&amp;#39;ve learned and connect with people. So I decided to put up a blog as quickly as possible. The only requirement was that it must take almost no time to set up. I was already familiar with WordPress, and have set up several WordPress blogs before. So I set it up, downloaded a free theme, and voila! I was in business.&lt;/p&gt;
 
-&lt;p&gt;Two and a half months later, I still like my blog a lot, but it seemed cluttered. I start noticing a lot of the other blogs I admired were beautifully minimalistic. The content was front and center. Most of these blogs were hosted on either Ghost, Medium, or GitHub Pages. I decided to look into these options.&lt;/p&gt;
+&lt;p&gt;Two and a half months later, I still like my blog a lot, but it looked cluttered. I started to admire a lot of the other blogs for their minimalistic beauty. The content was front and center. Most of these blogs were hosted on either Ghost, Medium, or GitHub Pages. I decided to look into these options.&lt;/p&gt;
 
-&lt;h3&gt;Why GitHub Pages?&lt;/h3&gt;
+&lt;h3&gt;Why GitHub Pages? Why Jekyll?&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; is hosted on GitHub. You automatically get one site per GitHub account, and when you push any changes to it, it gets updated. No further work needed! I was attracted mostly to the convenience of updating the blog where I would update my other code--in my text editor. It reminded me of the early days when the internet was just a bunch of static HTML pages, and I&amp;#39;d log into the server to edit my HTML files directly.&lt;/p&gt;
-
-&lt;h3&gt;Why Jekyll?&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; is hosted on GitHub. You automatically get one site per GitHub account, and when you push any changes to it, it gets updated. No further work needed! I was attracted mostly to the convenience of updating the blog where I would update my other code--in my text editor. It reminded me of the early days when the internet was just a bunch of static HTML pages, and I&amp;#39;d log into the server to edit my HTML files directly. On top of GitHub pages, you get Jekyll:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;GitHub Pages are powered by Jekyll behind the scenes, so in addition to supporting regular HTML content, they’re also a great way to host your Jekyll-powered website for free.&lt;/p&gt;
@@ -40,15 +38,37 @@
 
 &lt;p&gt;Jekyll works with regular HTML pages too, so I didn&amp;#39;t have to convert all my old posts to Markdown.&lt;/p&gt;
 
+&lt;p&gt;Here are the other advantages of using GitHub Pages / Jekyll:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;since content is static instead of in a database, all my blog content is version controlled and backed up on GitHub&lt;/li&gt;
+&lt;li&gt;static pages mean non-executable and secure pages! I don&amp;#39;t have to worry about someone hacking into my blog if I didn&amp;#39;t update to the latest WordPress release&lt;/li&gt;
+&lt;li&gt;design-wise, it is so simple. I can do anything I want to the site, it&amp;#39;s simply a matter of changing HTML, Markdown, and CSS files&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h3&gt;Setting it up&lt;/h3&gt;
 
-&lt;p&gt;There&amp;#39;s nothing that technically extraordinary about my set-up that I need to write a whole blog post about it. I followed &lt;a href=&quot;http://joshualande.com/jekyll-github-pages-poole/&quot;&gt;this tutorial&lt;/a&gt;, but instead of only using &lt;a href=&quot;https://github.com/poole/poole&quot;&gt;Poole&lt;/a&gt;, I also used a Poole theme called &lt;a href=&quot;http://hyde.getpoole.com/&quot;&gt;Hyde&lt;/a&gt;. The difference? Poole isn&amp;#39;t exactly a theme; it comes with all types of default settings on top of Jekyll to help bootstrap you so that you have a solid foundation to build upon. Hyde, on the other hand, &lt;i&gt;is&lt;/i&gt; a theme and is built on top of Poole.&lt;/p&gt;
+&lt;p&gt;There&amp;#39;s nothing that technically extraordinary about my set-up that I need to write a whole blog post about it. I followed &lt;a href=&quot;http://joshualande.com/jekyll-github-pages-poole/&quot;&gt;this tutorial&lt;/a&gt;, but instead of only using &lt;a href=&quot;https://github.com/poole/poole&quot;&gt;Poole&lt;/a&gt;, I also used a Poole theme called &lt;a href=&quot;http://hyde.getpoole.com/&quot;&gt;Hyde&lt;/a&gt;. The difference? Poole isn&amp;#39;t exactly a theme; it comes with all types of default settings on top of Jekyll to give you a solid foundation to build upon. Hyde, on the other hand, &lt;i&gt;is&lt;/i&gt; a theme and is built on top of Poole.&lt;/p&gt;
 
 &lt;p&gt;The second tutorial I used was &lt;a href=&quot;http://charliepark.org/tags-in-jekyll/&quot;&gt;this blog post&lt;/a&gt; which helped me implement tags.&lt;/p&gt;
 
 &lt;h3&gt;Downsides&lt;/h3&gt;
 
 &lt;p&gt;The only downside is that I&amp;#39;ve now lost all of the great comments you&amp;#39;ve left on my blog. I still &lt;i&gt;have&lt;/i&gt; them, of course. But they are no longer on this version of the blog for everyone to see. But since I&amp;#39;ve implemented comments using &lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus&lt;/a&gt;, it will be pretty easy for you to leave comments on this site from here on out. You don&amp;#39;t even need a Disqus account, as you can use OAuth to log in through Twitter or any of the other social networks.&lt;/p&gt;
+
+&lt;h3&gt;One additional note&lt;/h3&gt;
+
+&lt;p&gt;OK maybe two. First, the related_posts method that comes with Jekyll is sorely lacking. Luckily, I was able to find &lt;a href=&quot;http://www.chrisyin.com/2014/08/23/jekyll-related-posts/&quot;&gt;a plugin&lt;/a&gt; for it, and since Jekyll is written in Ruby, plugins are just Ruby classes that &lt;a href=&quot;http://en.wikipedia.org/wiki/Monkey_patch&quot;&gt;monkey patch&lt;/a&gt; existing classes. This means that if I didn&amp;#39;t like this plugin, I could change it without having to learn a new language.&lt;/p&gt;
+
+&lt;p&gt;Second, and this is the unfortunate part, GitHub Pages disables all plugins by default, for security reasons. So even though the related posts and tags plugins work fine on my local Jekyll server, it doesn&amp;#39;t work when pushed to GitHub.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s the workaround: When you run Jekyll, it generates a static site. When you push to GitHub, GitHub Pages knows to run Jekyll on those files and publish the static files that it generates. But we don&amp;#39;t want GitHub to run Jekyll for us because its version of Jekyll ignores plugins. We want to run our own Jekyll and tell GitHub to use our own statically generated pages instead!&lt;/p&gt;
+
+&lt;p&gt;So what we need are two repos. One to hold the Jekyll site, and one to hold our own statically generated site.&lt;/p&gt;
+
+&lt;p&gt;This second repo &lt;i&gt;must&lt;/i&gt; be named github-username.github.io because that&amp;#39;s how GitHub Pages knows its the repo to publish. So what I had to do was rename the current jimmylorunning.github.io repo to jimmylocoding.com. This will be the first repo mentioned above.&lt;/p&gt;
+
+&lt;p&gt;For the second repo, I go to GitHub and create one named jimmylorunning.github.io. I go to my local _site folder (which is where Jekyll stores the statically generated site) and type &lt;code&gt;git init&lt;/code&gt;. I add all the files, commit them, and push to jimmylorunning.github.io as its origin. From now on, whenever I make any changes to my blog, I will have to commit my jekyll files to the jimmylocoding.com repo, run &lt;code&gt;jekyll serve&lt;/code&gt; or &lt;code&gt;jekyll build&lt;/code&gt; (which I should run anyway, just to test my changes before pushing), then commit all my generated _site files to jimmylorunning.github.io.&lt;/p&gt;
 </content>
  </entry>
  
