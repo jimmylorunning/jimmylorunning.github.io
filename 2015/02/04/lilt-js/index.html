@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us" class="theme-base-09">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Lilt.js &middot; jlc
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/custom.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="layout-reverse">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          jlc
+        </a>
+      </h1>
+      <p class="lead">jimmylocoding</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+      <a class="sidebar-nav-item" href="resume">My Resume</a>
+      <div class="social-media">
+        <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
+        <a class="sidebar-nav-item" href="http://twitter.com/jimmylocoding"><i class="fa fa-twitter fa-2x"></i></a>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Lilt.js</h1>
+  <span class="post-date">04 Feb 2015</span>
+  <p><a href="/lilt/"><img src="/images/lilt.png" alt="Lilt" width="789" height="469" /></a></p>
+
+<p>I was working on my portfolio site last week and playing with the parallax effect when I had the idea of making a CSS shadow that moved as you scrolled to create the illusion of depth and a single source of light (imagine holding the light in front of your monitor and casting a shadow on your divs). Had this effect ever been made into a script? To my surprise, there were very few scripts out there that did this. So I decided to try it <a href="http://codepen.io/jimmylorunning/pen/emEwWr">on Codepen</a>. It only took me about half an hour to do. I went through several other variations since then, but the basic idea is the same.</p>
+
+<p>The next morning, I couldn&#39;t stop thinking about how awesome it would be if I could make it into a plugin. It could be my very first contribution to open source that people would actually use (because let&#39;s not kid ourselves, nobody&#39;s actually going to use my todo app! haha).</p>
+
+<p>So I started reading about JQuery plugins to see what I&#39;d have to do to my code to make it into a pluggable part that people can just include. I also wanted it to be easily customizable. People can just use data-attributes on their div tags to change the properties of the shadow, how much it blurred, how fast it moved, etc. I definitely didn&#39;t want them to have to change my script in order to change the options. It should be like a function, you pass it arguments, and it did its thing.</p>
+
+<p>Making my half hour script into a flexible plugin turned out to take me much longer than writing the basic script itself. But it was a great exercise in writing modifiable code! I had to think a lot about encapsulation and keeping variables inside the plugin separate from everything external. Finally, I had to create <a href="http://jimmylocoding.com/lilt/">a pretty page</a> to show off the capabilities of my plugin. Go <a href="http://jimmylocoding.com/lilt/">visit it now</a>! And let me know if you find it useful.</p>
+
+<p>Future improvements (maybe):
+<ul>
+    <li>text shadows!</li>
+    <li>maybe the blur value can change as you scroll as well?</li>
+</ul></p>
+
+</div>
+<div class="post-metadata">
+
+<div class="tags">
+  <h2>Tags</h2>
+  <ul>
+    
+    <li><a href="/tag/JavaScript">JavaScript</a></li>
+    
+    <li><a href="/tag/jQuery">jQuery</a></li>
+    
+    <li><a href="/tag/Lilt">Lilt</a></li>
+    
+    <li><a href="/tag/plugins">plugins</a></li>
+    
+    <li><a href="/tag/open source">open source</a></li>
+    
+  </ul>
+</div>
+
+<div class="related">
+
+
+  
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+  
+    <li><a href="/2015/02/02/week-6-unexpected/">Week 6: Unexpected!</a>
+    <small>02 Feb 2015</small></li>
+  
+
+  
+    <li><a href="/2015/01/19/week-4-oracle-of-bacon/">Week 4: Oracle of Bacon and other stuff</a>
+    <small>19 Jan 2015</small></li>
+  
+
+  
+    <li><a href="/2015/01/30/introducing-exquisite-source/">Introducing Exquisite Source!</a>
+    <small>30 Jan 2015</small></li>
+  
+
+
+</ul>
+
+</div>
+
+      
+<a name="comments"></a><h2 class="comments">Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'jimmylocoding';
+    var disqus_identifier = "jimmylocoding/2015/02/04/lilt-js/";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+
+  </body>
+</html>

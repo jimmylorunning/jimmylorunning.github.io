@@ -1,0 +1,45 @@
+.tags ul {
+	list-style-type: none;
+	margin-left: 0rem;
+	padding-left: 0rem;
+}
+
+.tags ul li {
+	display: inline;
+	padding: 0.1rem 0.3rem;
+	border: 1px solid #cccccc;
+}
+
+.social-media {
+	margin-top: 2em;
+}
+
+.social-media a {
+	color: #DDDDDD;
+}
+
+.social-media a:hover {
+	color: #FFFFFF;
+}
+
+.social-media .sidebar-nav-item {
+	display: inline-block;
+	margin-right: 0.7em;
+}
+
+.post-comments-link {
+	display: block;
+}
+
+.related {
+	padding-top: 1rem;
+	border-top: none;
+}
+
+.post-metadata {
+	border-top: 1px solid #eee;
+}
+
+.comments {
+	padding-top: 0rem;
+}

@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>jlc</title>
+ <link href="http://jimmylocoding.com/atom.xml" rel="self"/>
+ <link href="http://jimmylocoding.com/"/>
+ <updated>2015-03-10T10:32:43-04:00</updated>
+ <id>http://jimmylocoding.com</id>
+ <author>
+   <name>Jimmy Lo</name>
+   <email></email>
+ </author>
+
+ 
+ 
+ <entry>
+   <title>Jekyll & Hyde</title>
+   <link href="http://jimmylocoding.com/2015/03/10/jekyll-and-hyde/"/>
+   <updated>2015-03-10T00:00:00-04:00</updated>
+   <id>http://jimmylocoding.com/2015/03/10/jekyll-and-hyde</id>
+   <content type="html">&lt;p&gt;If you&amp;#39;re a longtime reader (as in, the 2 months that this blog has been in existence), you may have noticed some changes. That&amp;#39;s because I just changed blogging platforms from WordPress to &lt;a href=&quot;http://jekyllrb.com/docs/github-pages/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Why Change?&lt;/h3&gt;
+
+&lt;p&gt;In January, I was learning some new things (Rails, Ruby, Agile, etc.) and I had no time to customize a blog the way I liked it. Nevertheless, I needed some place to document what I&amp;#39;ve learned and connect with people. So I decided to put up a blog as quickly as possible. The only requirement was that it required almost no time to set up. I was already familiar with WordPress, and have set several WordPress blogs up before. So I set it up, downloaded a free theme, and voila! I was in business.&lt;/p&gt;
+
+&lt;p&gt;Two and a half months later, I still like my blog a lot, but it seemed cluttered. I start noticing a lot of the other blogs I admired were beautifully minimalistic. The content was front and center. Most of these blogs were hosted on either Ghost, Medium, or GitHub Pages. I decided to look into these options.&lt;/p&gt;
+
+&lt;h3&gt;Why GitHub Pages?&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; is hosted on GitHub. You automatically get one site per GitHub account, and when you push any changes to it, it gets updated. No further work needed! I was attracted mostly to the convenience of updating the blog where I would update my other code--in my text editor. It reminded me of the early days when the internet was just a bunch of static HTML pages, and I&amp;#39;d log into the server to edit my HTML files directly.&lt;/p&gt;
+
+&lt;h3&gt;Why Jekyll?&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;GitHub Pages are powered by Jekyll behind the scenes, so in addition to supporting regular HTML content, they’re also a great way to host your Jekyll-powered website for free.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Jekyll is so cool! With it, I can write all my posts within my text editor using beautiful &lt;a href=&quot;https://help.github.com/articles/markdown-basics/&quot;&gt;Markdown&lt;/a&gt; instead of ugly HTML or dealing with buggy WYSIWYG interfaces! GitHub Pages and Jekyll provides all the advantages of a static site (speed, simplicity) with all the advantages of a dynamic site (&lt;a href=&quot;http://en.wikipedia.org/wiki/Don%27t_repeat_yourself&quot;&gt;DRY-ness&lt;/a&gt;). Every time you push the site, Jekyll generates all the static pages for you based on the templates and code you&amp;#39;ve written. So despite the fact that it&amp;#39;s a static site, if you want to change the layout or colors or even functionality of your site, you can do it in just one place.&lt;/p&gt;
+
+&lt;p&gt;Jekyll works with regular HTML pages too, so I didn&amp;#39;t have to convert all my old posts to Markdown.&lt;/p&gt;
+
+&lt;h3&gt;Setting it up&lt;/h3&gt;
+
+&lt;p&gt;There&amp;#39;s nothing that technically extraordinary about my set-up that I need to write a whole blog post about it. I followed &lt;a href=&quot;http://joshualande.com/jekyll-github-pages-poole/&quot;&gt;this tutorial&lt;/a&gt;, but instead of only using &lt;a href=&quot;https://github.com/poole/poole&quot;&gt;Poole&lt;/a&gt;, I also used a Poole theme called &lt;a href=&quot;http://hyde.getpoole.com/&quot;&gt;Hyde&lt;/a&gt;. The difference? Poole isn&amp;#39;t exactly a theme; it comes with all types of default settings on top of Jekyll to help bootstrap you so that you have a solid foundation to build upon. Hyde, on the other hand, &lt;i&gt;is&lt;/i&gt; a theme and is built on top of Poole.&lt;/p&gt;
+
+&lt;p&gt;The second tutorial I used was &lt;a href=&quot;http://charliepark.org/tags-in-jekyll/&quot;&gt;this blog post&lt;/a&gt; which helped me implement tags.&lt;/p&gt;
+
+&lt;h3&gt;Downsides&lt;/h3&gt;
+
+&lt;p&gt;The only downside is that I&amp;#39;ve now lost all of the great comments you&amp;#39;ve left on my blog. I still &lt;i&gt;have&lt;/i&gt; them, of course. But they are no longer on this version of the blog for everyone to see. But since I&amp;#39;ve implemented comments using &lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus&lt;/a&gt;, it will be pretty easy for you to leave comments on this site from here on out. You don&amp;#39;t even need a Disqus account, as you can use OAuth to log in through Twitter or any of the other social networks.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ 
+ 
+ <entry>
+   <title>Method Chaining to the Madness</title>
+   <link href="http://jimmylocoding.com/2015/02/25/method-chaining-to-the-madness/"/>
+   <updated>2015-02-25T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/02/25/method-chaining-to-the-madness</id>
+   <content type="html">&lt;p&gt;I said I&amp;#39;d write a little bit about some of the challenges I encountered while writing the &lt;a href=&quot;https://github.com/codeforatlanta/csv_geocoder&quot;&gt;CSV Geocoder&lt;/a&gt; utility. So here&amp;#39;s a small problem and solution:&lt;/p&gt;
+
+&lt;h3&gt;Problem:&lt;/h3&gt;
+
+&lt;p&gt;The purpose of the class is very simple. I want to add geocode data to the CSV, then write it to a file. So I write a method like &lt;code&gt;write_csv_with_geocode(file)&lt;/code&gt; that joins the CSV with the geocode data and then writes it to a file. However, this violates the &lt;a href=&quot;http://en.wikipedia.org/wiki/Single_responsibility_principle&quot;&gt;single responsibility&lt;/a&gt; per method principle. It does two things: adds the geocode data, then writes it to a file.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;write_csv_with_geocode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;merge_csv_with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lat_lngs&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;CSV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;wb&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@csv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I could break the method out into two separate methods, but I know that in 99% of the use cases, the user will want to add_geocode then write. The two responsibilities are intimately related in this case. So the user would have to type two methods (three if you count the initializer) instead of one every time, like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;CSVGeocoder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;data.csv&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_geocode&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;data_with_geocode.csv&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;which wouldn&amp;#39;t be so bad if it weren&amp;#39;t something they&amp;#39;d have to do every time for such a simple task.&lt;/p&gt;
+
+&lt;p&gt;The upside of having it all in one method is that I can accomplish two related tasks in one method call instead of having to call both of them separately every time.&lt;/p&gt;
+
+&lt;h3&gt;Solution:&lt;/h3&gt;
+
+&lt;p&gt;Chaining! I make add_geocode assign the new value to an instance variable, then return self (returning self is the key to making methods chainable). Then the write method takes the instance variable and writes it to a CSV file. So now the user can do the simple task in one line, and the operations are also separated into their own methods. Best of both worlds! In fact, I realized I could do the same with all of the methods in the class, so that you could now write the following line:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;CSVGeocoder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;data.csv&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_geocode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;data_with_geocode.csv&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Isn&amp;#39;t it pretty? Here&amp;#39;s the new code:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add_geocode&lt;/span&gt;
+  &lt;span class=&quot;vi&quot;&gt;@new_csv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;merge_csv_with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lat_lngs&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;CSV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;wb&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;vi&quot;&gt;@new_csv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;csv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;What do you think?&lt;/h3&gt;
+
+&lt;p&gt;Is chaining a good solution to this problem? How would you have done it? Also: are there other ways I could improve this class?&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>CodeAcross Atlanta: Revitalizing South Downtown</title>
+   <link href="http://jimmylocoding.com/2015/02/24/codeacross-atlanta-revitalizing-south-downtown/"/>
+   <updated>2015-02-24T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/02/24/codeacross-atlanta-revitalizing-south-downtown</id>
+   <content type="html">&lt;p&gt;This past weekend, I attended my first hackathon-like event (there was no competitive element, so it&amp;#39;s not a hackathon, technically speaking). Organized by &lt;a href=&quot;http://www.codeforatlanta.org/&quot;&gt;Code For Atlanta&lt;/a&gt; and hosted by the &lt;a href=&quot;http://www.civicatlanta.org/&quot;&gt;Center for Civic Innovation&lt;/a&gt; as part of an international &lt;a href=&quot;http://www.codeforamerica.org/events/codeacross-2015/&quot;&gt;CodeAcross event&lt;/a&gt;, we met in South Downtown Atlanta to tackle the problems there, namely, how to revitalize the neighborhood.&lt;/p&gt;
+
+&lt;p&gt;In order to tackle the problem, we first had to understand the problem. So after a quick presentation on the history of the area, we took a walking tour of it. This introduction was captivating, but at the same time, I didn&amp;#39;t see eye to eye with our hosts.&lt;/p&gt;
+
+&lt;p&gt;Many of the participants of this event were not from this area. They see it as a dilapidated poor neighborhood that needs to be cleaned up. But I live within 5 miles of South Downtown and enjoy biking through the area. I also regularly attend shows at the &lt;a href=&quot;http://www.eyedrum.org/&quot;&gt;Eyedrum Art Gallery&lt;/a&gt; and &lt;a href=&quot;http://www.mammalgallery.com/&quot;&gt;Mammal Gallery&lt;/a&gt;. Yes, the neighborhood is poor, but people live and work here too. Often when we say we want to revitalize a neighborhood, it means gentrification. When we say we want to attract new developers, we&amp;#39;re also implying that we want the old businesses out. That means &lt;a href=&quot;http://largefeet.com/&quot;&gt;Friedman&amp;#39;s Shoes&lt;/a&gt;, who&amp;#39;s been serving large feet since 1929. That means the local charm of &lt;a href=&quot;http://clatl.com/atlanta/i-like-south-downtown-atlanta-the-way-it-is/Content?oid=4209416&quot;&gt;Rondo&lt;/a&gt;, which sells hexes, charms, and mojo powder.&lt;/p&gt;
+
+&lt;p&gt;But I wasn&amp;#39;t completely against the enterprise. I agree that many things could be improved in this area. But I tried to steer our group into thinking about what those needs were based on what the locals wanted instead of what tourists would want. To improve the area, we must improve the lives of the people in the area, not bring new people in.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/southdowntown1.jpg&quot; alt=&quot;South Downtown Atlanta&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Perhaps this is all too political for a tech blog, so let me go back to describing the rest of the weekend&amp;#39;s events.&lt;/p&gt;
+
+&lt;p&gt;We broke into three groups:
+&lt;ol&gt;
+    &lt;li&gt;&lt;strong&gt;Branding and storytelling&lt;/strong&gt; - how to brand the neighborhood to attract the &amp;#39;right&amp;#39; elements&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Interactive asset map&lt;/strong&gt; - so people can see what&amp;#39;s there and what can be there&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Participatory tool&lt;/strong&gt; - to gather opinions from the community about what the area needs&lt;/li&gt;
+&lt;/ol&gt;
+I joined the second group because I was interested in mapping and because I felt like I could learn the most there. First we talked about who the audience for the map could be, and given that, what assets we could or should map. Then we broke into two groups, one responsible for data gathering and one for building out the map with the given data. I joined the latter group, which consisted of four people: me, &lt;a href=&quot;http://mollietaylor.com/&quot;&gt;Mollie&lt;/a&gt;, &lt;a href=&quot;http://luigimontanez.com/&quot;&gt;Luigi&lt;/a&gt;, and &lt;a href=&quot;http://www.bryan-lackey.com/&quot;&gt;Bryan&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mollie was the resident expert on maps and mapping. She showed us how to use &lt;a href=&quot;http://leafletjs.com/&quot;&gt;Leaflet.js&lt;/a&gt; to quickly build out maps and create interactive event based behaviors. While she built out a prototype, the rest of us went through some tutorials to get acquainted with Leaflet, and also explore other possibilities like &lt;a href=&quot;https://www.mapbox.com/&quot;&gt;Mapbox&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;After that, I started to think about where I could be most useful. Since Mollie was already kicking ass on the maps, I thought I could do something to help import the data. The data gathering team was sending us Excel files with street addresses. In order to plot the points, geocode data was needed, which just means latitude and longitude. So I decided to write a small utility that would take a CSV file and write a new CSV file with all the existing data plus latitude and longitude.&lt;/p&gt;
+
+&lt;p&gt;Writing a script to do that wouldn&amp;#39;t have taken long, but I thought this might be a tool that could be used in the future by Code For Atlanta or other similar groups faced with this same problem. So I worked on a Ruby program that could potentially be re-used in other projects. You can see the code for it &lt;a href=&quot;https://github.com/codeforatlanta/csv_geocoder&quot;&gt;on GitHub&lt;/a&gt;, and I&amp;#39;ll probably write a follow up post soon on a few interesting design challenges I ran into.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/southdowntown2.jpg&quot; alt=&quot;Screenshot of South Downtown Asset Map&quot; /&gt;&lt;/p&gt;
+
+&lt;h3&gt;Day 2&lt;/h3&gt;
+
+&lt;p&gt;Things began slowly with coffee at 9am. A few folks stared into their laptops like zombies. I was one of those. My CSV Geocoder was working, but I couldn&amp;#39;t help tinkering with it, refactoring and improving it (in fact, I was still doing that earlier today). But more of the data was coming in in different formats. I was looking for a new task to do.&lt;/p&gt;
+
+&lt;p&gt;One of the things Mollie implemented the day before was integration of &lt;a href=&quot;https://foursquare.com/&quot;&gt;Foursquare&lt;/a&gt; data from their API. We were now pulling in data about government buildings in South Downtown. But what other Foursquare locations could we map? I wrote some scripts to automate this query. Other than that, I did some research on icons, and I also talked with members of the other teams about what they were doing.&lt;/p&gt;
+
+&lt;p&gt;At the end of the day, we all presented our projects. It was inspiring to see how much progress we made in just two days, and also to think about how all three projects will integrate into one larger project. The map will live on the website that the branding group created (which will eventually live at &lt;a href=&quot;http://www.southdowntown.org/&quot;&gt;southdowntown.org&lt;/a&gt;) and the participatory tool created by the third team will eventually feed back into the map and website so that the wishes and desires of the locals will be our guide.&lt;/p&gt;
+
+&lt;p&gt;Speaking of the future, this weekend was just the beginning of a longer effort. We will continue to meet about once a month to continue developing this project.&lt;/p&gt;
+
+&lt;p&gt;Overall, I had a great first hackathon. I met some amazing people and learned a lot from them. I worked on interesting projects, and I got to become more familiar with a local neighborhood.&lt;/p&gt;
+
+&lt;p&gt;To learn more about the details of making the map, creating the layers and interactions, go read &lt;a href=&quot;http://blog.mollietaylor.com/codeacross-asset-map.html&quot;&gt;Mollie&amp;#39;s excellent blog post&lt;/a&gt; about this same event! It&amp;#39;s pretty great. You can also see the source of both the asset map and my CSV geocoder on the &lt;a href=&quot;https://github.com/codeforatlanta/&quot;&gt;codeforatlanta GitHub page&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>TwitterFitter v2.0</title>
+   <link href="http://jimmylocoding.com/2015/02/13/twitter-fitter-v2/"/>
+   <updated>2015-02-13T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/02/13/twitter-fitter-v2</id>
+   <content type="html">&lt;p&gt;So I decided to revisit my &lt;a href=&quot;http://jimmylocoding.com/week-3-round-up-twitter-fitter-the-tweet-generator/&quot;&gt;week 3 app&lt;/a&gt;, TwitterFitter. At the end of week 3, it was a simple app that generated tweets based on a Twitter handle. The tweets it generated would be in the style of the Twitter account you gave it. It does this by chaining together words that often appear together. But there were a lot of things lacking in the app, so this week I revisited it and made it much better!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://secret-brushlands-4139.herokuapp.com/&quot;&gt;Version 2.0 of Twitter Fitter&lt;/a&gt; has a new design (it was just a white page before), and you can now enter TWO twitter handles and the app will generate tweets based on BOTH feeds combined. Also, you can now tweet the results (it tweets from the @FitterTweets account).&lt;/p&gt;
+
+&lt;p&gt;Most of these enhancements were straight forward, but there were a few tricky parts:
+&lt;ol&gt;
+    &lt;li&gt;At first, the generated tweets appeared on the results page and when you clicked &amp;quot;Tweet!&amp;quot;, it would tweet whatever was in the text field. But then I started thinking: is this a magnet for spammers? Anyone could just erase what&amp;#39;s in that text field, type something new in, and click &amp;quot;Tweet!&amp;quot; and it would look like it was coming from the @FitterTweets account. This is a major security flaw, and even though there many ways to hide this information, like making the field uneditable and in a POST action instead of a GET action, people could still easily spoof it. So instead of sending the tweet from a form, I saved the generated tweets in a Tweet model as soon as they are generated. Then in the results page, in addition to showing the tweets in a text field, I also include a hidden field with the ID of the generated tweet (from the model). So when you click &amp;quot;Tweet!&amp;quot; you&amp;#39;re not actually tweeting anything from the form, you&amp;#39;re just saying &amp;quot;tweet this previously generated tweet with this ID&amp;quot;. So everything that is tweeted from the account is pretty much vetted and safe (at least I hope so).&lt;/li&gt;
+    &lt;li&gt;My controller was getting pretty fat, and I had to look at it long and hard and figure out how to refactor it. I decided to make a Feeds class, which now lives in the lib folder. It wasn&amp;#39;t easy breaking apart the fat methods in the controller, but I&amp;#39;m glad I did because it looks much cleaner this way.&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+
+&lt;h3&gt;To Do&lt;/h3&gt;
+
+&lt;p&gt;Tests! For the Feed class and for the controller. I&amp;#39;m not very good at writing tests before the code, but as long as I write the tests some time, that&amp;#39;s probably better than never.&lt;/p&gt;
+
+&lt;p&gt;Please take a look at my code &lt;a href=&quot;https://github.com/jimmylorunning/twitter-fitter&quot;&gt;on GitHub&lt;/a&gt;, and play around with it &lt;a href=&quot;https://secret-brushlands-4139.herokuapp.com/&quot;&gt;on Heroku&lt;/a&gt;. Any feedback is welcome!&amp;quot;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>Week 7 in Review</title>
+   <link href="http://jimmylocoding.com/2015/02/10/week-7-in-review/"/>
+   <updated>2015-02-10T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/02/10/week-7-in-review</id>
+   <content type="html">&lt;p&gt;Didn&amp;#39;t get anything (app-wise) presentable to the world out this week. However, I did finish off a bunch of loose-ends at my freelance jobs and such, so I&amp;#39;m feeling pretty good about that. Just a quick round-up. I&amp;#39;ll have a longer blog post about other topics soon.
+&lt;ul&gt;
+    &lt;li&gt;made a lot of changes to the library site code... mostly refactorings, but also fixed some bugs&lt;/li&gt;
+    &lt;li&gt;another freelance project is coming to the end; it feels good to be in the home stretch&lt;/li&gt;
+    &lt;li&gt;SaaS - no homework this week, just a pretty extensive quiz that I didn&amp;#39;t do very good on. The topic is design patterns, and I feel like it would be better as a homework assignment so we could actually practice them rather than quiz questions, because patterns are already such abstract concepts, it&amp;#39;s hard to answer questions about them without tying them to a real app. I had a lot of trouble with the wording and terminology of many of the questions. I feel like I understood the concepts pretty well, but the wording always gets me to pick the wrong thing. But the bigger picture, that of design patterns, was still very useful, and is one area that I&amp;#39;ll need to get better at (both recognizing when to use them and actually implementing them well)&lt;/li&gt;
+    &lt;li&gt;My &lt;a href=&quot;http://jimmylocoding.com/resume&quot;&gt;resume&lt;/a&gt;. I&amp;#39;m still working on my portfolio site when I can find a spare second, but until it&amp;#39;s done &lt;a href=&quot;http://jimmylocoding.com/resume&quot;&gt;this resume&lt;/a&gt; will be my face on the job market. It was made in &lt;a href=&quot;https://jsonresume.org/&quot;&gt;JSON Resume&lt;/a&gt; (an open source solution). Fellow #codenewbie Jonathan told me about it, and it&amp;#39;s really saved me a lot of time by separating the presentation layer from the content (which is coded in JSON).&lt;/li&gt;
+    &lt;li&gt;Rails API + Ember - I worked on following &lt;a href=&quot;https://devmynd.com/blog/2014-7-rails-ember-js-with-the-ember-cli-redux&quot;&gt;this tutorial&lt;/a&gt; which is pretty straight forward, although probably not written for Rails newbies. There were a few things it did where I felt happy that it worked without knowing why it worked. Going back over it, I feel like I understand the main concepts well, but the details would be hard to reproduce in another app without following each step over again.&lt;/li&gt;
+    &lt;li&gt;I started a #codenewbie &lt;a href=&quot;http://www.codenewbie.org/code-club&quot;&gt;Code Club&lt;/a&gt; on making pull requests. Code Club is a great one-hour study session where we tackle a problem (doing a pull request in this case) and teach each other. We went through &lt;a href=&quot;http://www.codenewbie.org/blogs/how-to-make-a-pull-request&quot;&gt;this helpful article&lt;/a&gt; on doing pull requests as well as putting what it said into practice on my &lt;a href=&quot;https://still-sands-5922.herokuapp.com/index.php&quot;&gt;Exquisite Source&lt;/a&gt; repo &lt;a href=&quot;https://github.com/jimmylorunning/exquisite-source&quot;&gt;on github&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>Lilt.js</title>
+   <link href="http://jimmylocoding.com/2015/02/04/lilt-js/"/>
+   <updated>2015-02-04T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/02/04/lilt-js</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;/lilt/&quot;&gt;&lt;img src=&quot;/images/lilt.png&quot; alt=&quot;Lilt&quot; width=&quot;789&quot; height=&quot;469&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I was working on my portfolio site last week and playing with the parallax effect when I had the idea of making a CSS shadow that moved as you scrolled to create the illusion of depth and a single source of light (imagine holding the light in front of your monitor and casting a shadow on your divs). Had this effect ever been made into a script? To my surprise, there were very few scripts out there that did this. So I decided to try it &lt;a href=&quot;http://codepen.io/jimmylorunning/pen/emEwWr&quot;&gt;on Codepen&lt;/a&gt;. It only took me about half an hour to do. I went through several other variations since then, but the basic idea is the same.&lt;/p&gt;
+
+&lt;p&gt;The next morning, I couldn&amp;#39;t stop thinking about how awesome it would be if I could make it into a plugin. It could be my very first contribution to open source that people would actually use (because let&amp;#39;s not kid ourselves, nobody&amp;#39;s actually going to use my todo app! haha).&lt;/p&gt;
+
+&lt;p&gt;So I started reading about JQuery plugins to see what I&amp;#39;d have to do to my code to make it into a pluggable part that people can just include. I also wanted it to be easily customizable. People can just use data-attributes on their div tags to change the properties of the shadow, how much it blurred, how fast it moved, etc. I definitely didn&amp;#39;t want them to have to change my script in order to change the options. It should be like a function, you pass it arguments, and it did its thing.&lt;/p&gt;
+
+&lt;p&gt;Making my half hour script into a flexible plugin turned out to take me much longer than writing the basic script itself. But it was a great exercise in writing modifiable code! I had to think a lot about encapsulation and keeping variables inside the plugin separate from everything external. Finally, I had to create &lt;a href=&quot;http://jimmylocoding.com/lilt/&quot;&gt;a pretty page&lt;/a&gt; to show off the capabilities of my plugin. Go &lt;a href=&quot;http://jimmylocoding.com/lilt/&quot;&gt;visit it now&lt;/a&gt;! And let me know if you find it useful.&lt;/p&gt;
+
+&lt;p&gt;Future improvements (maybe):
+&lt;ul&gt;
+    &lt;li&gt;text shadows!&lt;/li&gt;
+    &lt;li&gt;maybe the blur value can change as you scroll as well?&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>Week 6: Unexpected!</title>
+   <link href="http://jimmylocoding.com/2015/02/02/week-6-unexpected/"/>
+   <updated>2015-02-02T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/02/02/week-6-unexpected</id>
+   <content type="html">&lt;p&gt;Last week was all about being overwhelmed. This week was all about the unexpected.
+&lt;ul&gt;
+    &lt;li&gt;&lt;strong&gt;SaaS homework:&lt;/strong&gt; I did not expect to spend 15 hours (more if you count the fact that I spent another 3 hours refactoring after I was done) on this assignment. It&amp;#39;s definitely the most involved homework assignment so far (although there were a few in SaaS 1 that were pretty difficult too). I won&amp;#39;t go into it in detail here because I already &lt;a href=&quot;http://jimmylocoding.com/saas-legacy-homework-2-lessons-learned/&quot;&gt;wrote a blogpost about it&lt;/a&gt;.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Exquisite Source:&lt;/strong&gt; I did not expect to write &lt;a href=&quot;https://still-sands-5922.herokuapp.com/about.php&quot;&gt;this&lt;/a&gt;. But I got inspired by an article on pull requests! And it was a very simple non-ambitious project technically speaking... with a (perhaps too) ambitious idea behind it. So we&amp;#39;ll see if it takes off. Hopefully it helps someone. If it doesn&amp;#39;t, it was only a couple hours of pretty fun work.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;My first JQuery plugin&lt;/strong&gt;? I will write a separate blog post about this soon. But umm... I wrote a JQuery plugin! And it&amp;#39;s open source. And it was the last thing I expected to do this week, but I just got caught up in a very small idea that I thought others could re-use. More soon.&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>Introducing Exquisite Source!</title>
+   <link href="http://jimmylocoding.com/2015/01/30/introducing-exquisite-source/"/>
+   <updated>2015-01-30T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/01/30/introducing-exquisite-source</id>
+   <content type="html">&lt;p&gt;I had an idea this morning while &lt;a href=&quot;http://www.codenewbie.org/blogs/how-to-make-a-pull-request&quot;&gt;reading about pull requests&lt;/a&gt;: why not have a sandbox-like environment just for people to practice doing pull requests without the fear of messing anything up? And while we&amp;#39;re at it, why not make it into a surrealist game, to see what kind of crazy franken-art will come out?&lt;/p&gt;
+
+&lt;p&gt;So I went ahead and made it a reality. Introducing &lt;a href=&quot;https://still-sands-5922.herokuapp.com/about.php&quot;&gt;Exquisite Source&lt;/a&gt;! Please have a look around and make your first pull request!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://still-sands-5922.herokuapp.com/about.php&quot;&gt;&lt;img src=&quot;/images/ec_screenshot.jpg&quot; alt=&quot;exquisite source screenshot&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>SaaS Legacy Homework 2: Lessons Learned</title>
+   <link href="http://jimmylocoding.com/2015/01/29/saas-legacy-hw2-lessons-learned/"/>
+   <updated>2015-01-29T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/01/29/saas-legacy-hw2-lessons-learned</id>
+   <content type="html">&lt;p&gt;This week&amp;#39;s &lt;a href=&quot;https://www.edx.org/course/engineering-software-service-part-2-uc-berkeleyx-cs169-2x&quot;&gt;SaaS homework&lt;/a&gt; has been the most elaborate so far. As the instructors explain in the lectures, after teaching the class for a while, they asked some of the top software companies what one thing they wish graduates of computer science programs would learn before entering the workforce. The overwhelming answer was &amp;quot;how to work with legacy code&amp;quot;. So even though at first they had no idea how to teach this, they set out to do so in this class. And thus we have legacy homework 1 and 2 (last week and this week).&lt;/p&gt;
+
+&lt;p&gt;Instead of working on a new custom app, we are given an existing app (the Typo blog platform) that has a long history, sometimes messy code, and spotty test coverage. Last week we were asked to fix a bug in it. This week, we had to add a new feature!&lt;/p&gt;
+
+&lt;p&gt;Our feature in a nutshell: add the ability to merge two articles into one. The body of the new article will be a concatenation of the two previous articles. The title and author will be from one of the two articles. And the comments of all previous articles (if any) will now be comments of this article. Only administrators can merge articles. All other users will not see the option at all.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/typo_merge_feature.png&quot;&gt;&lt;img src=&quot;/images/typo_merge_feature-sm.png&quot; alt=&quot;picture of what the typo merge feature should look like&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I spent a LONG time on this homework. Around 15 hours. The hardest part was writing the tests. That shouldn&amp;#39;t be a surprise because writing the test is always the hardest part for me! I am still very new to Rspec and TestUnit syntax, and spend so long trying to figure out exactly how to phrase things. But I&amp;#39;m proud to say that I stuck to it this time and wrote all the tests before writing the actual code (except for the view and some skeleton methods so it didn&amp;#39;t throw method-not-found errors--basically I had to get it to the point where the tests failed for the &lt;em&gt;right&lt;/em&gt; reasons and not because it couldn&amp;#39;t find some method).&lt;/p&gt;
+
+&lt;p&gt;First I wrote the Cucumber integration tests for the happy path only. Then I wrote the unit test for the controller. It was at this time that I realized I was planning to put way too much logic in the controller. So instead of putting all the tests there, I just wrote a few to make sure the controller was asking the model for that information. Then I had to write a bunch of unit tests for the model. At last I allowed myself to write some actual code, which didn&amp;#39;t take long.&lt;/p&gt;
+
+&lt;p&gt;Then at the very end I wrote the cucumber integration tests for the sad paths. The one thing that was SUPER helpful was using the debugger gem and plain old rails console (with the --sandbox option) while writing the tests, because it helped me figure out exactly how to get to certain elements in order to test them.&lt;/p&gt;
+
+&lt;p&gt;Even though I could have knocked out the homework in probably less than half the time without testing, I really liked the practice. It was hard but satisfying. There isn&amp;#39;t a more satisfying and empowering feeling than when you can get all your tests passing AND you haven&amp;#39;t even looked at your app in the browser yet with your own eyeballs... but you know it&amp;#39;s working! This is so different than the way I used to program.&lt;/p&gt;
+
+&lt;p&gt;I also feel like testing frees up my brain from worrying about every little bit of my application. If what I&amp;#39;m doing now will break something else, then I&amp;#39;ll know about it soon enough (if I wrote my tests right). So all I have to do now is concentrate on writing whatever little bit I&amp;#39;m working on now, instead of trying to keep the entire app in my head and worry about not breaking anything else.&lt;/p&gt;
+
+&lt;p&gt;A few SPECIFIC things I learned:
+&lt;ul&gt;
+    &lt;li&gt;in the controller, the redirect&lt;em&gt;to method does not redirect immediately. The rest of your method will continue running unless you specifically say &amp;quot;return&amp;quot; after redirecting&lt;/li&gt;
+    &lt;li&gt;if you want to redirect inside of a helper method (instead of a main controller action), then set that helper method as a before&lt;/em&gt;filter of your main action method or else it won&amp;#39;t redirect (return will just return to your main action method which will continue running)&lt;/li&gt;
+    &lt;li&gt;when using Capybara to find the xpath of an input element with a certain id=“name”, use &amp;#39;input[@id=“name”]&amp;#39; rather than &amp;#39;input#name&amp;#39;&lt;/li&gt;
+    &lt;li&gt;use text&lt;em&gt;field&lt;/em&gt;tag to create a simple input element with a normal name like &amp;quot;merge&lt;em&gt;with&amp;quot;.. I was trying to use the text&lt;/em&gt;field helper method and it kept making names like &amp;quot;merge[with]&amp;quot;. This is because text_field is &amp;quot;tailored for accessing a specified attribute (identified by method) on an object assigned to the template&amp;quot; -- so it&amp;#39;s really good if you want to create input fields that correspond to your model, but if not, then it may be too complicated for your needs&lt;/li&gt;
+    &lt;li&gt;use &amp;quot;tables&amp;quot; to set up a bunch of values in Cucumber. I&amp;#39;ve used them in previous apps but they always seemed like a mystery to me. But this time I played around with them in the debugger gem. You can &lt;a href=&quot;http://www.ruby-doc.org/gems/docs/d/davidtrogers-cucumber-0.6.2/Cucumber/Ast/Table.html&quot;&gt;find out more here&lt;/a&gt;.&lt;/li&gt;
+    &lt;li&gt;I tried really hard to keep my git commits small, task based, and meaningful this time, which meant I had to do a few git things I&amp;#39;ve never done before like adding specific lines instead of entire files. I really like the idea of my git history telling the story of my code. And also having the ability to revert any single change without messing anything else up.&lt;/li&gt;
+    &lt;li&gt;There&amp;#39;s probably a lot of other things but these are the easy ones that I can remember off the top of my head&lt;/li&gt;
+&lt;/ul&gt;
+And if you&amp;#39;re curious about the code I wrote for this week&amp;#39;s homework, it&amp;#39;s &lt;a href=&quot;https://github.com/jimmylorunning/typo&quot;&gt;up on Github&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>Overwhelmed!</title>
+   <link href="http://jimmylocoding.com/2015/01/27/overwhelmed/"/>
+   <updated>2015-01-27T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/01/27/overwhelmed</id>
+   <content type="html">&lt;p&gt;I didn&amp;#39;t finish my app this week! I tried to do too much. But here&amp;#39;s what I did finish:&lt;/p&gt;
+
+&lt;h3&gt;My SaaS homework&lt;/h3&gt;
+
+&lt;p&gt;I talked a little about this last week. We had to refactor and fix some bugs in a legacy codebase (Typo). I figured out that I had to run bundle exec rake db:test:prepare if I want to run Rspec after I run Cucumber. For some reason Cucumber messes up the database. Then, the biggest road block was writing tests and then getting them to pass. I ended up overly fixing it... and the autograder was not giving me credit because it was expecting this form to be submitted to an edit action when in fact it&amp;#39;s really a new action, so I had changed it to new in order to be more accurate.&lt;/p&gt;
+
+&lt;h3&gt;My portfolio&lt;/h3&gt;
+
+&lt;p&gt;I got it into my head that I can bang out &lt;a href=&quot;https://github.com/jimmylorunning/portfolio&quot;&gt;a portfolio webpage&lt;/a&gt; real quick. But quickly got stuck in a rut. Had a hard time setting up gulp. And it&amp;#39;s still working weirdly. When I run &amp;quot;gulp sass&amp;quot; it might more might not give me an error. Then if I change some tab inside the gulpfile... or if I just run &amp;quot;gulp&amp;quot; without any task specified, then run &amp;quot;gulp sass&amp;quot; again, it may or may not just work. It&amp;#39;s so erratic that I was tearing my hair out trying to figure it out. But I finally just gave up and wrote a shell script that does the same thing. Maybe I&amp;#39;ll try grunt next time.&lt;/p&gt;
+
+&lt;h3&gt;My app&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jimmylorunning/om-nom-nom&quot;&gt;Started but didn&amp;#39;t finish it&lt;/a&gt;. &lt;span style=&quot;line-height: 1.5;&quot;&gt;But the original idea for it was pretty good. It&amp;#39;s basically going to be a social network for yoga lovers. Yoga lovers can add yoga poses. And then they can create yoga routines by putting poses together in a certain order. Yoga poses that are shared publicly can be added on other people&amp;#39;s routines. There will be many other features, but that&amp;#39;s the core functionality. For example, when a routine is done, you can play it back and it will guide you through the routine in real time.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;I was basing yoga poses/routines off of Youtube&amp;#39;s videos / playlists. So I might work on it in the future. I feel like I need to at least learn a front end javascript framework before attacking this because there are pages that would be really awkward without loading things dynamically on the page without reloading the page.&lt;/p&gt;
+
+&lt;h3&gt;Level UP Rails&lt;/h3&gt;
+
+&lt;p&gt;made some progress on this curriculum. Although I started over-engineering one of the exercises, so my time was all sucked up in that. You can see it here. It&amp;#39;s still not finished (there are some improvements I am planning) but it&amp;#39;s basically a program that reads in two comma separated value files (CSV) of dinosaur data and creates an object that you can query. For example, you can say dinosaur.big to get a list of all the big ones. or dinosaur.bipeds. The cool thing is that you can also chain them together in any order like dinosaur.big.bipeds to get an intersection. You can see &lt;a href=&quot;https://github.com/jimmylorunning/level-up-exercises/tree/master/dino_catalog&quot;&gt;my code here&lt;/a&gt; (comments and suggestions welcome)&lt;/p&gt;
+
+&lt;h3&gt;My work&lt;/h3&gt;
+
+&lt;p&gt;I&amp;#39;m still doing some freelance work for the library. Did a lot of refactoring of code this past week and that was oddly satisfying.&lt;/p&gt;
+
+&lt;h3&gt;Meetups&lt;/h3&gt;
+
+&lt;p&gt;went to a Ruby meetup where everyone just socialized and worked on their projects at a coffeeshop. It&amp;#39;s not the main meetup they do (with an official speaker) but the other one where it&amp;#39;s more just like casual hanging out.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>Not Just Words</title>
+   <link href="http://jimmylocoding.com/2015/01/20/not-just-words/"/>
+   <updated>2015-01-20T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/01/20/not-just-words</id>
+   <content type="html">&lt;p&gt;I had a whoops! moment the other day. A friend and I were working on a Python program together, and at one point she was asking me how I would do something. And without thinking, I said &amp;quot;Well, we could just pass this variable in,&amp;quot; or &amp;quot;Just put this inside of the loop&amp;quot;. And after a while, she said &amp;quot;Stop saying JUST! You make it sound like it&amp;#39;s supposed to be easy.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;Thank god she said that, because I didn&amp;#39;t even notice what I was doing. I immediately apologized and stopped using that word.&lt;/p&gt;
+
+&lt;p&gt;But it&amp;#39;s amazing how (just) one word can be so alienating, and it&amp;#39;s important to be conscious of what we say when we&amp;#39;re learning with others. The thing is, I&amp;#39;ve often been on the other side of that equation--where I felt stupid because I was talking to someone much more experienced, and they were using words that made it seem so easy. And I hated it!&lt;/p&gt;
+
+&lt;p&gt;Another thing: when you feel alienated by a word or how someone is saying something, tell them! Because a lot of times they may not be aware of it, and they may have the best of intentions but just not realize what they are doing.&lt;/p&gt;
+
+&lt;p&gt;So on that note, what words do you find alienating?&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>Week 4: Oracle of Bacon and other stuff</title>
+   <link href="http://jimmylocoding.com/2015/01/19/week-4-oracle-of-bacon/"/>
+   <updated>2015-01-19T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/01/19/week-4-oracle-of-bacon</id>
+   <content type="html">&lt;p&gt;This week, I started my &lt;a href=&quot;https://www.edx.org/course/engineering-software-service-part-2-uc-berkeleyx-cs169-2x&quot;&gt;SaaS Part 2&lt;/a&gt; class... I decided to just do the SaaS homework in place of my weekly app. The homework involves the &lt;a href=&quot;http://oracleofbacon.org/&quot;&gt;Oracle of Bacon&lt;/a&gt; website, where you can find the &lt;a href=&quot;http://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon&quot;&gt;Bacon Number&lt;/a&gt; of any actor. It also shows you the linkages along the way... for instance:
+&lt;blockquote&gt;Sean Connery
+was in Der Name der Rose with
+Ron Perlman
+who was in Balto with
+Kevin Bacon.&lt;/blockquote&gt;
+So Sean Connery has a Bacon Number of 2. The website also has an API. You can ask it for a connection between any two actors, and it will return that information (if any) in XML format.&lt;/p&gt;
+
+&lt;p&gt;Our job was to connect to the API and write a wrapper around the XML that gets returned. Our wrapper would basically detect if the returned value was valid, and if so, it would make it into an object that we can query. The SaaS class (both part 1 and part 2) has been really good at stressing agile practices, and this homework was no different. We were to pair program over Google Hangouts on Air. The tests were written for us in this assignment, but we needed to get them to pass.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Firsts:&lt;/strong&gt;
+&lt;ul&gt;
+    &lt;li&gt;writing an abstraction layer / wrapper&lt;/li&gt;
+    &lt;li&gt;handling XML with &lt;a href=&quot;https://rubygems.org/gems/nokogiri&quot;&gt;nokogiri&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;writing my own validation method (our class included ActiveModel&amp;#39;s Validation methods, so it got a lot of behavior for free)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;strong&gt;Homework 2&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I finished early so I started on homework 2, which is all about refactoring and working with legacy code. We have to clone an existing repo, the &lt;a href=&quot;https://github.com/saasbook/typo&quot;&gt;Typo blogging platform&lt;/a&gt; and fix a bug in it, but first we have to write tests around the bug. Here&amp;#39;s a Google Hangout video of me trying to work out the first part:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/tvMJCXvf7ds&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I was really confused about half an hour in because I had made some changes and my tests passed, and I was really happy with it. But then all of a sudden all the tests failed even though I hadn&amp;#39;t changed anything since the last time! I finally figured out that I had to run bundle exec rake db:test:prepare. Although I still don&amp;#39;t understand why... I hadn&amp;#39;t changed the database at all since the last time I ran the tests. I thought I only had to run that command when I changed the database.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Other things:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://leveluprails.com/&quot;&gt;Level UP Rails&lt;/a&gt; is a project designed to give a common baseline to engineers on the &lt;a href=&quot;http://words.steveklabnik.com/rails-has-two-default-stacks&quot;&gt;Rails Prime&lt;/a&gt; stack. It was designed by Joseph Mastey to help onboard new hires to the Enova team. But guess what? It&amp;#39;s also open source, so I&amp;#39;m taking it even though Enova hasn&amp;#39;t offered me a job yet (what are they waiting for? Fools!). So far I&amp;#39;ve finished the first lesson of the first course, which mostly focuses on server commands and borderline sysadmin skills, many of which have intimidated me in the past. I just started on the second section entitled &amp;#39;Basic Ruby&amp;#39;. The overall course description is: &amp;quot;Learn to build and test a complete Ruby on Rails application. This isn&amp;#39;t a basic intro: you will finish with some serious ruby chops.&amp;quot; I can&amp;#39;t wait to have serious chops! I&amp;#39;m documenting my progress on &lt;a href=&quot;https://github.com/jimmylorunning/level-up-rails&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Also this week I participated in two &lt;a href=&quot;http://www.codenewbie.org/code-club&quot;&gt;Code Club&lt;/a&gt; sessions (through the &lt;a href=&quot;http://www.codenewbie.org/&quot;&gt;CodeNewbie&lt;/a&gt; website). They were great! It&amp;#39;s sort of like hanging out with cool people while learning a lot. Each session has a host, but the host doesn&amp;#39;t necessarily have to know any more about the subject than anyone else. It&amp;#39;s basically like a study session; everyone is there to learn and encourage others to learn. The first one I took was on &lt;a href=&quot;http://javascriptissexy.com/javascript-variable-scope-and-hoisting-explained/&quot;&gt;Javascript Variable Scope&lt;/a&gt; where I got to hang out with &lt;a href=&quot;http://bloggytoons.com/&quot;&gt;Saron&lt;/a&gt; and &lt;a href=&quot;http://cynthialanel.com/&quot;&gt;Cynthia&lt;/a&gt;. The second one I took was &lt;a href=&quot;http://thetechcofounder.com/getting-started-with-ember-js-using-ember-cli/&quot;&gt;an introduction to Ember.js&lt;/a&gt; with &lt;a href=&quot;http://jonathanyeong.com/&quot;&gt;Jonathan&lt;/a&gt; and Yaw.&lt;/p&gt;
+
+&lt;p&gt;And ... and ... and ... I went to a &lt;a href=&quot;http://www.meetup.com/atlantaruby/&quot;&gt;Ruby Meetup&lt;/a&gt; on Wednesday (the featured talk was on Angular JS). I met a lot of nice people. And then I got home just in time to participate in &lt;a href=&quot;http://www.codenewbie.org/chat&quot;&gt;#CodeNewbie Twitter Chat&lt;/a&gt;! I didn&amp;#39;t feel like I did that much this week, but I guess I did!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>Learning Roadmap</title>
+   <link href="http://jimmylocoding.com/2015/01/17/learning-roadmap/"/>
+   <updated>2015-01-17T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/01/17/learning-roadmap</id>
+   <content type="html">&lt;p&gt;One of the hardest things about self-guided learning is coming up with a disciplined curriculum of some sort. School is good for giving you some kind of structure in which to learn, but when you&amp;#39;re learning on your own, you can go in any direction, which can be good and bad. When you don&amp;#39;t know a lot, you may not even know what is worth learning and what isn&amp;#39;t. It&amp;#39;s really easy to end up learning &amp;quot;spastically&amp;quot; -- by which I mean, I&amp;#39;ll learn a little bit of this until I see something shiny over here and then I&amp;#39;ll learn that before I finish learning this, etc. Meanwhile maybe there&amp;#39;s something else that is super important to what your end-goal is, but since you didn&amp;#39;t read the right blog posts, you never even find out about it... the proverbial &amp;quot;things you don&amp;#39;t know that you don&amp;#39;t know.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;So it&amp;#39;s important to start with a rough roadmap, and re-assess that roadmap regularly to see what spots you&amp;#39;re missing. Here is my current roadmap:
+&lt;ul&gt;
+    &lt;li&gt;take the EdX.org &lt;a href=&quot;https://www.edx.org/course/engineering-software-service-part-2-uc-berkeleyx-cs169-2x&quot;&gt;Software as a Service Part 2&lt;/a&gt; class. &lt;a href=&quot;https://www.edx.org/course/engineering-software-service-uc-berkeleyx-cs169-1x&quot;&gt;Part 1&lt;/a&gt; was super helpful in terms of learning basic Ruby/Rails, testing and agile practices. Part 2 focuses on more advanced Rails topics as well as working with legacy code. I am currently in week 2 of this class, which ends in mid-February.&lt;/li&gt;
+    &lt;li&gt;continue writing an app per week, with the following caveats:
+&lt;ul&gt;
+    &lt;li&gt;I want to learn at least one new thing per app. currently it&amp;#39;s pretty hard &lt;em&gt;not&lt;/em&gt; to learn one new thing, as I know relatively little. But as I learn more, I will probably want more specific goals like &amp;quot;learn to make an API for my app&amp;quot; or &amp;quot;learn to write a simple gem&amp;quot;.&lt;/li&gt;
+    &lt;li&gt;Since I am also taking the EdX SaaS class, on weeks where my SaaS homework is pretty involved, I can substitute that homework assignment for my weekly app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://leveluprails.com/&quot;&gt;Level UP Rails&lt;/a&gt; -- I heard about this curriculum through the Ruby Rogues podcast episode &lt;a href=&quot;http://devchat.tv/ruby-rogues/190-rr-apprenticeship-with-joseph-mastey-and-jill-lynch-of-enova&quot;&gt;&amp;quot;Apprenticeship with Joseph Mastey and Jill Lynch of Enova&amp;quot;&lt;/a&gt; where Joseph talks about implementing an apprenticeship program at his company for onboarding new hires who show a lot of potential but who may not be as technically proficient. These apprentices spend the first few months just learning the company&amp;#39;s stack, codebase, and a lot of other basic skills. Joseph also mentioned that the curriculum that he designed is now open source! It&amp;#39;s available at &lt;a href=&quot;https://leveluprails.com/&quot;&gt;https://leveluprails.com/&lt;/a&gt;. So far I&amp;#39;m really enjoying this curriculum. It provides just enough guidance and links about each topic so that you know what you should learn, without providing too much more. Then it&amp;#39;s your responsibility to Google it if you want to know more. There are also exercises at the end of each section. I also find the way the exercise titles are phrased to be amusing... I&amp;#39;m not sure if this was a conscious decision but they&amp;#39;re phrased to sound like unit test describe blocks..., for example &amp;quot;Knows what ports are and can use netstat to find them&amp;quot;. You can follow &lt;a href=&quot;https://github.com/jimmylorunning/level-up-rails&quot;&gt;my progress on github&lt;/a&gt;, where I&amp;#39;ll record my answers to the exercises as well as whatever personal notes I want to remember for later.&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://www.poodr.com/&quot;&gt;Read Practical Object Oriented Design in Ruby&lt;/a&gt; by Sandi Metz - this is a great book so far. If you haven&amp;#39;t already, go watch &lt;a href=&quot;https://www.youtube.com/results?search_query=sandi+metz&quot;&gt;Sandi Metz&amp;#39;s talks&lt;/a&gt; on YouTube. I&amp;#39;ve learned so much from her.&lt;/li&gt;
+    &lt;li&gt;Continue to blog at least once a week.&lt;/li&gt;
+&lt;/ul&gt;
+Those are my top priorities. And here are some of my lesser goals that would be wonderful to accomplish if I can find the time:
+&lt;ul&gt;
+    &lt;li&gt;read &lt;a href=&quot;http://www.javascriptenlightenment.com/JavaScript_Enlightenment.pdf&quot;&gt;JS Enlightenment&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;read &lt;a href=&quot;https://www.justinweiss.com/book/&quot;&gt;Practicing Rails&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;learn a JavaScript framework (Ember? Backbone? Angular? Meteor?)&lt;/li&gt;
+&lt;/ul&gt;
+Social or career oriented goals:
+&lt;ul&gt;
+    &lt;li&gt;Continue to attend meetups / hackathons&lt;/li&gt;
+    &lt;li&gt;Create my resume webpage&lt;/li&gt;
+    &lt;li&gt;Make some business cards&lt;/li&gt;
+&lt;/ul&gt;
+Non programming related:
+&lt;ul&gt;
+    &lt;li&gt;ride the &lt;a href=&quot;http://streetcar.atlantaga.gov/&quot;&gt;Atlanta Streetcar&lt;/a&gt; which just opened up about a month ago.&lt;/li&gt;
+    &lt;li&gt;go to the &lt;a href=&quot;http://www.thekingcenter.org/&quot;&gt;Martin Luther King Center&lt;/a&gt; I&amp;#39;ve lived within 2 miles from the MLK center, drive by it all the time, and yet I&amp;#39;ve never visited. There&amp;#39;s no excuse for that!&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>My Coding 'Journey'</title>
+   <link href="http://jimmylocoding.com/2015/01/14/my-coding-journey/"/>
+   <updated>2015-01-14T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/01/14/my-coding-journey</id>
+   <content type="html">&lt;p&gt;I&amp;#39;ve been hanging out at the &lt;a href=&quot;http://codenewbie.org&quot;&gt;Code Newbie&lt;/a&gt; website a lot lately, talking in the forums as well as listening to the excellent &lt;a href=&quot;http://www.codenewbie.org/podcast&quot;&gt;podcasts&lt;/a&gt; hosted by &lt;a href=&quot;http://bloggytoons.com/&quot;&gt;Saron Yitbarek&lt;/a&gt;. She interviews programmers not only about the technical nitty gritty, but also about the more human side of software development. One of these topics is: how do people get started in software development? What was your first app? What was something you wish you knew before you got into programming?&lt;/p&gt;
+
+&lt;p&gt;So far in this blog I haven&amp;#39;t divulged many personal details, and you may even be wondering &amp;quot;who is this Jimmy Lo anyway?&amp;quot; This may be because I feel like my story isn&amp;#39;t nearly as dramatic or interesting as many others. I didn&amp;#39;t change careers (at least not in the traditional sense), or go through bootcamp, or battle many personal adversities.&lt;/p&gt;
+
+&lt;p&gt;In fact, my interest in programming started with BASIC in high school, and I was a computer science major in college. So technically I&amp;#39;m not a &amp;quot;newbie&amp;quot; at all (despite how I feel inside). In college, I wrote programs in Pascal, C, Lisp, Smalltalk, as well as making websites for fun in plain HTML and CSS (this was before CMSs existed). After graduating, I worked in a design firm doing their web development, mostly working in Flash and Actionscript as well as some ASP. Then, I made my dramatic career change--&lt;em&gt;away&lt;/em&gt; from computers.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#39;ve always loved writing, and in 2003, I moved to Tempe, Arizona to pursue a Master of Fine Arts degree in Creative Writing-Poetry at Arizona State University.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/freepoems_cl-sm.jpg&quot; alt=&quot;my Free Poems on Demand project in the Creative Loafing&quot; width=&quot;300&quot; height=&quot;225&quot; align=&quot;right&quot; /&gt;Long story short: I eventually focused a lot of my energies towards writing and the arts, which you can find out more about if you go to &lt;a href=&quot;http://jimmylorunning.com&quot;&gt;my main website here&lt;/a&gt;. I still coded, but my attention had been diverted. My skills lagged. When I moved back to Atlanta, I got a job at the county library as the in-house web developer, building out their website as well as making useful tools in PHP to streamline their day to day tasks.&lt;/p&gt;
+
+&lt;p&gt;Last year, I quit in order to do freelance work and have more time to learn new things (both professionally and personally). Despite the financial hit, I think it was worth it--my interest in coding has blossomed since then. I am now learning more than I ever had.&lt;/p&gt;
+
+&lt;p&gt;Even though I don&amp;#39;t regret spending time on other interests, I also wish I had dedicated more of it towards coding. When I think back on it, I realize that all my programming jobs have been at places where I was the only programmer, or I was only one of a very small team where everyone just worked on their own code. Even though I&amp;#39;m not technically a newbie, I feel like one when it comes to collaborating in a team and working on a shared codebase. And as a programmer, the best way to learn is to collaborate with a team of smart people that will push you. This kind of learning and working environment is what I crave now.&lt;/p&gt;
+
+&lt;p&gt;Luckily, I&amp;#39;m getting back into the game right when coding is starting to get a lot more mainstream and exciting. Free learning resources are all over the web, and the community is super supportive. Open source software has made code available to all. And attitudes are also improving. Programming has gotten a lot more inclusive to newbies and non-programmers alike. People who don&amp;#39;t come from a traditional computer science background can easily enter the field. All of this is encouraging and makes me feel like I am moving in the right direction.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>Week 3 Round Up: Twitter Fitter&#8212;the tweet generator!</title>
+   <link href="http://jimmylocoding.com/2015/01/12/week-3-round-up-twitter-fitter/"/>
+   <updated>2015-01-12T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/01/12/week-3-round-up-twitter-fitter</id>
+   <content type="html">&lt;p&gt;So there&amp;#39;s still a lot more work I want to do on my week 3 app &lt;a href=&quot;https://secret-brushlands-4139.herokuapp.com/&quot;&gt;Twitter Fitter&lt;/a&gt;. But the general idea is there--it&amp;#39;s a &lt;a href=&quot;http://en.wikipedia.org/wiki/Markov_chain&quot;&gt;Markov generator&lt;/a&gt;. You type in a twitter handle, and it spits back a generated tweet (or tweet-like string) that is in the style of that user. (Try @DATABASE_HULK, @StephenAtHome, @BarackObama, or @kimkardashian) Part of the app/week project is that I want to learn something new each time. So what did I learn this week?&lt;/p&gt;
+
+&lt;h3&gt;Firsts:&lt;/h3&gt;
+
+&lt;p&gt;Well, this was my first app where I had to connect to another service (in this case it was the &lt;a href=&quot;https://dev.twitter.com/rest/public&quot;&gt;Twitter API&lt;/a&gt; through the &lt;a href=&quot;https://github.com/sferik/twitter&quot;&gt;Twitter gem&lt;/a&gt;) and also the first app where I wrote my own POROs (plain old Ruby objects) inside of Rails. In fact, this was barely a Rails app. It doesn&amp;#39;t even have a model. It&amp;#39;s mostly just a single page that connects to Twitter and then runs the MarkovChain object that I wrote for it. I also obviously learned a lot about Markov generators and how they work. (I knew about them generally but never thought about how to write one before)&lt;/p&gt;
+
+&lt;h3&gt;Testing:&lt;/h3&gt;
+
+&lt;p&gt;I was able to write &lt;a href=&quot;https://github.com/jimmylorunning/twitter-fitter/blob/master/spec/lib/markov_chain_spec.rb&quot;&gt;tests for my MarkovChain object&lt;/a&gt;. I&amp;#39;m pretty proud of this. But I haven&amp;#39;t written tests for the actual controller code yet (which is currently very messy).&lt;/p&gt;
+
+&lt;h3&gt;To do:&lt;/h3&gt;
+
+&lt;p&gt;As always there are still many things I want to do to improve it:
+&lt;ul&gt;
+    &lt;li&gt;Needs major styling. Looks really ugly right now. I want it to look good!&lt;/li&gt;
+    &lt;li&gt;I want you to be able to retweet the generated tweets. Maybe it will retweet it from a custom account, maybe @TwitterFitter&lt;/li&gt;
+    &lt;li&gt;I want to make a gem out of the MarkovChain object. There are already similar gems out there (and my algorithm isn&amp;#39;t all that unique), but I think it would be a learning experience to create my own gem.&lt;/li&gt;
+    &lt;li&gt;Tweak my generator code. Currently it&amp;#39;s pretty simple, and the results are either pretty funny / nonsensical or else they&amp;#39;re pretty boring (like almost word for word of an existing tweet rather than a mix-match of different tweets)&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;h3&gt;Challenges:&lt;/h3&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;writing the &lt;a href=&quot;https://github.com/jimmylorunning/twitter-fitter/blob/master/lib/markov_chain.rb&quot;&gt;actual Markov generator&lt;/a&gt;, and making it perform okay as well as be open to modification in the future if I wanted to change the way it works later. For example, I thought it would be cool if I could pass it a lambda so that it picks the next word based on running that lambda code. The default is just random, but maybe someone would want to tweak it themselves without having to go into my code.&lt;/li&gt;
+    &lt;li&gt;figuring out how to call private / public methods within my class, and whether or not to even use private methods. &lt;a title=&quot;self or no self&quot; href=&quot;http://jimmylocoding.com/self-or-no-self/&quot;&gt;Here's a blog post I wrote&lt;/a&gt; about this topic.&lt;/li&gt;
+    &lt;li&gt;tweaking the generator. When I use a prefix length of 2, I get back text that's very similar to the original text, so much so that it's kind of boring. If I set it to 1, I get back things that are sometimes very nonsensical. I decided on 1. But it would be nice to come up with a different algorithm so that it's between totally nonsensical and completely boring.&lt;/li&gt;
+    &lt;li&gt;figuring out how to include my ruby object in the lib directory and have rails auto include it. I was not naming my file correctly, so it didn't include it when autoloading! Took me some extra googling to figure out why.&lt;/li&gt;
+    &lt;li&gt;writing test code. I'm not sure I did it right, but testing code that's supposed to be random was also kind of tricky. I had to &lt;a href=&quot;http://ruby-doc.org/core-2.2.0/Random.html#method-c-srand&quot;&gt;seed the generator&lt;/a&gt; with values so that it would be predictable/testable.&lt;/li&gt;
+    &lt;li&gt;using the Twitter gem. I had to figure out how to give it my API keys and secrets without exposing it through github. I wrote a &lt;a title=&quot;Hiding my API keys&quot; href=&quot;http://jimmylocoding.com/hiding-my-api-keys/&quot;&gt;blog post about this here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Next week(s):&lt;/h3&gt;
+
+&lt;p&gt;I&amp;#39;ve mentioned taking the incredibly helpful &lt;a href=&quot;https://www.edx.org/course/engineering-software-service-uc-berkeleyx-cs169-1x&quot;&gt;edX.org SaaS class&lt;/a&gt; (Software as a Service) before. Well, &lt;a href=&quot;https://www.edx.org/course/software-service-uc-berkeleyx-cs169-2x&quot;&gt;part 2 of the class&lt;/a&gt; has just started, so instead of continuing with my own apps, I will be doing the SaaS homework apps every week for the next few weeks. It&amp;#39;s only a few weeks, and there&amp;#39;s not a homework for &lt;em&gt;every&lt;/em&gt; week, so it won&amp;#39;t be taking over this project completely, but its presence will definitely be felt. I will still be blogging about my discoveries, though! Hope you&amp;#39;ll keep reading.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>self or no self</title>
+   <link href="http://jimmylocoding.com/2015/01/09/self-or-no-self/"/>
+   <updated>2015-01-09T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/01/09/self-or-no-self</id>
+   <content type="html">&lt;p&gt;Ruby is sometimes very confusing. For example, when you call an instance method within the same class, you can do so with or without &lt;code&gt;self&lt;/code&gt;... it&amp;#39;s optional:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;instance_method&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# works from inside the class&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instance_method&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# also works from inside the class&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;other_object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instance_method&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# works from outside the class&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;However, if the method is a setter method, &lt;a href=&quot;http://www.rubyfleebie.com/use-self-explicitly/&quot;&gt;you &lt;em&gt;must&lt;/em&gt; use self&lt;/a&gt;. The reasoning behind this is that Ruby doesn&amp;#39;t know whether &lt;code&gt;instance_method&lt;/code&gt; is an instance method or a local variable, and the &lt;code&gt;self&lt;/code&gt; gets rid of that ambiguity. Let&amp;#39;s call this rule A.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;instance_method&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# error&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;instance_method&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# works&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;However, &lt;a href=&quot;http://stackoverflow.com/questions/4293215/understanding-private-methods-in-ruby&quot;&gt;private methods can&amp;#39;t use self&lt;/a&gt;. Let&amp;#39;s call this rule B. The reasoning behind this is that private methods cannot be called with an explicit receiver, even if &lt;code&gt;self&lt;/code&gt; is that receiver.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;private_method&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# error&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;private_method&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# works&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;What happens when rule A butts head with rule B?&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;private_method&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# violates rule A - error&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;private_method&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# violates rule B - but works!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Apparently in this case, the second line is the one that&amp;#39;s allowed. &lt;a href=&quot;ttp://devblog.orgsync.com/2013/05/20/private-and-protected-they-might-not-mean-what-you-think-they-mean/&quot;&gt;This blog post&lt;/a&gt; explains it very clearly:
+&lt;blockquote&gt;When using a setter in Ruby we&amp;#39;re supposed to use an explicit receiver like &lt;code&gt;self&lt;/code&gt;. Here we have a private method that doesn&amp;#39;t allow an explicit receiver. We appear to have reached an impasse. &lt;strong&gt;In this case it turns out Ruby breaks its own rule.&lt;/strong&gt;&lt;/blockquote&gt;
+Before I found this, I was trying to get around the impasse by doing jenky things like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;private_method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I was surprised this wasn&amp;#39;t a bigger topic, but then &lt;a href=&quot;http://heartmindcode.com/2013/04/25/private_accessors_in_ruby/&quot;&gt;I read this article&lt;/a&gt; about how private and protected methods aren&amp;#39;t even used that much in Ruby!
+&lt;blockquote&gt;For the most part, we just... don’t [write private methods].&lt;/blockquote&gt;
+The following is from the book I&amp;#39;m reading, &lt;a href=&quot;http://www.poodr.com/&quot;&gt;Practical Object Oriented Design in Ruby&lt;/a&gt; by Sandi Metz:
+&lt;blockquote&gt;Users of a class can redefine any method to public regardless of its initial declaration. The private and protected keywords are more like flexible barriers than concrete restrictions. ... Using them sends two messages:
+&lt;ul&gt;
+    &lt;li&gt;You believe that you have better information today than programmers will have in the future&lt;/li&gt;
+    &lt;li&gt;You believe that those future programmers need to be prevented from accidentally using a method that you currently consider unstable&lt;/li&gt;
+&lt;/ul&gt;
+These beliefs may be correct but the future is a long way off and one can never be certain... many perfectly  competent Ruby programmers omit them and instead use comments or a special method naming convention (Ruby on Rails, for example, adds a leading &amp;#39;_&amp;#39; to private methods) to indicate public and private parts of interfaces.&lt;/blockquote&gt;
+I don&amp;#39;t know what I feel about all this yet, but I might skip over writing private methods for now just because it makes things much easier for me immediately.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>Hiding my API keys</title>
+   <link href="http://jimmylocoding.com/2015/01/07/hiding-my-api-keys/"/>
+   <updated>2015-01-07T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/01/07/hiding-my-api-keys</id>
+   <content type="html">&lt;h3&gt;Problem: I don&amp;#39;t want to expose API secret keys, but I still want to be able to commit my changes and push to github.&lt;/h3&gt;
+
+&lt;h3&gt;Solution:&lt;/h3&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Install &lt;a href=&quot;https://github.com/laserlemon/figaro&quot;&gt;figaro&lt;/a&gt; gem&lt;/li&gt;
+    &lt;li&gt;set environment variables in config/application.yml
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;ss&quot;&gt;my_api_key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;weoi23urow234jerow67jerjerjwejr&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/li&gt;
+    &lt;li&gt;make sure .gitignore ignores config/application.yml&lt;/li&gt;
+    &lt;li&gt;in the initializer code, (for my week3 app, I put this in config/initializer/twitter.rb) use `ENV['my_api_key']` instead of hardcoding the api key&lt;/li&gt;
+    &lt;li&gt;after deploying to heroku, run this command to set heroku's env variables
+&gt; figaro heroku:set -e production
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>Week 2 Round Up: say-anything</title>
+   <link href="http://jimmylocoding.com/2015/01/05/week-2-round-up-say-anything/"/>
+   <updated>2015-01-05T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/01/05/week-2-round-up-say-anything</id>
+   <content type="html">&lt;p&gt;Week 2 of An App Per Week is over! It was tough and I got a little behind. I planned to implement the &lt;a href=&quot;http://docs.railsbridge.org/intermediate-rails/&quot;&gt;RailsBridge intermediate curriculum&lt;/a&gt;, plus testing and some extra features. Here is what I was able to accomplish:
+&lt;ul&gt;
+    &lt;li&gt;all the basic features specified in the curriculum&lt;/li&gt;
+    &lt;li&gt;extra features:
+&lt;ul&gt;
+    &lt;li&gt;deleting posts&lt;/li&gt;
+    &lt;li&gt;profile page with a list of posts (not replies yet)&lt;/li&gt;
+    &lt;li&gt;custom user fields: username and favorite movie fields instead of just the default e-mail and password&lt;/li&gt;
+    &lt;li&gt;some testing&lt;/li&gt;
+    &lt;li&gt;fancy bootstrap styling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+What I wasn&amp;#39;t able to finish this time around:
+&lt;ul&gt;
+    &lt;li&gt;Testing! I got some testing done, but it was taking too long to do for features that I wasn&amp;#39;t sure how to build out, so I figured I&amp;#39;d write the tests after the fact. So that&amp;#39;s still on my to do list...&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://github.com/intridea/omniauth&quot;&gt;Omniauth&lt;/a&gt; -- being able to log in through Twitter, Github, FB, etc. I might do this tomorrow&lt;/li&gt;
+    &lt;li&gt;fancier post markup, or maybe even a wysiwyg edit window would be nice (I&amp;#39;m sure there&amp;#39;s a gem, right?)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a href=&quot;https://aqueous-sierra-5780.herokuapp.com/&quot;&gt;And here it is!&lt;/a&gt; All in all, I am pretty happy with it. The major things I learned:
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://github.com/plataformatec/devise&quot;&gt;Devise&lt;/a&gt; was a pleasure to work with. It&amp;#39;s relatively easy to set up and gave me a lot of standard user stuff out of the box. I really liked it. It wasn&amp;#39;t even that hard to add custom fields (username, favorite movie, etc.) to the user profile. At one point I had to look into the Devise source on github to figure something out, but even that wasn&amp;#39;t too hard because it&amp;#39;s pretty well organized.&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://guides.rubyonrails.org/routing.html#nested-resources&quot;&gt;Nested resources&lt;/a&gt;. I implemented replies the non-nested way, then re-read the hints section, and figured out that nested resources was the way to go with this kind of feature. Nested resources gives you an url that corresponds to the relationship of your models. So because replies belong to posts, you can have a URL like post/5/replies. It doesn&amp;#39;t matter as much in my finished product since I ended up embedding replies within posts anyway.&lt;/li&gt;
+    &lt;li&gt;Dealing with &lt;a href=&quot;http://edgeguides.rubyonrails.org/action_controller_overview.html#strong-parameters&quot;&gt;strong parameters&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://guides.rubyonrails.org/association_basics.html&quot;&gt;has_many / belongs_to&lt;/a&gt; association -- I&amp;#39;ve dealt with this before, but this was my first time working with them outside of a tutorial, so it sunk in more&lt;/li&gt;
+    &lt;li&gt;The &lt;a href=&quot;http://guides.rubyonrails.org/asset_pipeline.html&quot;&gt;asset pipeline&lt;/a&gt; -- had to figure some assets out and so I read a little bit about this, but I need to read way more when I have time&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;h3&gt;Unsolved problems:&lt;/h3&gt;
+
+&lt;p&gt;When testing, I had to run some tests as a signed in user and some as signed out. How do I do this? After some reading, I figured out that I had to stub the authentication in the specs. I followed &lt;a href=&quot;https://github.com/plataformatec/devise/wiki/How-To:-Stub-authentication-in-controller-specs&quot;&gt;these directions&lt;/a&gt; and put the ControllerHelpers module in spec/support/controller_helpers.rb as well as the accompanying config. But it kept complaining: &amp;quot;undefined method sign_in&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;After a certain amount of googling, head scratching, and generally going nowhere, I finally just moved the module into my spec file. Not graceful, but I had to keep going. If you have any ideas about this let me know.&lt;/p&gt;
+
+&lt;p&gt;Also while trying to test user authentication related things, I figured out how to fake sign in/out inside of rails console and get to the user object:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;ApplicationController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;allow_forgery_protection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;/users/sign_in&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;user&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;username&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;jimmy&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;mypassword&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}})&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cu&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;current_user&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I find it super useful to be able to try things out in the console. It&amp;#39;s probably where I learn the most.&lt;/p&gt;
+
+&lt;p&gt;Another problem. In Michael Hartl&amp;#39;s Rails Tutorial book, he was able to set up a &lt;code&gt;has_many&lt;/code&gt; / &lt;code&gt;belongs_to&lt;/code&gt; association between User and Micropost. And because this was set up, he was automatically able to write something like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;micropost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;some_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;However, I set up my app in a very similar way. My &lt;code&gt;:post belongs_to :user&lt;/code&gt; and my &lt;code&gt;:user has_many :posts&lt;/code&gt;. But I couldn&amp;#39;t get this to work. I always got &amp;quot;undefined method posts&amp;quot;. My workaround was simply to use plain old Posts object and pass it the &lt;code&gt;current_user&lt;/code&gt; when needed.&lt;/p&gt;
+
+&lt;p&gt;Another thing I learned... where and &lt;code&gt;find_by_???&lt;/code&gt; methods are not interchangeable:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# returns ActiveRecord::Relation&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_by_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# returns User&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# error, no id method&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# returns the user id correctly&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;block&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# works&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;block&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# error, no each method on User&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There are many other smaller things I could blog about, but I don&amp;#39;t have time and you probably don&amp;#39;t have patience. I may write up a few of these smaller issues later if I feel like it.&lt;/p&gt;
+
+&lt;h3&gt;Next Week&lt;/h3&gt;
+
+&lt;p&gt;Any ideas? I&amp;#39;m thinking about writing an app that would involve pulling from some API... maybe the Twitter API and doing something with the data. Stay tuned.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>How do I write tests that I don’t have to keep changing?</title>
+   <link href="http://jimmylocoding.com/2015/01/02/how-do-i-write-tests-that-dont-have-to-keep-changing/"/>
+   <updated>2015-01-02T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/01/02/how-do-i-write-tests-that-dont-have-to-keep-changing</id>
+   <content type="html">&lt;p&gt;Sometimes I want to check to make sure my controller is sending a message to my model. For example, I want to make sure it&amp;#39;s asking the model to return a set of results. But I don&amp;#39;t care what message it sends:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;Posts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;should_receive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:index&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Here I&amp;#39;m making sure I&amp;#39;m asking the model for all posts. However, I soon realized that I wanted them ordered a certain way. So I replaced the controller code to call :order instead of :all&lt;/p&gt;
+
+&lt;p&gt;Now I have to go back to the test and change it. But later perhaps I will want to change it again to use &lt;code&gt;:find&lt;/code&gt; or &lt;code&gt;:find_all_by&lt;/code&gt; or &lt;code&gt;:where&lt;/code&gt; or something else altogether.&lt;/p&gt;
+
+&lt;p&gt;Will I have to change the test every time? What I really want is a way to say “make sure my controller sends my model a message, it doesn&amp;#39;t matter what message it sends.” Because basically all these methods perform a similar task, and I don&amp;#39;t care which implementation I ultimately decide on. My tests should just care about the fact that I sent the message at all, and that the model will take care of the rest. So my question is two-fold:
+&lt;ol&gt;
+    &lt;li&gt;Should I even be testing for this? Or is this not an important thing to test?&lt;/li&gt;
+    &lt;li&gt;If I should be testing for this, how do I do it so I don&amp;#39;t have to change my test code every time?Is this possible?&lt;/li&gt;
+&lt;/ol&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>Blogging in the New Year</title>
+   <link href="http://jimmylocoding.com/2015/01/01/blogging-in-the-new-year/"/>
+   <updated>2015-01-01T00:00:00-05:00</updated>
+   <id>http://jimmylocoding.com/2015/01/01/blogging-in-the-new-year</id>
+   <content type="html">&lt;p&gt;Happy new year and welcome to jimmylocoding! This will be a space for me to document my journey learning Ruby on Rails (and inevitably many other things along the way and beyond). Hopefully it will be somewhat interesting/educational for others.&lt;/p&gt;
+
+&lt;p&gt;My Rails journey started around January 2014, but life took over before I could get through Michael Hartl&amp;#39;s Rails Tutorial. About two months ago, I decided to pick up where I left off--here are some of the things I&amp;#39;ve done since:
+&lt;ul&gt;
+  &lt;li&gt;Started going to &lt;a href=&quot;http://www.meetup.com/atlantaruby/&quot;&gt;Ruby meetups&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Started going to &lt;a href=&quot;http://www.meetup.com/codeforatlanta/&quot;&gt;codeforatlanta&lt;/a&gt; (civic hacking) meeups/hackathons&lt;/li&gt;
+  &lt;li&gt;Did a bunch of katas on &lt;a href=&quot;http://codewars.com/&quot;&gt;codewars.com&lt;/a&gt; -- I highly recommend this, it made me start to &amp;quot;think Ruby&amp;quot;&lt;/li&gt;
+  &lt;li&gt;Took this &lt;a href=&quot;https://www.edx.org/course/engineering-software-service-uc-berkeleyx-cs169-1x&quot;&gt;EdX.org class on SaaS&lt;/a&gt; -- this was super helpful, and I will blog about this more in the future&lt;/li&gt;
+  &lt;li&gt;Got really comfortable with git/github, at least the very basic common commands&lt;/li&gt;
+  &lt;li&gt;Listened to a bunch of podcasts. My favorites are &lt;a href=&quot;http://devchat.tv/ruby-rogues/&quot;&gt;Ruby Rogues&lt;/a&gt; and &lt;a href=&quot;http://www.codenewbie.org/&quot;&gt;Code Newbie&lt;/a&gt;. Code Newbie also has an online community of friendly encouraging folks.&lt;/li&gt;
+  &lt;li&gt;Recently resolved to write a new app every week, even if it&amp;#39;s a very simple app&lt;/li&gt;
+&lt;/ul&gt;
+This is my second week writing an app per week. Last week, I finally made my very first app outside of following tutorials. It was a bit scary at first to not have that reassuring set of instructions to fall back on.&lt;/p&gt;
+
+&lt;p&gt;For my first app, I chose a very simple, some may even say &lt;em&gt;boring&lt;/em&gt;, app: a to do list! People kept telling me &amp;quot;Just write an app for practice,&amp;quot; and I had planned to do this. But I couldn&amp;#39;t think of any good ideas!&lt;/p&gt;
+
+&lt;p&gt;Or my ideas were &lt;em&gt;too&lt;/em&gt; good and &lt;em&gt;too&lt;/em&gt; ambitious, and therefore too intimidating for a first project. Then I realized it doesn&amp;#39;t have to be a good idea! I decided that since my first few apps will suck anyway, I should just keep it simple and focus on getting them out as quickly as possible and try to learn as much as I can from them.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;#39;re curious, you can see the &lt;a href=&quot;https://github.com/jimmylorunning/muchtodo&quot;&gt;source code&lt;/a&gt; of my first app on github or play with it &lt;a href=&quot;https://intense-beyond-1562.herokuapp.com/todos&quot;&gt;on Heroku&lt;/a&gt;. I learned a lot. And even though it could be a lot better, I need to move on to Week Two!&lt;/p&gt;
+
+&lt;p&gt;This week, I am working on a message board app, based on the &lt;a href=&quot;http://docs.railsbridge.org/intermediate-rails/&quot;&gt;RailsBridge curriculum&lt;/a&gt;. The curriculum is perfect because it gives me a guide to follow in terms of what to do next without giving me any of the technical hand-holding that tutorials give. So it&amp;#39;s still challenging, but with a bit of structure thrown in.&lt;/p&gt;
+
+&lt;p&gt;You can see it &lt;a href=&quot;https://github.com/jimmylorunning/say-something&quot;&gt;on github here&lt;/a&gt; and play with it (even in its half finished state) &lt;a href=&quot;https://aqueous-sierra-5780.herokuapp.com/&quot;&gt;on Heroku&lt;/a&gt;. I will be continually deploying it as I finish each part, and blogging about it too. So stay tuned!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+
+</feed>

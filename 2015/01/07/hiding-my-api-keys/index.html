@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us" class="theme-base-09">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Hiding my API keys &middot; jlc
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/custom.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="layout-reverse">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          jlc
+        </a>
+      </h1>
+      <p class="lead">jimmylocoding</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+      <a class="sidebar-nav-item" href="resume">My Resume</a>
+      <div class="social-media">
+        <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
+        <a class="sidebar-nav-item" href="http://twitter.com/jimmylocoding"><i class="fa fa-twitter fa-2x"></i></a>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Hiding my API keys</h1>
+  <span class="post-date">07 Jan 2015</span>
+  <h3>Problem: I don&#39;t want to expose API secret keys, but I still want to be able to commit my changes and push to github.</h3>
+
+<h3>Solution:</h3>
+
+<ul>
+    <li>Install <a href="https://github.com/laserlemon/figaro">figaro</a> gem</li>
+    <li>set environment variables in config/application.yml
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">my_api_key</span><span class="p">:</span> <span class="s1">&#39;weoi23urow234jerow67jerjerjwejr&#39;</span></code></pre></div>
+
+</li>
+    <li>make sure .gitignore ignores config/application.yml</li>
+    <li>in the initializer code, (for my week3 app, I put this in config/initializer/twitter.rb) use `ENV['my_api_key']` instead of hardcoding the api key</li>
+    <li>after deploying to heroku, run this command to set heroku's env variables
+> figaro heroku:set -e production
+</li>
+</ul>
+
+</div>
+<div class="post-metadata">
+
+<div class="tags">
+  <h2>Tags</h2>
+  <ul>
+    
+    <li><a href="/tag/APIs">APIs</a></li>
+    
+    <li><a href="/tag/env">env</a></li>
+    
+    <li><a href="/tag/figaro">figaro</a></li>
+    
+    <li><a href="/tag/gems">gems</a></li>
+    
+    <li><a href="/tag/github">github</a></li>
+    
+    <li><a href="/tag/rails">rails</a></li>
+    
+    <li><a href="/tag/yml">yml</a></li>
+    
+    <li><a href="/tag/security">security</a></li>
+    
+  </ul>
+</div>
+
+<div class="related">
+
+
+  
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+  
+    <li><a href="/2015/02/13/twitter-fitter-v2/">TwitterFitter v2.0</a>
+    <small>13 Feb 2015</small></li>
+  
+
+  
+    <li><a href="/2015/01/12/week-3-round-up-twitter-fitter/">Week 3 Round Up: Twitter Fitter&#8212;the tweet generator!</a>
+    <small>12 Jan 2015</small></li>
+  
+
+  
+    <li><a href="/2015/02/10/week-7-in-review/">Week 7 in Review</a>
+    <small>10 Feb 2015</small></li>
+  
+
+  
+    <li><a href="/2015/01/05/week-2-round-up-say-anything/">Week 2 Round Up: say-anything</a>
+    <small>05 Jan 2015</small></li>
+  
+
+  
+    <li><a href="/2015/01/30/introducing-exquisite-source/">Introducing Exquisite Source!</a>
+    <small>30 Jan 2015</small></li>
+  
+
+  
+    <li><a href="/2015/01/19/week-4-oracle-of-bacon/">Week 4: Oracle of Bacon and other stuff</a>
+    <small>19 Jan 2015</small></li>
+  
+
+
+</ul>
+
+</div>
+
+      
+<a name="comments"></a><h2 class="comments">Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'jimmylocoding';
+    var disqus_identifier = "jimmylocoding/2015/01/07/hiding-my-api-keys/";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+
+  </body>
+</html>

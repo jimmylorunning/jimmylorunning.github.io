@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us" class="theme-base-09">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      self or no self &middot; jlc
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/custom.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="layout-reverse">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          jlc
+        </a>
+      </h1>
+      <p class="lead">jimmylocoding</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+      <a class="sidebar-nav-item" href="resume">My Resume</a>
+      <div class="social-media">
+        <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
+        <a class="sidebar-nav-item" href="http://twitter.com/jimmylocoding"><i class="fa fa-twitter fa-2x"></i></a>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">self or no self</h1>
+  <span class="post-date">09 Jan 2015</span>
+  <p>Ruby is sometimes very confusing. For example, when you call an instance method within the same class, you can do so with or without <code>self</code>... it&#39;s optional:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">instance_method</span> <span class="c1"># works from inside the class</span>
+<span class="nb">self</span><span class="o">.</span><span class="n">instance_method</span> <span class="c1"># also works from inside the class</span>
+<span class="n">other_object</span><span class="o">.</span><span class="n">instance_method</span> <span class="c1"># works from outside the class</span></code></pre></div>
+
+<p>However, if the method is a setter method, <a href="http://www.rubyfleebie.com/use-self-explicitly/">you <em>must</em> use self</a>. The reasoning behind this is that Ruby doesn&#39;t know whether <code>instance_method</code> is an instance method or a local variable, and the <code>self</code> gets rid of that ambiguity. Let&#39;s call this rule A.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">instance_method</span> <span class="o">=</span> <span class="mi">42</span> <span class="c1"># error</span>
+<span class="nb">self</span><span class="o">.</span><span class="n">instance_method</span> <span class="o">=</span> <span class="mi">42</span> <span class="c1"># works</span></code></pre></div>
+
+<p>However, <a href="http://stackoverflow.com/questions/4293215/understanding-private-methods-in-ruby">private methods can&#39;t use self</a>. Let&#39;s call this rule B. The reasoning behind this is that private methods cannot be called with an explicit receiver, even if <code>self</code> is that receiver.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">self</span><span class="o">.</span><span class="n">private_method</span> <span class="c1"># error</span>
+<span class="n">private_method</span> <span class="c1"># works</span></code></pre></div>
+
+<p>What happens when rule A butts head with rule B?</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">private_method</span> <span class="o">=</span> <span class="mi">42</span> <span class="c1"># violates rule A - error</span>
+<span class="nb">self</span><span class="o">.</span><span class="n">private_method</span> <span class="o">=</span> <span class="mi">42</span> <span class="c1"># violates rule B - but works!</span></code></pre></div>
+
+<p>Apparently in this case, the second line is the one that&#39;s allowed. <a href="ttp://devblog.orgsync.com/2013/05/20/private-and-protected-they-might-not-mean-what-you-think-they-mean/">This blog post</a> explains it very clearly:
+<blockquote>When using a setter in Ruby we&#39;re supposed to use an explicit receiver like <code>self</code>. Here we have a private method that doesn&#39;t allow an explicit receiver. We appear to have reached an impasse. <strong>In this case it turns out Ruby breaks its own rule.</strong></blockquote>
+Before I found this, I was trying to get around the impasse by doing jenky things like this:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">private_method</span><span class="o">=</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span></code></pre></div>
+
+<p>I was surprised this wasn&#39;t a bigger topic, but then <a href="http://heartmindcode.com/2013/04/25/private_accessors_in_ruby/">I read this article</a> about how private and protected methods aren&#39;t even used that much in Ruby!
+<blockquote>For the most part, we just... don’t [write private methods].</blockquote>
+The following is from the book I&#39;m reading, <a href="http://www.poodr.com/">Practical Object Oriented Design in Ruby</a> by Sandi Metz:
+<blockquote>Users of a class can redefine any method to public regardless of its initial declaration. The private and protected keywords are more like flexible barriers than concrete restrictions. ... Using them sends two messages:
+<ul>
+    <li>You believe that you have better information today than programmers will have in the future</li>
+    <li>You believe that those future programmers need to be prevented from accidentally using a method that you currently consider unstable</li>
+</ul>
+These beliefs may be correct but the future is a long way off and one can never be certain... many perfectly  competent Ruby programmers omit them and instead use comments or a special method naming convention (Ruby on Rails, for example, adds a leading &#39;_&#39; to private methods) to indicate public and private parts of interfaces.</blockquote>
+I don&#39;t know what I feel about all this yet, but I might skip over writing private methods for now just because it makes things much easier for me immediately.</p>
+
+</div>
+<div class="post-metadata">
+
+<div class="tags">
+  <h2>Tags</h2>
+  <ul>
+    
+    <li><a href="/tag/instance methods">instance methods</a></li>
+    
+    <li><a href="/tag/methods">methods</a></li>
+    
+    <li><a href="/tag/private methods">private methods</a></li>
+    
+    <li><a href="/tag/public methods">public methods</a></li>
+    
+    <li><a href="/tag/ruby">ruby</a></li>
+    
+    <li><a href="/tag/self">self</a></li>
+    
+  </ul>
+</div>
+
+<div class="related">
+
+
+  
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+  
+    <li><a href="/2015/02/25/method-chaining-to-the-madness/">Method Chaining to the Madness</a>
+    <small>25 Feb 2015</small></li>
+  
+
+  
+    <li><a href="/2015/01/05/week-2-round-up-say-anything/">Week 2 Round Up: say-anything</a>
+    <small>05 Jan 2015</small></li>
+  
+
+
+</ul>
+
+</div>
+
+      
+<a name="comments"></a><h2 class="comments">Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'jimmylocoding';
+    var disqus_identifier = "jimmylocoding/2015/01/09/self-or-no-self/";
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+
+  </body>
+</html>
