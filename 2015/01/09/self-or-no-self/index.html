@@ -398,7 +398,7 @@
           
         
       
-      <a class="sidebar-nav-item" href="resume">My Resume</a>
+      <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
         <a class="sidebar-nav-item" href="http://twitter.com/jimmylocoding"><i class="fa fa-twitter fa-2x"></i></a>
@@ -434,7 +434,7 @@
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">private_method</span> <span class="o">=</span> <span class="mi">42</span> <span class="c1"># violates rule A - error</span>
 <span class="nb">self</span><span class="o">.</span><span class="n">private_method</span> <span class="o">=</span> <span class="mi">42</span> <span class="c1"># violates rule B - but works!</span></code></pre></div>
 
-<p>Apparently in this case, the second line is the one that&#39;s allowed. <a href="ttp://devblog.orgsync.com/2013/05/20/private-and-protected-they-might-not-mean-what-you-think-they-mean/">This blog post</a> explains it very clearly:
+<p>Apparently in this case, the second line is the one that&#39;s allowed. <a href="http://devblog.orgsync.com/2013/05/20/private-and-protected-they-might-not-mean-what-you-think-they-mean/">This blog post</a> explains it very clearly:
 <blockquote>When using a setter in Ruby we&#39;re supposed to use an explicit receiver like <code>self</code>. Here we have a private method that doesn&#39;t allow an explicit receiver. We appear to have reached an impasse. <strong>In this case it turns out Ruby breaks its own rule.</strong></blockquote>
 Before I found this, I was trying to get around the impasse by doing jenky things like this:</p>
 
