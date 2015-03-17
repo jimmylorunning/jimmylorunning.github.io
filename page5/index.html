@@ -398,6 +398,10 @@
           
         
       
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -411,6 +415,38 @@
 
     <div class="content container">
       <div class="posts">
+  
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/2015/01/02/how-do-i-write-tests-that-dont-have-to-keep-changing/">
+          How do I write tests that I don’t have to keep changing?
+        </a>
+      </h1>
+
+      <span class="post-date">02 Jan 2015</span>
+
+      <p>Sometimes I want to check to make sure my controller is sending a message to my model. For example, I want to make sure it&#39;s asking the model to return a set of results. But I don&#39;t care what message it sends:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Posts</span><span class="o">.</span><span class="n">should_receive</span><span class="p">(</span><span class="ss">:all</span><span class="p">)</span>
+  <span class="n">get</span> <span class="ss">:index</span></code></pre></div>
+
+<p>Here I&#39;m making sure I&#39;m asking the model for all posts. However, I soon realized that I wanted them ordered a certain way. So I replaced the controller code to call :order instead of :all</p>
+
+<p>Now I have to go back to the test and change it. But later perhaps I will want to change it again to use <code>:find</code> or <code>:find_all_by</code> or <code>:where</code> or something else altogether.</p>
+
+<p>Will I have to change the test every time? What I really want is a way to say “make sure my controller sends my model a message, it doesn&#39;t matter what message it sends.” Because basically all these methods perform a similar task, and I don&#39;t care which implementation I ultimately decide on. My tests should just care about the fact that I sent the message at all, and that the model will take care of the rest. So my question is two-fold:
+<ol>
+    <li>Should I even be testing for this? Or is this not an important thing to test?</li>
+    <li>If I should be testing for this, how do I do it so I don&#39;t have to change my test code every time?Is this possible?</li>
+</ol></p>
+
+
+      
+      <span class="post-comments-link"><a href="/2015/01/02/how-do-i-write-tests-that-dont-have-to-keep-changing/#comments"><i class="fa fa-comments"></i> What do you think?</a></span>
+      
+    </div>
+    
   
     
     <div class="post">

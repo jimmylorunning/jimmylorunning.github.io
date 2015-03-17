@@ -398,6 +398,10 @@
           
         
       
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -411,6 +415,49 @@
 
     <div class="content container">
       <div class="posts">
+  
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/getting-git">
+          Getting Git
+        </a>
+      </h1>
+
+      <span class="post-date">17 Mar 2015</span>
+
+      <p><img src="/images/git.png" align="right">Not so long ago, I was learning Git for the first time. I was going through tutorials and picking it up pretty quickly. No big deal, right? I understood the basic concept of version control, and I can type simple commands. The problem is that whenever I used git outside of those tutorials and ideal situations, I got stuck because I didn&#39;t understand how it worked behind the scenes.</p>
+
+<p>There are many tutorials that go through the motions of using git without telling you how to think about what&#39;s going on. On the other hand, resources that teach you how to think about git aren&#39;t nearly as prevalent as those beginner tutorials that teach you what to type. So here are three of the most useful resources that helped me level up on git beyond the very basics.</p>
+
+<h3>Think Like a Git</h3>
+
+<p><a href="http://think-like-a-git.net/">Think Like a Git</a> is a website dedicated to that &quot;aha&quot; moment. Do you think there&#39;s something magical about git? There really isn&#39;t. It&#39;s just that you don&#39;t have a mental model of git yet, so everything that happens seems like magic and kind of mysterious. Reading this tutorial was enlightening and really put me on the track of being comfortable with git, even when I messed up and didn&#39;t follow a normal workflow.</p>
+
+<h3>Git for Ages 4 and Up</h3>
+
+<p>In <a href="https://www.youtube.com/watch?v=1ffBJ4sVUb4">Git for Ages 4 and Up</a> Michael Schwern walks you through adding, committing, pushing, and a whole bunch of other git commands while playing with Tinkertoys! The visual element really makes this a wonderful resource. Unfortunately, the video isn&#39;t of the highest quality, and there are a lot of interuptions and tangents. But overall, it&#39;s really helpful.</p>
+
+<h3>Git Happens</h3>
+
+<p>Jessica Kerr <a href="http://twitter.com/jessitron">@jessitron</a> is a great speaker and in <a href="https://www.youtube.com/watch?v=Dv8I_kfrFWw">Git Happens</a>, she not only leads us through a few more difficult commands but also helps us understand <em>why</em> git is hard, and why it&#39;s worth it. I loved how she talked about how git not only allows you to save your work, but also allows you to tell the story of what you did any way you like. Please note that Jessica actually prefers <a href="https://vimeo.com/46010208">this version</a> of her talk, but the one above was the one that I originally watched (and I still prefer it).</p>
+
+<h3>A few visualization tools</h3>
+
+<p>I haven&#39;t really used many of these extensively, but since we&#39;re talking about visualizing and mental models, these can come in handy:</p>
+
+<ul>
+<li><a href="http://gitx.frim.nl/">GitX</a> a git GUI made for Mac OS X</li>
+<li><a href="http://www.wei-wang.com/ExplainGitWithD3/#">Visualizing Git Concepts with D3</a></li>
+<li><a href="http://pcottle.github.io/learnGitBranching/">Learn Git Branching</a> with visualization</li>
+</ul>
+
+
+      
+      <span class="post-comments-link"><a href="/getting-git#comments"><i class="fa fa-comments"></i> What do you think?</a></span>
+      
+    </div>
+    
   
     
     <div class="post">
@@ -605,39 +652,6 @@ I joined the second group because I was interested in mapping and because I felt
 
       
       <span class="post-comments-link"><a href="/2015/02/24/codeacross-atlanta-revitalizing-south-downtown/#comments"><i class="fa fa-comments"></i> What do you think?</a></span>
-      
-    </div>
-    
-  
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="/2015/02/13/twitter-fitter-v2/">
-          TwitterFitter v2.0
-        </a>
-      </h1>
-
-      <span class="post-date">13 Feb 2015</span>
-
-      <p>So I decided to revisit my <a href="http://jimmylocoding.com/2015/01/12/week-3-round-up-twitter-fitter/">week 3 app</a>, TwitterFitter. At the end of week 3, it was a simple app that generated tweets based on a Twitter handle. The tweets it generated would be in the style of the Twitter account you gave it. It does this by chaining together words that often appear together. But there were a lot of things lacking in the app, so this week I revisited it and made it much better!</p>
-
-<p><a href="https://secret-brushlands-4139.herokuapp.com/">Version 2.0 of Twitter Fitter</a> has a new design (it was just a white page before), and you can now enter TWO twitter handles and the app will generate tweets based on BOTH feeds combined. Also, you can now tweet the results (it tweets from the @FitterTweets account).</p>
-
-<p>Most of these enhancements were straight forward, but there were a few tricky parts:
-<ol>
-    <li>At first, the generated tweets appeared on the results page and when you clicked &quot;Tweet!&quot;, it would tweet whatever was in the text field. But then I started thinking: is this a magnet for spammers? Anyone could just erase what&#39;s in that text field, type something new in, and click &quot;Tweet!&quot; and it would look like it was coming from the @FitterTweets account. This is a major security flaw, and even though there many ways to hide this information, like making the field uneditable and in a POST action instead of a GET action, people could still easily spoof it. So instead of sending the tweet from a form, I saved the generated tweets in a Tweet model as soon as they are generated. Then in the results page, in addition to showing the tweets in a text field, I also include a hidden field with the ID of the generated tweet (from the model). So when you click &quot;Tweet!&quot; you&#39;re not actually tweeting anything from the form, you&#39;re just saying &quot;tweet this previously generated tweet with this ID&quot;. So everything that is tweeted from the account is pretty much vetted and safe (at least I hope so).</li>
-    <li>My controller was getting pretty fat, and I had to look at it long and hard and figure out how to refactor it. I decided to make a Feeds class, which now lives in the lib folder. It wasn&#39;t easy breaking apart the fat methods in the controller, but I&#39;m glad I did because it looks much cleaner this way.</li>
-</ol></p>
-
-<h3>To Do</h3>
-
-<p>Tests! For the Feed class and for the controller. I&#39;m not very good at writing tests before the code, but as long as I write the tests some time, that&#39;s probably better than never.</p>
-
-<p>Please take a look at my code <a href="https://github.com/jimmylorunning/twitter-fitter">on GitHub</a>, and play around with it <a href="https://secret-brushlands-4139.herokuapp.com/">on Heroku</a>. Any feedback is welcome!&quot;</p>
-
-
-      
-      <span class="post-comments-link"><a href="/2015/02/13/twitter-fitter-v2/#comments"><i class="fa fa-comments"></i> What do you think?</a></span>
       
     </div>
     

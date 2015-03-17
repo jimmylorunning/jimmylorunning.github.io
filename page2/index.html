@@ -398,6 +398,10 @@
           
         
       
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -411,6 +415,39 @@
 
     <div class="content container">
       <div class="posts">
+  
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/2015/02/13/twitter-fitter-v2/">
+          TwitterFitter v2.0
+        </a>
+      </h1>
+
+      <span class="post-date">13 Feb 2015</span>
+
+      <p>So I decided to revisit my <a href="http://jimmylocoding.com/2015/01/12/week-3-round-up-twitter-fitter/">week 3 app</a>, TwitterFitter. At the end of week 3, it was a simple app that generated tweets based on a Twitter handle. The tweets it generated would be in the style of the Twitter account you gave it. It does this by chaining together words that often appear together. But there were a lot of things lacking in the app, so this week I revisited it and made it much better!</p>
+
+<p><a href="https://secret-brushlands-4139.herokuapp.com/">Version 2.0 of Twitter Fitter</a> has a new design (it was just a white page before), and you can now enter TWO twitter handles and the app will generate tweets based on BOTH feeds combined. Also, you can now tweet the results (it tweets from the @FitterTweets account).</p>
+
+<p>Most of these enhancements were straight forward, but there were a few tricky parts:
+<ol>
+    <li>At first, the generated tweets appeared on the results page and when you clicked &quot;Tweet!&quot;, it would tweet whatever was in the text field. But then I started thinking: is this a magnet for spammers? Anyone could just erase what&#39;s in that text field, type something new in, and click &quot;Tweet!&quot; and it would look like it was coming from the @FitterTweets account. This is a major security flaw, and even though there many ways to hide this information, like making the field uneditable and in a POST action instead of a GET action, people could still easily spoof it. So instead of sending the tweet from a form, I saved the generated tweets in a Tweet model as soon as they are generated. Then in the results page, in addition to showing the tweets in a text field, I also include a hidden field with the ID of the generated tweet (from the model). So when you click &quot;Tweet!&quot; you&#39;re not actually tweeting anything from the form, you&#39;re just saying &quot;tweet this previously generated tweet with this ID&quot;. So everything that is tweeted from the account is pretty much vetted and safe (at least I hope so).</li>
+    <li>My controller was getting pretty fat, and I had to look at it long and hard and figure out how to refactor it. I decided to make a Feeds class, which now lives in the lib folder. It wasn&#39;t easy breaking apart the fat methods in the controller, but I&#39;m glad I did because it looks much cleaner this way.</li>
+</ol></p>
+
+<h3>To Do</h3>
+
+<p>Tests! For the Feed class and for the controller. I&#39;m not very good at writing tests before the code, but as long as I write the tests some time, that&#39;s probably better than never.</p>
+
+<p>Please take a look at my code <a href="https://github.com/jimmylorunning/twitter-fitter">on GitHub</a>, and play around with it <a href="https://secret-brushlands-4139.herokuapp.com/">on Heroku</a>. Any feedback is welcome!&quot;</p>
+
+
+      
+      <span class="post-comments-link"><a href="/2015/02/13/twitter-fitter-v2/#comments"><i class="fa fa-comments"></i> What do you think?</a></span>
+      
+    </div>
+    
   
     
     <div class="post">
@@ -515,53 +552,6 @@
 
       
       <span class="post-comments-link"><a href="/2015/01/30/introducing-exquisite-source/#comments"><i class="fa fa-comments"></i> What do you think?</a></span>
-      
-    </div>
-    
-  
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="/2015/01/29/saas-legacy-hw2-lessons-learned/">
-          SaaS Legacy Homework 2: Lessons Learned
-        </a>
-      </h1>
-
-      <span class="post-date">29 Jan 2015</span>
-
-      <p>This week&#39;s <a href="https://www.edx.org/course/engineering-software-service-part-2-uc-berkeleyx-cs169-2x">SaaS homework</a> has been the most elaborate so far. As the instructors explain in the lectures, after teaching the class for a while, they asked some of the top software companies what one thing they wish graduates of computer science programs would learn before entering the workforce. The overwhelming answer was &quot;how to work with legacy code&quot;. So even though at first they had no idea how to teach this, they set out to do so in this class. And thus we have legacy homework 1 and 2 (last week and this week).</p>
-
-<p>Instead of working on a new custom app, we are given an existing app (the Typo blog platform) that has a long history, sometimes messy code, and spotty test coverage. Last week we were asked to fix a bug in it. This week, we had to add a new feature!</p>
-
-<p>Our feature in a nutshell: add the ability to merge two articles into one. The body of the new article will be a concatenation of the two previous articles. The title and author will be from one of the two articles. And the comments of all previous articles (if any) will now be comments of this article. Only administrators can merge articles. All other users will not see the option at all.</p>
-
-<p><a href="/images/typo_merge_feature.png"><img src="/images/typo_merge_feature-sm.png" alt="picture of what the typo merge feature should look like" /></a></p>
-
-<p>I spent a LONG time on this homework. Around 15 hours. The hardest part was writing the tests. That shouldn&#39;t be a surprise because writing the test is always the hardest part for me! I am still very new to Rspec and TestUnit syntax, and spend so long trying to figure out exactly how to phrase things. But I&#39;m proud to say that I stuck to it this time and wrote all the tests before writing the actual code (except for the view and some skeleton methods so it didn&#39;t throw method-not-found errors--basically I had to get it to the point where the tests failed for the <em>right</em> reasons and not because it couldn&#39;t find some method).</p>
-
-<p>First I wrote the Cucumber integration tests for the happy path only. Then I wrote the unit test for the controller. It was at this time that I realized I was planning to put way too much logic in the controller. So instead of putting all the tests there, I just wrote a few to make sure the controller was asking the model for that information. Then I had to write a bunch of unit tests for the model. At last I allowed myself to write some actual code, which didn&#39;t take long.</p>
-
-<p>Then at the very end I wrote the cucumber integration tests for the sad paths. The one thing that was SUPER helpful was using the debugger gem and plain old rails console (with the --sandbox option) while writing the tests, because it helped me figure out exactly how to get to certain elements in order to test them.</p>
-
-<p>Even though I could have knocked out the homework in probably less than half the time without testing, I really liked the practice. It was hard but satisfying. There isn&#39;t a more satisfying and empowering feeling than when you can get all your tests passing AND you haven&#39;t even looked at your app in the browser yet with your own eyeballs... but you know it&#39;s working! This is so different than the way I used to program.</p>
-
-<p>I also feel like testing frees up my brain from worrying about every little bit of my application. If what I&#39;m doing now will break something else, then I&#39;ll know about it soon enough (if I wrote my tests right). So all I have to do now is concentrate on writing whatever little bit I&#39;m working on now, instead of trying to keep the entire app in my head and worry about not breaking anything else.</p>
-
-<p>A few SPECIFIC things I learned:
-<ul>
-    <li>in the controller, the redirect<em>to method does not redirect immediately. The rest of your method will continue running unless you specifically say &quot;return&quot; after redirecting</li>
-    <li>if you want to redirect inside of a helper method (instead of a main controller action), then set that helper method as a before</em>filter of your main action method or else it won&#39;t redirect (return will just return to your main action method which will continue running)</li>
-    <li>when using Capybara to find the xpath of an input element with a certain id=“name”, use &#39;input[@id=“name”]&#39; rather than &#39;input#name&#39;</li>
-    <li>use <code>text_field_tag</code> to create a simple input element with a normal name like <code>merge_with</code>.. I was trying to use the <code>text_field</code> helper method and it kept making names like &quot;merge[with]&quot;. This is because text_field is &quot;tailored for accessing a specified attribute (identified by method) on an object assigned to the template&quot; -- so it&#39;s really good if you want to create input fields that correspond to your model, but if not, then it may be too complicated for your needs</li>
-    <li>use &quot;tables&quot; to set up a bunch of values in Cucumber. I&#39;ve used them in previous apps but they always seemed like a mystery to me. But this time I played around with them in the debugger gem. You can <a href="https://thomassundberg.wordpress.com/2014/06/30/cucumber-data-tables/">find out more here</a>.</li>
-    <li>I tried really hard to keep my git commits small, task based, and meaningful this time, which meant I had to do a few git things I&#39;ve never done before like adding specific lines instead of entire files. I really like the idea of my git history telling the story of my code. And also having the ability to revert any single change without messing anything else up.</li>
-    <li>There&#39;s probably a lot of other things but these are the easy ones that I can remember off the top of my head</li>
-</ul>
-And if you&#39;re curious about the code I wrote for this week&#39;s homework, it&#39;s <a href="https://github.com/jimmylorunning/typo">up on Github</a>.</p>
-
-
-      
-      <span class="post-comments-link"><a href="/2015/01/29/saas-legacy-hw2-lessons-learned/#comments"><i class="fa fa-comments"></i> What do you think?</a></span>
       
     </div>
     

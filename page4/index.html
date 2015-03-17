@@ -398,6 +398,10 @@
           
         
       
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -411,6 +415,39 @@
 
     <div class="content container">
       <div class="posts">
+  
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/2015/01/14/my-coding-journey/">
+          My Coding 'Journey'
+        </a>
+      </h1>
+
+      <span class="post-date">14 Jan 2015</span>
+
+      <p>I&#39;ve been hanging out at the <a href="http://codenewbie.org">Code Newbie</a> website a lot lately, talking in the forums as well as listening to the excellent <a href="http://www.codenewbie.org/podcast">podcasts</a> hosted by <a href="http://bloggytoons.com/">Saron Yitbarek</a>. She interviews programmers not only about the technical nitty gritty, but also about the more human side of software development. One of these topics is: how do people get started in software development? What was your first app? What was something you wish you knew before you got into programming?</p>
+
+<p>So far in this blog I haven&#39;t divulged many personal details, and you may even be wondering &quot;who is this Jimmy Lo anyway?&quot; This may be because I feel like my story isn&#39;t nearly as dramatic or interesting as many others. I didn&#39;t change careers (at least not in the traditional sense), or go through bootcamp, or battle many personal adversities.</p>
+
+<p>In fact, my interest in programming started with BASIC in high school, and I was a computer science major in college. So technically I&#39;m not a &quot;newbie&quot; at all (despite how I feel inside). In college, I wrote programs in Pascal, C, Lisp, Smalltalk, as well as making websites for fun in plain HTML and CSS (this was before CMSs existed). After graduating, I worked in a design firm doing their web development, mostly working in Flash and Actionscript as well as some ASP. Then, I made my dramatic career change--<em>away</em> from computers.</p>
+
+<p>I&#39;ve always loved writing, and in 2003, I moved to Tempe, Arizona to pursue a Master of Fine Arts degree in Creative Writing-Poetry at Arizona State University.</p>
+
+<p><img src="/images/freepoems_cl-sm.jpg" alt="my Free Poems on Demand project in the Creative Loafing" width="300" height="225" align="right" />Long story short: I eventually focused a lot of my energies towards writing and the arts, which you can find out more about if you go to <a href="http://jimmylorunning.com">my main website here</a>. I still coded, but my attention had been diverted. My skills lagged. When I moved back to Atlanta, I got a job at the county library as the in-house web developer, building out their website as well as making useful tools in PHP to streamline their day to day tasks.</p>
+
+<p>Last year, I quit in order to do freelance work and have more time to learn new things (both professionally and personally). Despite the financial hit, I think it was worth it--my interest in coding has blossomed since then. I am now learning more than I ever had.</p>
+
+<p>Even though I don&#39;t regret spending time on other interests, I also wish I had dedicated more of it towards coding. When I think back on it, I realize that all my programming jobs have been at places where I was the only programmer, or I was only one of a very small team where everyone just worked on their own code. Even though I&#39;m not technically a newbie, I feel like one when it comes to collaborating in a team and working on a shared codebase. And as a programmer, the best way to learn is to collaborate with a team of smart people that will push you. This kind of learning and working environment is what I crave now.</p>
+
+<p>Luckily, I&#39;m getting back into the game right when coding is starting to get a lot more mainstream and exciting. Free learning resources are all over the web, and the community is super supportive. Open source software has made code available to all. And attitudes are also improving. Programming has gotten a lot more inclusive to newbies and non-programmers alike. People who don&#39;t come from a traditional computer science background can easily enter the field. All of this is encouraging and makes me feel like I am moving in the right direction.</p>
+
+
+      
+      <span class="post-comments-link"><a href="/2015/01/14/my-coding-journey/#comments"><i class="fa fa-comments"></i> What do you think?</a></span>
+      
+    </div>
+    
   
     
     <div class="post">
@@ -630,38 +667,6 @@ What I wasn&#39;t able to finish this time around:
 
       
       <span class="post-comments-link"><a href="/2015/01/05/week-2-round-up-say-anything/#comments"><i class="fa fa-comments"></i> What do you think?</a></span>
-      
-    </div>
-    
-  
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="/2015/01/02/how-do-i-write-tests-that-dont-have-to-keep-changing/">
-          How do I write tests that I don’t have to keep changing?
-        </a>
-      </h1>
-
-      <span class="post-date">02 Jan 2015</span>
-
-      <p>Sometimes I want to check to make sure my controller is sending a message to my model. For example, I want to make sure it&#39;s asking the model to return a set of results. But I don&#39;t care what message it sends:</p>
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Posts</span><span class="o">.</span><span class="n">should_receive</span><span class="p">(</span><span class="ss">:all</span><span class="p">)</span>
-  <span class="n">get</span> <span class="ss">:index</span></code></pre></div>
-
-<p>Here I&#39;m making sure I&#39;m asking the model for all posts. However, I soon realized that I wanted them ordered a certain way. So I replaced the controller code to call :order instead of :all</p>
-
-<p>Now I have to go back to the test and change it. But later perhaps I will want to change it again to use <code>:find</code> or <code>:find_all_by</code> or <code>:where</code> or something else altogether.</p>
-
-<p>Will I have to change the test every time? What I really want is a way to say “make sure my controller sends my model a message, it doesn&#39;t matter what message it sends.” Because basically all these methods perform a similar task, and I don&#39;t care which implementation I ultimately decide on. My tests should just care about the fact that I sent the message at all, and that the model will take care of the rest. So my question is two-fold:
-<ol>
-    <li>Should I even be testing for this? Or is this not an important thing to test?</li>
-    <li>If I should be testing for this, how do I do it so I don&#39;t have to change my test code every time?Is this possible?</li>
-</ol></p>
-
-
-      
-      <span class="post-comments-link"><a href="/2015/01/02/how-do-i-write-tests-that-dont-have-to-keep-changing/#comments"><i class="fa fa-comments"></i> What do you think?</a></span>
       
     </div>
     
