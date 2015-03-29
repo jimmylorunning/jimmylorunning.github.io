@@ -4,7 +4,7 @@
  <title>jlc</title>
  <link href="http://jimmylocoding.com/atom.xml" rel="self"/>
  <link href="http://jimmylocoding.com/"/>
- <updated>2015-03-24T23:04:41-04:00</updated>
+ <updated>2015-03-29T12:52:31-04:00</updated>
  <id>http://jimmylocoding.com</id>
  <author>
    <name>Jimmy Lo</name>
@@ -620,7 +620,9 @@ I don&amp;#39;t know what I feel about all this yet, but I might skip over writi
    <link href="http://jimmylocoding.com/2015/01/07/hiding-my-api-keys/"/>
    <updated>2015-01-07T00:00:00-05:00</updated>
    <id>http://jimmylocoding.com/2015/01/07/hiding-my-api-keys</id>
-   <content type="html">&lt;h3&gt;Problem: I don&amp;#39;t want to expose API secret keys, but I still want to be able to commit my changes and push to github.&lt;/h3&gt;
+   <content type="html">&lt;h3&gt;Problem:&lt;/h3&gt;
+
+&lt;p&gt;I don&amp;#39;t want to expose API secret keys, but I still want to be able to commit my changes and push to github.&lt;/p&gt;
 
 &lt;h3&gt;Solution:&lt;/h3&gt;
 
@@ -631,12 +633,15 @@ I don&amp;#39;t know what I feel about all this yet, but I might skip over writi
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;ss&quot;&gt;my_api_key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;weoi23urow234jerow67jerjerjwejr&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;/li&gt;
-    &lt;li&gt;make sure .gitignore ignores config/application.yml&lt;/li&gt;
-    &lt;li&gt;in the initializer code, (for my week3 app, I put this in config/initializer/twitter.rb) use `ENV['my_api_key']` instead of hardcoding the api key&lt;/li&gt;
-    &lt;li&gt;after deploying to heroku, run this command to set heroku's env variables
-&gt; figaro heroku:set -e production
+  &lt;li&gt;make sure .gitignore ignores config/application.yml&lt;/li&gt;
+  &lt;li&gt;in the initializer code, (for my week3 app, I put this in config/initializer/twitter.rb) use ENV['my_api_key'] instead of hardcoding the api key&lt;/li&gt;
+  &lt;li&gt;after deploying to heroku, run this command to set heroku's env variables
 &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;figaro heroku:set -e production&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
  </entry>
  

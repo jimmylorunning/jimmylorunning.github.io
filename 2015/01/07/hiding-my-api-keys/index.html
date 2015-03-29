@@ -417,7 +417,9 @@
       <div class="post">
   <h1 class="post-title">Hiding my API keys</h1>
   <span class="post-date">07 Jan 2015</span>
-  <h3>Problem: I don&#39;t want to expose API secret keys, but I still want to be able to commit my changes and push to github.</h3>
+  <h3>Problem:</h3>
+
+<p>I don&#39;t want to expose API secret keys, but I still want to be able to commit my changes and push to github.</p>
 
 <h3>Solution:</h3>
 
@@ -428,12 +430,15 @@
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">my_api_key</span><span class="p">:</span> <span class="s1">&#39;weoi23urow234jerow67jerjerjwejr&#39;</span></code></pre></div>
 
 </li>
-    <li>make sure .gitignore ignores config/application.yml</li>
-    <li>in the initializer code, (for my week3 app, I put this in config/initializer/twitter.rb) use `ENV['my_api_key']` instead of hardcoding the api key</li>
-    <li>after deploying to heroku, run this command to set heroku's env variables
-> figaro heroku:set -e production
+  <li>make sure .gitignore ignores config/application.yml</li>
+  <li>in the initializer code, (for my week3 app, I put this in config/initializer/twitter.rb) use ENV['my_api_key'] instead of hardcoding the api key</li>
+  <li>after deploying to heroku, run this command to set heroku's env variables
 </li>
 </ul>
+
+<blockquote>
+<p>figaro heroku:set -e production</p>
+</blockquote>
 
 </div>
 <div class="post-metadata">
