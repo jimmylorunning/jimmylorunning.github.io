@@ -402,6 +402,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -415,6 +423,86 @@
 
     <div class="content container">
       <div class="posts">
+  
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/2015/01/05/week-2-round-up-say-anything/">
+          Week 2 Round Up: say-anything
+        </a>
+      </h1>
+
+      <span class="post-date">05 Jan 2015</span>
+
+      <p>Week 2 of An App Per Week is over! It was tough and I got a little behind. I planned to implement the <a href="http://docs.railsbridge.org/intermediate-rails/">RailsBridge intermediate curriculum</a>, plus testing and some extra features. Here is what I was able to accomplish:
+<ul>
+    <li>all the basic features specified in the curriculum</li>
+    <li>extra features:
+<ul>
+    <li>deleting posts</li>
+    <li>profile page with a list of posts (not replies yet)</li>
+    <li>custom user fields: username and favorite movie fields instead of just the default e-mail and password</li>
+    <li>some testing</li>
+    <li>fancy bootstrap styling</li>
+</ul>
+</li>
+</ul>
+What I wasn&#39;t able to finish this time around:
+<ul>
+    <li>Testing! I got some testing done, but it was taking too long to do for features that I wasn&#39;t sure how to build out, so I figured I&#39;d write the tests after the fact. So that&#39;s still on my to do list...</li>
+    <li><a href="https://github.com/intridea/omniauth">Omniauth</a> -- being able to log in through Twitter, Github, FB, etc. I might do this tomorrow</li>
+    <li>fancier post markup, or maybe even a wysiwyg edit window would be nice (I&#39;m sure there&#39;s a gem, right?)</li>
+</ul>
+<a href="https://aqueous-sierra-5780.herokuapp.com/">And here it is!</a> All in all, I am pretty happy with it. The major things I learned:
+<ul>
+    <li><a href="https://github.com/plataformatec/devise">Devise</a> was a pleasure to work with. It&#39;s relatively easy to set up and gave me a lot of standard user stuff out of the box. I really liked it. It wasn&#39;t even that hard to add custom fields (username, favorite movie, etc.) to the user profile. At one point I had to look into the Devise source on github to figure something out, but even that wasn&#39;t too hard because it&#39;s pretty well organized.</li>
+    <li><a href="http://guides.rubyonrails.org/routing.html#nested-resources">Nested resources</a>. I implemented replies the non-nested way, then re-read the hints section, and figured out that nested resources was the way to go with this kind of feature. Nested resources gives you an url that corresponds to the relationship of your models. So because replies belong to posts, you can have a URL like post/5/replies. It doesn&#39;t matter as much in my finished product since I ended up embedding replies within posts anyway.</li>
+    <li>Dealing with <a href="http://edgeguides.rubyonrails.org/action_controller_overview.html#strong-parameters">strong parameters</a></li>
+    <li><a href="http://guides.rubyonrails.org/association_basics.html">has_many / belongs_to</a> association -- I&#39;ve dealt with this before, but this was my first time working with them outside of a tutorial, so it sunk in more</li>
+    <li>The <a href="http://guides.rubyonrails.org/asset_pipeline.html">asset pipeline</a> -- had to figure some assets out and so I read a little bit about this, but I need to read way more when I have time</li>
+</ul></p>
+
+<h3>Unsolved problems:</h3>
+
+<p>When testing, I had to run some tests as a signed in user and some as signed out. How do I do this? After some reading, I figured out that I had to stub the authentication in the specs. I followed <a href="https://github.com/plataformatec/devise/wiki/How-To:-Stub-authentication-in-controller-specs">these directions</a> and put the ControllerHelpers module in spec/support/controller_helpers.rb as well as the accompanying config. But it kept complaining: &quot;undefined method sign_in&quot;.</p>
+
+<p>After a certain amount of googling, head scratching, and generally going nowhere, I finally just moved the module into my spec file. Not graceful, but I had to keep going. If you have any ideas about this let me know.</p>
+
+<p>Also while trying to test user authentication related things, I figured out how to fake sign in/out inside of rails console and get to the user object:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">ApplicationController</span><span class="o">.</span><span class="n">allow_forgery_protection</span> <span class="o">=</span> <span class="kp">false</span>
+<span class="n">app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;/users/sign_in&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;user&quot;</span><span class="o">=&gt;</span> <span class="p">{</span><span class="s2">&quot;username&quot;</span><span class="o">=&gt;</span> <span class="s2">&quot;jimmy&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="o">=&gt;</span> <span class="s2">&quot;mypassword&quot;</span><span class="p">}})</span>
+<span class="n">cu</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">controller</span><span class="o">.</span><span class="n">current_user</span></code></pre></div>
+
+<p>I find it super useful to be able to try things out in the console. It&#39;s probably where I learn the most.</p>
+
+<p>Another problem. In Michael Hartl&#39;s Rails Tutorial book, he was able to set up a <code>has_many</code> / <code>belongs_to</code> association between User and Micropost. And because this was set up, he was automatically able to write something like this:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">User</span><span class="o">.</span><span class="n">micropost</span><span class="o">.</span><span class="n">some_method</span><span class="p">()</span></code></pre></div>
+
+<p>However, I set up my app in a very similar way. My <code>:post belongs_to :user</code> and my <code>:user has_many :posts</code>. But I couldn&#39;t get this to work. I always got &quot;undefined method posts&quot;. My workaround was simply to use plain old Posts object and pass it the <code>current_user</code> when needed.</p>
+
+<p>Another thing I learned... where and <code>find_by_???</code> methods are not interchangeable:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">x</span> <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span> <span class="c1"># returns ActiveRecord::Relation</span>
+<span class="n">y</span> <span class="o">=</span> <span class="no">User</span><span class="o">.</span><span class="n">find_by_id</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># returns User</span>
+<span class="n">x</span><span class="o">.</span><span class="n">id</span> <span class="c1"># error, no id method</span>
+<span class="n">y</span><span class="o">.</span><span class="n">id</span> <span class="c1"># returns the user id correctly</span>
+<span class="n">x</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="n">block</span> <span class="p">}</span> <span class="c1"># works</span>
+<span class="n">y</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="n">block</span> <span class="p">}</span> <span class="c1"># error, no each method on User</span></code></pre></div>
+
+<p>There are many other smaller things I could blog about, but I don&#39;t have time and you probably don&#39;t have patience. I may write up a few of these smaller issues later if I feel like it.</p>
+
+<h3>Next Week</h3>
+
+<p>Any ideas? I&#39;m thinking about writing an app that would involve pulling from some API... maybe the Twitter API and doing something with the data. Stay tuned.</p>
+
+
+      
+      <span class="post-comments-link"><a href="/2015/01/05/week-2-round-up-say-anything/#comments"><i class="fa fa-comments"></i> What do you think?</a></span>
+      
+    </div>
+    
   
     
     <div class="post">

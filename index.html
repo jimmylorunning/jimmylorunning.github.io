@@ -402,6 +402,14 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -415,6 +423,79 @@
 
     <div class="content container">
       <div class="posts">
+  
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/my-first-code-retreat">
+          My First Code Retreat!
+        </a>
+      </h1>
+
+      <span class="post-date">31 Mar 2015</span>
+
+      <p>This past weekend I went to my very first code retreat! &quot;What is a code retreat?&quot; you may be asking yourself. Don&#39;t worry, I didn&#39;t know what it was either until very recently. Here&#39;s an intro from the event&#39;s sign up page:</p>
+
+<blockquote>
+<p>Coderetreat is a day-long, intensive practice event, focusing on the fundamentals of software development and design. By providing developers the opportunity to take part in focused practice, away from the pressures of &#39;getting things done&#39;, the coderetreat format has proven itself to be a highly effective means of skill improvement. Practicing the basic principles of modular and object-oriented design, developers can improve their ability to write code that minimizes the cost of change over time.</p>
+
+<p>More specifically,  individuals are are grouped into teams of two and each team “solves” a common problem, &#39;The Game of Life&#39;.  There are 6 sessions throughout the day and for each session the groups are reorganized and the code deleted.  After each session there are session reflections to help with the  internalization of lessons.</p>
+</blockquote>
+
+<p>It&#39;s basically a day of learning and exploring with awesome people and no judgment. So pretty much the best thing ever.</p>
+
+<p>The event I went to was hosted at <a href="https://www.bignerdranch.com/">Big Nerd Ranch</a> and lead by <a href="http://kyfast.net/">Kylie Stradley</a> and <a href="http://srbiv.github.io/">Stafford Brooke</a>, and also sponsored by <a href="https://mandrill.com/">Mandrill</a> and <a href="http://mailchimp.com/">Mailchimp</a>.</p>
+
+<p>After a breakfast of gourmet donuts, Kylie introduced us to the problem we were to solve for the rest of the day: <a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">The Game of Life</a>. The game explores the complexities that arise from a set of very simple rules. And because of its simple rules, it makes for a great software design exercise.</p>
+
+<p>The point was not to write working code, but to explore different possible ways of writing it. The fun came in the variation of solutions, and the explorations of the pros/cons of each.</p>
+
+<p>It reminded me of an exercise I gave myself when I was first exploring the beauty and subtlety of writing. The exercise was simple: pick any sentence and write it 20 or 30 different times using different sentence structures, wording, punctuation or grammar without changing the primary meaning. For example, the sentence &quot;The quick brown fox jumps over the lazy dog.&quot; could also be written as:</p>
+
+<blockquote>
+<p>Being quick, the brown fox jumps over the lazy dog.</p>
+
+<p>The lazy dog was jumped over by the quick brown fox.</p>
+
+<p>Because the fox is lazy, the quick brown fox jumps over him.</p>
+
+<p>The fox (quick and brown) jumps over the lazy dog.</p>
+
+<p>Over the lazy dog the quick brown fox jumps!</p>
+</blockquote>
+
+<p>(This was the type of fun I had in high school hahaha) The other part of this exercise, and arguably the more important part, is to take each sentence and analyze it for how it differs from the original in terms of tone, voice, connotation, emphasis, meaning, etc. I say this is the more important part of the exercise because reflection leads to awareness and understanding of what each tweak does to the original. This kind of obsession eventually lead me to become a poet, so if this looks fun to you: beware! A life of agonizing over words awaits you.</p>
+
+<p>Code retreat reminded me of doing this same exercise, but with code! We were given just enough time to formulate a solution, without enough time to finish or perfect it. That way, we weren&#39;t expected to finish anything, and so we could concentrate on issues of design.</p>
+
+<p>We paired with a new person for each session, and by the end of the day we would have paired with almost everybody in the room. For each session, we were also expected to practice test driven development (this made it even harder to complete in 45 minutes, but added the dimension of very intentional forethought and planning).</p>
+
+<p>Many of us had never tackled the game of life problem before, so the first session was basically dedicated to getting comfortable with the problem space. But with each subsequent session, we were given new constraints. Imagine if doing the sentence exercise above, I had given myself rules for each sentence, like &quot;must use a passive verb&quot; or &quot;must have a dependent clause&quot;. These constraints stretched us and made us think about the problem in a new way.</p>
+
+<p>We had a diverse group of experts and beginners. Rather than try to make everyone program in one language, we were encouraged to learn from each other. Thus, I got to program with a C# programmer, an iOS developer, and someone with JavaScript and Go experience, as well as people who didn&#39;t have much programming experience (but rich experiences in other fields).</p>
+
+<p>At the end of each session, we were encouraged to delete our code. This re-inforced the idea that the code was not the goal, but what we learned from designing it. After each session, we also reconvened with the larger group to talk about what we learned and how we approached the problem and share ideas. This part was super helpful and eye-opening, because some teams came up with very unexpected and inventive designs.</p>
+
+<p>One of the things we talked about was whether the logic of the cell living or dying should go into the board or the cell. There were good arguments on both sides, and at the end of the day I had attempted it both ways and am <em>still</em> undecided about which way is better. As with everything, it&#39;s a matter of understanding tradeoffs.</p>
+
+<h3>Looking Back</h3>
+
+<p>If I could do code retreat all over again, I would try not to design the entire game every time. Instead, figure out what the constraint is getting me to reconsider, and only design/program that part. For example, we had a constraint where we couldn&#39;t use if statements. The method that it would affect most would be the main logic of the program--whether a cell lives or dies.</p>
+
+<p>But we ended up on several tangents, spending a lot of time talking about other aspects of the program, like different ways of seeding it, or how to find neighboring cells and such. And because we only had 45 minutes, I didn&#39;t feel like I got enough time to really explore the main issues of that exercise. If I could do it again, I would have just hardcoded a method that returned the same number of neighbors every time, just so that I didn&#39;t have to think about that part, and could focus on the really good parts of that exercise.</p>
+
+<h3>Looking Forward</h3>
+
+<p>Coderetreat was a great experience, and I loved meeting people in the spirit of learning. Everyone was kind and helpful, and the ideas we shared will continue to help me in my everyday work. But this is just the beginning:</p>
+
+<p>Global Day of Coderetreat is November 15! I&#39;m already looking forward to the next one, and so should you. There is <a href="http://coderetreat.org/">a website</a> where you can look for coderetreats in your area. But if there isn&#39;t one, you should organize one! The website provides all the details you&#39;ll need to organize your very own.</p>
+
+
+      
+      <span class="post-comments-link"><a href="/my-first-code-retreat#comments"><i class="fa fa-comments"></i> What do you think?</a></span>
+      
+    </div>
+    
   
     
     <div class="post">
@@ -593,65 +674,6 @@
 
       
       <span class="post-comments-link"><a href="/2015/02/25/method-chaining-to-the-madness/#comments"><i class="fa fa-comments"></i> What do you think?</a></span>
-      
-    </div>
-    
-  
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="/2015/02/24/codeacross-atlanta-revitalizing-south-downtown/">
-          CodeAcross Atlanta: Revitalizing South Downtown
-        </a>
-      </h1>
-
-      <span class="post-date">24 Feb 2015</span>
-
-      <p>This past weekend, I attended my first hackathon-like event (there was no competitive element, so it&#39;s not a hackathon, technically speaking). Organized by <a href="http://www.codeforatlanta.org/">Code For Atlanta</a> and hosted by the <a href="http://www.civicatlanta.org/">Center for Civic Innovation</a> as part of an international <a href="http://www.codeforamerica.org/events/codeacross-2015/">CodeAcross event</a>, we met in South Downtown Atlanta to tackle the problems there, namely, how to revitalize the neighborhood.</p>
-
-<p>In order to tackle the problem, we first had to understand the problem. So after a quick presentation on the history of the area, we took a walking tour of it. This introduction was captivating, but at the same time, I didn&#39;t see eye to eye with our hosts.</p>
-
-<p>Many of the participants of this event were not from this area. They see it as a dilapidated poor neighborhood that needs to be cleaned up. But I live within 5 miles of South Downtown and enjoy biking through the area. I also regularly attend shows at the <a href="http://www.eyedrum.org/">Eyedrum Art Gallery</a> and <a href="http://www.mammalgallery.com/">Mammal Gallery</a>. Yes, the neighborhood is poor, but people live and work here too. Often when we say we want to revitalize a neighborhood, it means gentrification. When we say we want to attract new developers, we&#39;re also implying that we want the old businesses out. That means <a href="http://largefeet.com/">Friedman&#39;s Shoes</a>, who&#39;s been serving large feet since 1929. That means the local charm of <a href="http://clatl.com/atlanta/i-like-south-downtown-atlanta-the-way-it-is/Content?oid=4209416">Rondo</a>, which sells hexes, charms, and mojo powder.</p>
-
-<p>But I wasn&#39;t completely against the enterprise. I agree that many things could be improved in this area. But I tried to steer our group into thinking about what those needs were based on what the locals wanted instead of what tourists would want. To improve the area, we must improve the lives of the people in the area, not bring new people in.</p>
-
-<p><img src="/images/southdowntown1.jpg" alt="South Downtown Atlanta" /></p>
-
-<p>Perhaps this is all too political for a tech blog, so let me go back to describing the rest of the weekend&#39;s events.</p>
-
-<p>We broke into three groups:
-<ol>
-    <li><strong>Branding and storytelling</strong> - how to brand the neighborhood to attract the &#39;right&#39; elements</li>
-    <li><strong>Interactive asset map</strong> - so people can see what&#39;s there and what can be there</li>
-    <li><strong>Participatory tool</strong> - to gather opinions from the community about what the area needs</li>
-</ol>
-I joined the second group because I was interested in mapping and because I felt like I could learn the most there. First we talked about who the audience for the map could be, and given that, what assets we could or should map. Then we broke into two groups, one responsible for data gathering and one for building out the map with the given data. I joined the latter group, which consisted of four people: me, <a href="http://mollietaylor.com/">Mollie</a>, <a href="http://luigimontanez.com/">Luigi</a>, and <a href="http://www.bryan-lackey.com/">Bryan</a>.</p>
-
-<p>Mollie was the resident expert on maps and mapping. She showed us how to use <a href="http://leafletjs.com/">Leaflet.js</a> to quickly build out maps and create interactive event based behaviors. While she built out a prototype, the rest of us went through some tutorials to get acquainted with Leaflet, and also explore other possibilities like <a href="https://www.mapbox.com/">Mapbox</a>.</p>
-
-<p>After that, I started to think about where I could be most useful. Since Mollie was already kicking ass on the maps, I thought I could do something to help import the data. The data gathering team was sending us Excel files with street addresses. In order to plot the points, geocode data was needed, which just means latitude and longitude. So I decided to write a small utility that would take a CSV file and write a new CSV file with all the existing data plus latitude and longitude.</p>
-
-<p>Writing a script to do that wouldn&#39;t have taken long, but I thought this might be a tool that could be used in the future by Code For Atlanta or other similar groups faced with this same problem. So I worked on a Ruby program that could potentially be re-used in other projects. You can see the code for it <a href="https://github.com/codeforatlanta/csv_geocoder">on GitHub</a>, and I&#39;ll probably write a follow up post soon on a few interesting design challenges I ran into.</p>
-
-<p><img src="/images/southdowntown2.jpg" alt="Screenshot of South Downtown Asset Map" /></p>
-
-<h3>Day 2</h3>
-
-<p>Things began slowly with coffee at 9am. A few folks stared into their laptops like zombies. I was one of those. My CSV Geocoder was working, but I couldn&#39;t help tinkering with it, refactoring and improving it (in fact, I was still doing that earlier today). But more of the data was coming in in different formats. I was looking for a new task to do.</p>
-
-<p>One of the things Mollie implemented the day before was integration of <a href="https://foursquare.com/">Foursquare</a> data from their API. We were now pulling in data about government buildings in South Downtown. But what other Foursquare locations could we map? I wrote some scripts to automate this query. Other than that, I did some research on icons, and I also talked with members of the other teams about what they were doing.</p>
-
-<p>At the end of the day, we all presented our projects. It was inspiring to see how much progress we made in just two days, and also to think about how all three projects will integrate into one larger project. The map will live on the website that the branding group created (which will eventually live at <a href="http://www.southdowntown.org/">southdowntown.org</a>) and the participatory tool created by the third team will eventually feed back into the map and website so that the wishes and desires of the locals will be our guide.</p>
-
-<p>Speaking of the future, this weekend was just the beginning of a longer effort. We will continue to meet about once a month to continue developing this project.</p>
-
-<p>Overall, I had a great first hackathon. I met some amazing people and learned a lot from them. I worked on interesting projects, and I got to become more familiar with a local neighborhood.</p>
-
-<p>To learn more about the details of making the map, creating the layers and interactions, go read <a href="http://blog.mollietaylor.com/codeacross-asset-map.html">Mollie&#39;s excellent blog post</a> about this same event! It&#39;s pretty great. You can also see the source of both the asset map and my CSV geocoder on the <a href="https://github.com/codeforatlanta/">codeforatlanta GitHub page</a>.</p>
-
-
-      
-      <span class="post-comments-link"><a href="/2015/02/24/codeacross-atlanta-revitalizing-south-downtown/#comments"><i class="fa fa-comments"></i> What do you think?</a></span>
       
     </div>
     
