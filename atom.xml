@@ -4,7 +4,7 @@
  <title>jlc</title>
  <link href="http://jimmylocoding.com/atom.xml" rel="self"/>
  <link href="http://jimmylocoding.com/"/>
- <updated>2015-03-31T16:39:00-04:00</updated>
+ <updated>2015-04-08T09:11:39-04:00</updated>
  <id>http://jimmylocoding.com</id>
  <author>
    <name>Jimmy Lo</name>
@@ -618,10 +618,10 @@ Non programming related:
 
 &lt;ul&gt;
     &lt;li&gt;writing the &lt;a href=&quot;https://github.com/jimmylorunning/twitter-fitter/blob/master/lib/markov_chain.rb&quot;&gt;actual Markov generator&lt;/a&gt;, and making it perform okay as well as be open to modification in the future if I wanted to change the way it works later. For example, I thought it would be cool if I could pass it a lambda so that it picks the next word based on running that lambda code. The default is just random, but maybe someone would want to tweak it themselves without having to go into my code.&lt;/li&gt;
-    &lt;li&gt;figuring out how to call private / public methods within my class, and whether or not to even use private methods. &lt;a title=&quot;self or no self&quot; href=&quot;http://jimmylocoding.com/2015/01/09/self-or-no-self/&quot;&gt;Here's a blog post I wrote&lt;/a&gt; about this topic.&lt;/li&gt;
-    &lt;li&gt;tweaking the generator. When I use a prefix length of 2, I get back text that's very similar to the original text, so much so that it's kind of boring. If I set it to 1, I get back things that are sometimes very nonsensical. I decided on 1. But it would be nice to come up with a different algorithm so that it's between totally nonsensical and completely boring.&lt;/li&gt;
-    &lt;li&gt;figuring out how to include my ruby object in the lib directory and have rails auto include it. I was not naming my file correctly, so it didn't include it when autoloading! Took me some extra googling to figure out why.&lt;/li&gt;
-    &lt;li&gt;writing test code. I'm not sure I did it right, but testing code that's supposed to be random was also kind of tricky. I had to &lt;a href=&quot;http://ruby-doc.org/core-2.2.0/Random.html#method-c-srand&quot;&gt;seed the generator&lt;/a&gt; with values so that it would be predictable/testable.&lt;/li&gt;
+    &lt;li&gt;figuring out how to call private / public methods within my class, and whether or not to even use private methods. &lt;a title=&quot;self or no self&quot; href=&quot;http://jimmylocoding.com/2015/01/09/self-or-no-self/&quot;&gt;Here&#39;s a blog post I wrote&lt;/a&gt; about this topic.&lt;/li&gt;
+    &lt;li&gt;tweaking the generator. When I use a prefix length of 2, I get back text that&#39;s very similar to the original text, so much so that it&#39;s kind of boring. If I set it to 1, I get back things that are sometimes very nonsensical. I decided on 1. But it would be nice to come up with a different algorithm so that it&#39;s between totally nonsensical and completely boring.&lt;/li&gt;
+    &lt;li&gt;figuring out how to include my ruby object in the lib directory and have rails auto include it. I was not naming my file correctly, so it didn&#39;t include it when autoloading! Took me some extra googling to figure out why.&lt;/li&gt;
+    &lt;li&gt;writing test code. I&#39;m not sure I did it right, but testing code that&#39;s supposed to be random was also kind of tricky. I had to &lt;a href=&quot;http://ruby-doc.org/core-2.2.0/Random.html#method-c-srand&quot;&gt;seed the generator&lt;/a&gt; with values so that it would be predictable/testable.&lt;/li&gt;
     &lt;li&gt;using the Twitter gem. I had to figure out how to give it my API keys and secrets without exposing it through github. I wrote a &lt;a title=&quot;Hiding my API keys&quot; href=&quot;http://jimmylocoding.com/2015/01/07/hiding-my-api-keys/&quot;&gt;blog post about this here&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -699,8 +699,8 @@ I don&amp;#39;t know what I feel about all this yet, but I might skip over writi
 
 &lt;/li&gt;
   &lt;li&gt;make sure .gitignore ignores config/application.yml&lt;/li&gt;
-  &lt;li&gt;in the initializer code, (for my week3 app, I put this in config/initializer/twitter.rb) use ENV['my_api_key'] instead of hardcoding the api key&lt;/li&gt;
-  &lt;li&gt;after deploying to heroku, run this command to set heroku's env variables
+  &lt;li&gt;in the initializer code, (for my week3 app, I put this in config/initializer/twitter.rb) use ENV[&#39;my_api_key&#39;] instead of hardcoding the api key&lt;/li&gt;
+  &lt;li&gt;after deploying to heroku, run this command to set heroku&#39;s env variables
 &lt;/li&gt;
 &lt;/ul&gt;
 
