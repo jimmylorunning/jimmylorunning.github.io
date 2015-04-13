@@ -410,6 +410,38 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -423,6 +455,142 @@
 
     <div class="content container">
       <div class="posts">
+  
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/install-fest">
+          Install Fest!!!
+        </a>
+      </h1>
+
+      <span class="post-date">13 Apr 2015</span>
+
+      <p>I&#39;m in the middle of a super long post about Rails models. It is quite involved and is taking a long time to write. So in the meantime, I present you with this relatively shorter blog post composed of mostly links.</p>
+
+<p>I recently got a new MacBook Pro! So I spent a day installing and setting up my system for the perfect workflow. I experimented with different set ups, and ended up installing and un-installing several things. Also sometimes I&#39;d install something, and realize I had to install something else first, etc. So here I will try to just show you how I would do it if I had to do it again, without all the mistakes.</p>
+
+<h3>The Terminal and the Shell</h3>
+
+<ul>
+<li>install <a href="http://iterm.sourceforge.net/index.shtml">iTerm</a></li>
+<li>install <a href="http://ohmyz.sh/">Oh My ZSH</a> because it&#39;s really cool looking!
+
+<ul>
+<li>move existing .bashrc content to .zshrc</li>
+<li>move existing .bash_profile content to .zprofile</li>
+<li>selectively add some of these <a href="http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html">shell aliases</a></li>
+</ul></li>
+</ul>
+
+<h3>Get ALL OF THE PACKAGE MANAGERZZZ!</h3>
+
+<ul>
+<li>haha j/k, there are so many that it&#39;s confusing. I&#39;ll try to explain...
+
+<ul>
+<li>apt-get is a package manager for linux (don&#39;t need for my Mac--use homebrew instead)</li>
+<li><a href="http://brew.sh/">homebrew</a> is a package manager for osx (the command is just <code>brew</code>)</li>
+<li><a href="https://github.com/rubygems/rubygems">rubygems</a> is a package manager for ruby (the command is <code>gem</code>)</li>
+<li><a href="https://www.npmjs.com/package/npm">npm</a> is a package manager for JavaScript, you&#39;ll need to install <a href="https://nodejs.org/download/">node.js</a> first</li>
+<li><a href="http://bower.io/">bower</a> is a package manager for web packages (bootstrap, jquery, etc.)</li>
+</ul></li>
+<li>decidedly NOT package managers, but useful in some of the same ways:
+
+<ul>
+<li><a href="https://www.gnu.org/software/wget/">wget</a> can be used to download contents from FTP, HTTP and HTTPS (<code>brew install wget</code>)</li>
+<li><a href="http://curl.haxx.se/docs/manpage.html">curl</a> is similar to wget, with <a href="http://daniel.haxx.se/docs/curl-vs-wget.html">some differences</a>. (comes with Mac, I think)</li>
+</ul></li>
+</ul>
+
+<h3>tmux it up!</h3>
+
+<ul>
+<li>install tmux: <a href="https://robots.thoughtbot.com/love-hate-tmux">simple instructions</a></li>
+<li>optionally <a href="https://gist.github.com/snuggs/800936">configure tmux based on this gist</a></li>
+<li>set up shell so that it <a href="https://wiki.archlinux.org/index.php/Tmux#Start_tmux_on_every_shell_login">starts tmux by default</a></li>
+<li><a href="https://robots.thoughtbot.com/a-tmux-crash-course">learn more</a> about tmux</li>
+</ul>
+
+<h3>Git, GitHub, etc.</h3>
+
+<ul>
+<li>set up XCode and git (I just typed <code>git</code> and it asked me if I wanted to install XCode etc., so easy)</li>
+<li>generate <a href="https://help.github.com/articles/generating-ssh-keys/">ssh key for github</a></li>
+<li>added alias for <a href="http://gitimmersion.com/lab_11.html">git hist</a> </li>
+<li>optionally install <a href="http://gitx.frim.nl/">GitX</a> or <a href="http://www.sourcetreeapp.com/">Source Tree</a> for GUI visualization</li>
+</ul>
+
+<h3>Set up localhost</h3>
+
+<ul>
+<li>set up <a href="https://discussions.apple.com/docs/DOC-3083">localhost with userdir</a>
+
+<ul>
+<li>user pages at ~/Sites (accessible at localhost/~jimmy/...)</li>
+<li>localhost at /Library/WebServer/Documents (or ~www/Documents) and accessible at localhost</li>
+<li>had to do &quot;chmod -R o+w ~www/Documents&quot; in order to get write access to this folder</li>
+<li><a href="https://kb.iu.edu/d/abbe">linked</a> /wwwd to ~www/Documents so I can just do &#39;cd /wwwd&#39; or &#39;/wwwd&#39; in zsh</li>
+</ul></li>
+</ul>
+
+<h3>Edit Them Texts!</h3>
+
+<ul>
+<li>no need to install vim (comes with Mac), but it&#39;s nice to configure vim:
+
+<ul>
+<li>install <a href="https://github.com/tpope/vim-pathogen">pathogen</a> which allows us to...</li>
+<li>install <a href="https://github.com/tpope/vim-sensible">Vim Sensible</a> (universal set of defaults)</li>
+<li>and <a href="https://github.com/altercation/vim-colors-solarized">Solarized</a> (pretty colors!)</li>
+<li>note: if your colors don&#39;t look right, add <code>let g:solarized_termcolors = 256</code> to your ~/.vimrc file as <a href="http://fideloper.com/mac-vim-tmux">detailed here</a> (scroll down to &quot;Add Solarized&quot;)</li>
+<li>added some <a href="https://gist.github.com/jimmylorunning/196d21cca3e6233be90b">tab settings into .vimrc</a></li>
+</ul></li>
+<li>install <a href="http://www.sublimetext.com/">Sublime Text</a> and <a href="https://www.sublimetext.com/docs/2/osx_command_line.html">linked subl</a> so it can be used on the command line</li>
+</ul>
+
+<h3>Set up Rails</h3>
+
+<ul>
+<li>install <a href="https://gorails.com/setup/osx/10.10-yosemite">rbenv, ruby, rails, mysql, and postgresql</a></li>
+<li>install <a href="https://toolbelt.heroku.com/osx">heroku toolbelt</a></li>
+</ul>
+
+<h3>PHP, if you absolutely must</h3>
+
+<ul>
+<li>PHP came with my Mac! (type <code>php -v</code> to see if you have it first) but I still had to <a href="http://coolestguidesontheplanet.com/get-apache-mysql-php-phpmyadmin-working-osx-10-10-yosemite/">configure it</a> (scroll down to PHP).</li>
+<li>if you already installed Rails via instructions above, then you&#39;ll have MySQL... now all you&#39;ll need is <a href="http://www.phpmyadmin.net/home_page/index.php">phpmyadmin</a>. Use <a href="http://coolestguidesontheplanet.com/get-apache-mysql-php-phpmyadmin-working-osx-10-10-yosemite/">these instructions</a> (search for phpmyadmin)</li>
+<li>install PHPUnit (testing framework) with <a href="https://phpunit.de/getting-started.html">these instructions</a></li>
+</ul>
+
+<h3>Jekyll or this blog didn&#39;t happen!</h3>
+
+<ul>
+<li>instructions here <a href="http://jekyllrb.com/docs/installation/">Jekyll</a></li>
+</ul>
+
+<h3>Other Super Useful Tools!</h3>
+
+<ul>
+<li>install <a href="http://www.ricciadams.com/projects/pixel-winch">Pixel Winch</a> SUPER easily measure anything in pixels</li>
+<li>install <a href="https://kapeli.com/dash">Dash</a> read docs on Ruby, JavaScript, etc. even if you&#39;re offline</li>
+<li>install <a href="http://mizage.com/divvy/">Divvy</a> manage your windows</li>
+<li>install <a href="http://www.colordiff.org/">colordiff</a> <code>brew install colordiff</code> and alias diff=&quot;colordiff&quot; in ~./zshrc</li>
+<li>install <a href="https://agilebits.com/onepassword">1Password</a> for password management</li>
+<li>install <a href="http://todotxt.com/">todo.txt</a> command line todo list tool!</li>
+</ul>
+
+<p>Phew! Did I miss anything? Do you have any suggestions? Let me know!</p>
+
+
+      
+      <span class="post-comments-link"><a href="/install-fest#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
+      
+    </div>
+    
+  
+    
   
     
     <div class="post">
@@ -605,75 +773,6 @@
 
       
       <span class="post-comments-link"><a href="/2015/03/10/jekyll-and-hyde/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
-      
-    </div>
-    
-  
-    
-  
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="/2015/02/25/method-chaining-to-the-madness/">
-          Method Chaining to the Madness
-        </a>
-      </h1>
-
-      <span class="post-date">25 Feb 2015</span>
-
-      <p>I said I&#39;d write a little bit about some of the challenges I encountered while writing the <a href="https://github.com/codeforatlanta/csv_geocoder">CSV Geocoder</a> utility. So here&#39;s a small problem and solution:</p>
-
-<h3>Problem:</h3>
-
-<p>The purpose of the class is very simple. I want to add geocode data to the CSV, then write it to a file. So I write a method like <code>write_csv_with_geocode(file)</code> that joins the CSV with the geocode data and then writes it to a file. However, this violates the <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility</a> per method principle. It does two things: adds the geocode data, then writes it to a file.</p>
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">write_csv_with_geocode</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-  <span class="n">merge_csv_with</span> <span class="n">lat_lngs</span>
-  <span class="no">CSV</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">csv</span><span class="o">|</span>
-    <span class="vi">@csv</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
-      <span class="n">csv</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="n">row</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-<span class="k">end</span></code></pre></div>
-
-<p>I could break the method out into two separate methods, but I know that in 99% of the use cases, the user will want to add_geocode then write. The two responsibilities are intimately related in this case. So the user would have to type two methods (three if you count the initializer) instead of one every time, like this:</p>
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">data</span> <span class="o">=</span> <span class="no">CSVGeocoder</span><span class="o">.</span><span class="n">new</span> <span class="s1">&#39;data.csv&#39;</span>
-<span class="n">data</span><span class="o">.</span><span class="n">add_geocode</span>
-<span class="n">data</span><span class="o">.</span><span class="n">write</span> <span class="s1">&#39;data_with_geocode.csv&#39;</span></code></pre></div>
-
-<p>which wouldn&#39;t be so bad if it weren&#39;t something they&#39;d have to do every time for such a simple task.</p>
-
-<p>The upside of having it all in one method is that I can accomplish two related tasks in one method call instead of having to call both of them separately every time.</p>
-
-<h3>Solution:</h3>
-
-<p>Chaining! I make add_geocode assign the new value to an instance variable, then return self (returning self is the key to making methods chainable). Then the write method takes the instance variable and writes it to a CSV file. So now the user can do the simple task in one line, and the operations are also separated into their own methods. Best of both worlds! In fact, I realized I could do the same with all of the methods in the class, so that you could now write the following line:</p>
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">CSVGeocoder</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">add_geocode</span><span class="o">.</span><span class="n">write</span> <span class="s1">&#39;data_with_geocode.csv&#39;</span></code></pre></div>
-
-<p>Isn&#39;t it pretty? Here&#39;s the new code:</p>
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">add_geocode</span>
-  <span class="vi">@new_csv</span> <span class="o">=</span> <span class="n">merge_csv_with</span> <span class="n">lat_lngs</span>
-  <span class="nb">self</span>
-<span class="k">end</span>
-
-<span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-  <span class="no">CSV</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">csv</span><span class="o">|</span>
-    <span class="vi">@new_csv</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
-      <span class="n">csv</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="n">row</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-<span class="k">end</span></code></pre></div>
-
-<h3>What do you think?</h3>
-
-<p>Is chaining a good solution to this problem? How would you have done it? Also: are there other ways I could improve this class?</p>
-
-
-      
-      <span class="post-comments-link"><a href="/2015/02/25/method-chaining-to-the-madness/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
       
     </div>
     

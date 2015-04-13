@@ -410,6 +410,38 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -423,6 +455,101 @@
 
     <div class="content container">
       <div class="posts">
+  
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/2015/01/09/self-or-no-self/">
+          self or no self
+        </a>
+      </h1>
+
+      <span class="post-date">09 Jan 2015</span>
+
+      <p>Ruby is sometimes very confusing. For example, when you call an instance method within the same class, you can do so with or without <code>self</code>... it&#39;s optional:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">instance_method</span> <span class="c1"># works from inside the class</span>
+<span class="nb">self</span><span class="o">.</span><span class="n">instance_method</span> <span class="c1"># also works from inside the class</span>
+<span class="n">other_object</span><span class="o">.</span><span class="n">instance_method</span> <span class="c1"># works from outside the class</span></code></pre></div>
+
+<p>However, if the method is a setter method, <a href="http://www.rubyfleebie.com/use-self-explicitly/">you <em>must</em> use self</a>. The reasoning behind this is that Ruby doesn&#39;t know whether <code>instance_method</code> is an instance method or a local variable, and the <code>self</code> gets rid of that ambiguity. Let&#39;s call this rule A.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">instance_method</span> <span class="o">=</span> <span class="mi">42</span> <span class="c1"># error</span>
+<span class="nb">self</span><span class="o">.</span><span class="n">instance_method</span> <span class="o">=</span> <span class="mi">42</span> <span class="c1"># works</span></code></pre></div>
+
+<p>However, <a href="http://stackoverflow.com/questions/4293215/understanding-private-methods-in-ruby">private methods can&#39;t use self</a>. Let&#39;s call this rule B. The reasoning behind this is that private methods cannot be called with an explicit receiver, even if <code>self</code> is that receiver.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">self</span><span class="o">.</span><span class="n">private_method</span> <span class="c1"># error</span>
+<span class="n">private_method</span> <span class="c1"># works</span></code></pre></div>
+
+<p>What happens when rule A butts head with rule B?</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">private_method</span> <span class="o">=</span> <span class="mi">42</span> <span class="c1"># violates rule A - error</span>
+<span class="nb">self</span><span class="o">.</span><span class="n">private_method</span> <span class="o">=</span> <span class="mi">42</span> <span class="c1"># violates rule B - but works!</span></code></pre></div>
+
+<p>Apparently in this case, the second line is the one that&#39;s allowed. <a href="http://devblog.orgsync.com/2013/05/20/private-and-protected-they-might-not-mean-what-you-think-they-mean/">This blog post</a> explains it very clearly:
+<blockquote>When using a setter in Ruby we&#39;re supposed to use an explicit receiver like <code>self</code>. Here we have a private method that doesn&#39;t allow an explicit receiver. We appear to have reached an impasse. <strong>In this case it turns out Ruby breaks its own rule.</strong></blockquote>
+Before I found this, I was trying to get around the impasse by doing jenky things like this:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">private_method</span><span class="o">=</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span></code></pre></div>
+
+<p>I was surprised this wasn&#39;t a bigger topic, but then <a href="http://heartmindcode.com/2013/04/25/private_accessors_in_ruby/">I read this article</a> about how private and protected methods aren&#39;t even used that much in Ruby!
+<blockquote>For the most part, we just... don’t [write private methods].</blockquote>
+The following is from the book I&#39;m reading, <a href="http://www.poodr.com/">Practical Object Oriented Design in Ruby</a> by Sandi Metz:
+<blockquote>Users of a class can redefine any method to public regardless of its initial declaration. The private and protected keywords are more like flexible barriers than concrete restrictions. ... Using them sends two messages:
+<ul>
+    <li>You believe that you have better information today than programmers will have in the future</li>
+    <li>You believe that those future programmers need to be prevented from accidentally using a method that you currently consider unstable</li>
+</ul>
+These beliefs may be correct but the future is a long way off and one can never be certain... many perfectly  competent Ruby programmers omit them and instead use comments or a special method naming convention (Ruby on Rails, for example, adds a leading &#39;_&#39; to private methods) to indicate public and private parts of interfaces.</blockquote>
+I don&#39;t know what I feel about all this yet, but I might skip over writing private methods for now just because it makes things much easier for me immediately.</p>
+
+
+      
+      <span class="post-comments-link"><a href="/2015/01/09/self-or-no-self/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
+      
+    </div>
+    
+  
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/2015/01/07/hiding-my-api-keys/">
+          Hiding my API keys
+        </a>
+      </h1>
+
+      <span class="post-date">07 Jan 2015</span>
+
+      <h3>Problem:</h3>
+
+<p>I don&#39;t want to expose API secret keys, but I still want to be able to commit my changes and push to github.</p>
+
+<h3>Solution:</h3>
+
+<ul>
+    <li>Install <a href="https://github.com/laserlemon/figaro">figaro</a> gem</li>
+    <li>set environment variables in config/application.yml
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">my_api_key</span><span class="p">:</span> <span class="s1">&#39;weoi23urow234jerow67jerjerjwejr&#39;</span></code></pre></div>
+
+</li>
+  <li>make sure .gitignore ignores config/application.yml</li>
+  <li>in the initializer code, (for my week3 app, I put this in config/initializer/twitter.rb) use ENV['my_api_key'] instead of hardcoding the api key</li>
+  <li>after deploying to heroku, run this command to set heroku's env variables
+</li>
+</ul>
+
+<blockquote>
+<p>figaro heroku:set -e production</p>
+</blockquote>
+
+
+      
+      <span class="post-comments-link"><a href="/2015/01/07/hiding-my-api-keys/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
+      
+    </div>
+    
   
     
     <div class="post">

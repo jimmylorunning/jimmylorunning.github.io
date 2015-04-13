@@ -410,6 +410,38 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -423,6 +455,75 @@
 
     <div class="content container">
       <div class="posts">
+  
+    
+  
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/2015/02/25/method-chaining-to-the-madness/">
+          Method Chaining to the Madness
+        </a>
+      </h1>
+
+      <span class="post-date">25 Feb 2015</span>
+
+      <p>I said I&#39;d write a little bit about some of the challenges I encountered while writing the <a href="https://github.com/codeforatlanta/csv_geocoder">CSV Geocoder</a> utility. So here&#39;s a small problem and solution:</p>
+
+<h3>Problem:</h3>
+
+<p>The purpose of the class is very simple. I want to add geocode data to the CSV, then write it to a file. So I write a method like <code>write_csv_with_geocode(file)</code> that joins the CSV with the geocode data and then writes it to a file. However, this violates the <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility</a> per method principle. It does two things: adds the geocode data, then writes it to a file.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">write_csv_with_geocode</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+  <span class="n">merge_csv_with</span> <span class="n">lat_lngs</span>
+  <span class="no">CSV</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">csv</span><span class="o">|</span>
+    <span class="vi">@csv</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="n">csv</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="n">row</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
+
+<p>I could break the method out into two separate methods, but I know that in 99% of the use cases, the user will want to add_geocode then write. The two responsibilities are intimately related in this case. So the user would have to type two methods (three if you count the initializer) instead of one every time, like this:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">data</span> <span class="o">=</span> <span class="no">CSVGeocoder</span><span class="o">.</span><span class="n">new</span> <span class="s1">&#39;data.csv&#39;</span>
+<span class="n">data</span><span class="o">.</span><span class="n">add_geocode</span>
+<span class="n">data</span><span class="o">.</span><span class="n">write</span> <span class="s1">&#39;data_with_geocode.csv&#39;</span></code></pre></div>
+
+<p>which wouldn&#39;t be so bad if it weren&#39;t something they&#39;d have to do every time for such a simple task.</p>
+
+<p>The upside of having it all in one method is that I can accomplish two related tasks in one method call instead of having to call both of them separately every time.</p>
+
+<h3>Solution:</h3>
+
+<p>Chaining! I make add_geocode assign the new value to an instance variable, then return self (returning self is the key to making methods chainable). Then the write method takes the instance variable and writes it to a CSV file. So now the user can do the simple task in one line, and the operations are also separated into their own methods. Best of both worlds! In fact, I realized I could do the same with all of the methods in the class, so that you could now write the following line:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">CSVGeocoder</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">add_geocode</span><span class="o">.</span><span class="n">write</span> <span class="s1">&#39;data_with_geocode.csv&#39;</span></code></pre></div>
+
+<p>Isn&#39;t it pretty? Here&#39;s the new code:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">add_geocode</span>
+  <span class="vi">@new_csv</span> <span class="o">=</span> <span class="n">merge_csv_with</span> <span class="n">lat_lngs</span>
+  <span class="nb">self</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+  <span class="no">CSV</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">csv</span><span class="o">|</span>
+    <span class="vi">@new_csv</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+      <span class="n">csv</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="n">row</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></div>
+
+<h3>What do you think?</h3>
+
+<p>Is chaining a good solution to this problem? How would you have done it? Also: are there other ways I could improve this class?</p>
+
+
+      
+      <span class="post-comments-link"><a href="/2015/02/25/method-chaining-to-the-madness/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
+      
+    </div>
+    
   
     
     <div class="post">
@@ -539,63 +640,6 @@ I joined the second group because I was interested in mapping and because I felt
 
       
       <span class="post-comments-link"><a href="/2015/02/10/week-7-in-review/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
-      
-    </div>
-    
-  
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="/2015/02/04/lilt-js/">
-          Lilt.js
-        </a>
-      </h1>
-
-      <span class="post-date">04 Feb 2015</span>
-
-      <p><a href="/lilt/"><img src="/images/lilt.png" alt="Lilt" width="789" height="469" /></a></p>
-
-<p>I was working on my portfolio site last week and playing with the parallax effect when I had the idea of making a CSS shadow that moved as you scrolled to create the illusion of depth and a single source of light (imagine holding the light in front of your monitor and casting a shadow on your divs). Had this effect ever been made into a script? To my surprise, there were very few scripts out there that did this. So I decided to try it <a href="http://codepen.io/jimmylorunning/pen/emEwWr">on Codepen</a>. It only took me about half an hour to do. I went through several other variations since then, but the basic idea is the same.</p>
-
-<p>The next morning, I couldn&#39;t stop thinking about how awesome it would be if I could make it into a plugin. It could be my very first contribution to open source that people would actually use (because let&#39;s not kid ourselves, nobody&#39;s actually going to use my todo app! haha).</p>
-
-<p>So I started reading about JQuery plugins to see what I&#39;d have to do to my code to make it into a pluggable part that people can just include. I also wanted it to be easily customizable. People can just use data-attributes on their div tags to change the properties of the shadow, how much it blurred, how fast it moved, etc. I definitely didn&#39;t want them to have to change my script in order to change the options. It should be like a function, you pass it arguments, and it did its thing.</p>
-
-<p>Making my half hour script into a flexible plugin turned out to take me much longer than writing the basic script itself. But it was a great exercise in writing modifiable code! I had to think a lot about encapsulation and keeping variables inside the plugin separate from everything external. Finally, I had to create <a href="http://jimmylocoding.com/lilt/">a pretty page</a> to show off the capabilities of my plugin. Go <a href="http://jimmylocoding.com/lilt/">visit it now</a>! And let me know if you find it useful.</p>
-
-<p>Future improvements (maybe):
-<ul>
-    <li>text shadows!</li>
-    <li>maybe the blur value can change as you scroll as well?</li>
-</ul></p>
-
-
-      
-      <span class="post-comments-link"><a href="/2015/02/04/lilt-js/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
-      
-    </div>
-    
-  
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="/2015/02/02/week-6-unexpected/">
-          Week 6: Unexpected!
-        </a>
-      </h1>
-
-      <span class="post-date">02 Feb 2015</span>
-
-      <p>Last week was all about being overwhelmed. This week was all about the unexpected.
-<ul>
-    <li><strong>SaaS homework:</strong> I did not expect to spend 15 hours (more if you count the fact that I spent another 3 hours refactoring after I was done) on this assignment. It&#39;s definitely the most involved homework assignment so far (although there were a few in SaaS 1 that were pretty difficult too). I won&#39;t go into it in detail here because I already <a href="http://jimmylocoding.com/2015/01/29/saas-legacy-hw2-lessons-learned/">wrote a blogpost about it</a>.</li>
-    <li><strong>Exquisite Source:</strong> I did not expect to write <a href="https://still-sands-5922.herokuapp.com/about.php">this</a>. But I got inspired by an article on pull requests! And it was a very simple non-ambitious project technically speaking... with a (perhaps too) ambitious idea behind it. So we&#39;ll see if it takes off. Hopefully it helps someone. If it doesn&#39;t, it was only a couple hours of pretty fun work.</li>
-    <li><strong>My first JQuery plugin</strong>? I will write a separate blog post about this soon. But umm... I wrote a JQuery plugin! And it&#39;s open source. And it was the last thing I expected to do this week, but I just got caught up in a very small idea that I thought others could re-use. More soon.</li>
-</ul></p>
-
-
-      
-      <span class="post-comments-link"><a href="/2015/02/02/week-6-unexpected/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
       
     </div>
     

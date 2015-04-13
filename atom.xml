@@ -4,13 +4,141 @@
  <title>jlc</title>
  <link href="http://jimmylocoding.com/atom.xml" rel="self"/>
  <link href="http://jimmylocoding.com/"/>
- <updated>2015-04-08T09:39:54-04:00</updated>
+ <updated>2015-04-13T11:39:54-04:00</updated>
  <id>http://jimmylocoding.com</id>
  <author>
    <name>Jimmy Lo</name>
    <email></email>
  </author>
 
+ 
+ 
+ <entry>
+   <title>Install Fest!!!</title>
+   <link href="http://jimmylocoding.com/install-fest"/>
+   <updated>2015-04-13T00:00:00-04:00</updated>
+   <id>http://jimmylocoding.com/install-fest</id>
+   <content type="html">&lt;p&gt;I&amp;#39;m in the middle of a super long post about Rails models. It is quite involved and is taking a long time to write. So in the meantime, I present you with this relatively shorter blog post composed of mostly links.&lt;/p&gt;
+
+&lt;p&gt;I recently got a new MacBook Pro! So I spent a day installing and setting up my system for the perfect workflow. I experimented with different set ups, and ended up installing and un-installing several things. Also sometimes I&amp;#39;d install something, and realize I had to install something else first, etc. So here I will try to just show you how I would do it if I had to do it again, without all the mistakes.&lt;/p&gt;
+
+&lt;h3&gt;The Terminal and the Shell&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;install &lt;a href=&quot;http://iterm.sourceforge.net/index.shtml&quot;&gt;iTerm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;install &lt;a href=&quot;http://ohmyz.sh/&quot;&gt;Oh My ZSH&lt;/a&gt; because it&amp;#39;s really cool looking!
+
+&lt;ul&gt;
+&lt;li&gt;move existing .bashrc content to .zshrc&lt;/li&gt;
+&lt;li&gt;move existing .bash_profile content to .zprofile&lt;/li&gt;
+&lt;li&gt;selectively add some of these &lt;a href=&quot;http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html&quot;&gt;shell aliases&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Get ALL OF THE PACKAGE MANAGERZZZ!&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;haha j/k, there are so many that it&amp;#39;s confusing. I&amp;#39;ll try to explain...
+
+&lt;ul&gt;
+&lt;li&gt;apt-get is a package manager for linux (don&amp;#39;t need for my Mac--use homebrew instead)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://brew.sh/&quot;&gt;homebrew&lt;/a&gt; is a package manager for osx (the command is just &lt;code&gt;brew&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/rubygems/rubygems&quot;&gt;rubygems&lt;/a&gt; is a package manager for ruby (the command is &lt;code&gt;gem&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/npm&quot;&gt;npm&lt;/a&gt; is a package manager for JavaScript, you&amp;#39;ll need to install &lt;a href=&quot;https://nodejs.org/download/&quot;&gt;node.js&lt;/a&gt; first&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://bower.io/&quot;&gt;bower&lt;/a&gt; is a package manager for web packages (bootstrap, jquery, etc.)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;decidedly NOT package managers, but useful in some of the same ways:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gnu.org/software/wget/&quot;&gt;wget&lt;/a&gt; can be used to download contents from FTP, HTTP and HTTPS (&lt;code&gt;brew install wget&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://curl.haxx.se/docs/manpage.html&quot;&gt;curl&lt;/a&gt; is similar to wget, with &lt;a href=&quot;http://daniel.haxx.se/docs/curl-vs-wget.html&quot;&gt;some differences&lt;/a&gt;. (comes with Mac, I think)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;tmux it up!&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;install tmux: &lt;a href=&quot;https://robots.thoughtbot.com/love-hate-tmux&quot;&gt;simple instructions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;optionally &lt;a href=&quot;https://gist.github.com/snuggs/800936&quot;&gt;configure tmux based on this gist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;set up shell so that it &lt;a href=&quot;https://wiki.archlinux.org/index.php/Tmux#Start_tmux_on_every_shell_login&quot;&gt;starts tmux by default&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://robots.thoughtbot.com/a-tmux-crash-course&quot;&gt;learn more&lt;/a&gt; about tmux&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Git, GitHub, etc.&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;set up XCode and git (I just typed &lt;code&gt;git&lt;/code&gt; and it asked me if I wanted to install XCode etc., so easy)&lt;/li&gt;
+&lt;li&gt;generate &lt;a href=&quot;https://help.github.com/articles/generating-ssh-keys/&quot;&gt;ssh key for github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;added alias for &lt;a href=&quot;http://gitimmersion.com/lab_11.html&quot;&gt;git hist&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;optionally install &lt;a href=&quot;http://gitx.frim.nl/&quot;&gt;GitX&lt;/a&gt; or &lt;a href=&quot;http://www.sourcetreeapp.com/&quot;&gt;Source Tree&lt;/a&gt; for GUI visualization&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Set up localhost&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;set up &lt;a href=&quot;https://discussions.apple.com/docs/DOC-3083&quot;&gt;localhost with userdir&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;user pages at ~/Sites (accessible at localhost/~jimmy/...)&lt;/li&gt;
+&lt;li&gt;localhost at /Library/WebServer/Documents (or ~www/Documents) and accessible at localhost&lt;/li&gt;
+&lt;li&gt;had to do &amp;quot;chmod -R o+w ~www/Documents&amp;quot; in order to get write access to this folder&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://kb.iu.edu/d/abbe&quot;&gt;linked&lt;/a&gt; /wwwd to ~www/Documents so I can just do &amp;#39;cd /wwwd&amp;#39; or &amp;#39;/wwwd&amp;#39; in zsh&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Edit Them Texts!&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;no need to install vim (comes with Mac), but it&amp;#39;s nice to configure vim:
+
+&lt;ul&gt;
+&lt;li&gt;install &lt;a href=&quot;https://github.com/tpope/vim-pathogen&quot;&gt;pathogen&lt;/a&gt; which allows us to...&lt;/li&gt;
+&lt;li&gt;install &lt;a href=&quot;https://github.com/tpope/vim-sensible&quot;&gt;Vim Sensible&lt;/a&gt; (universal set of defaults)&lt;/li&gt;
+&lt;li&gt;and &lt;a href=&quot;https://github.com/altercation/vim-colors-solarized&quot;&gt;Solarized&lt;/a&gt; (pretty colors!)&lt;/li&gt;
+&lt;li&gt;note: if your colors don&amp;#39;t look right, add &lt;code&gt;let g:solarized_termcolors = 256&lt;/code&gt; to your ~/.vimrc file as &lt;a href=&quot;http://fideloper.com/mac-vim-tmux&quot;&gt;detailed here&lt;/a&gt; (scroll down to &amp;quot;Add Solarized&amp;quot;)&lt;/li&gt;
+&lt;li&gt;added some &lt;a href=&quot;https://gist.github.com/jimmylorunning/196d21cca3e6233be90b&quot;&gt;tab settings into .vimrc&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;install &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt; and &lt;a href=&quot;https://www.sublimetext.com/docs/2/osx_command_line.html&quot;&gt;linked subl&lt;/a&gt; so it can be used on the command line&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Set up Rails&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;install &lt;a href=&quot;https://gorails.com/setup/osx/10.10-yosemite&quot;&gt;rbenv, ruby, rails, mysql, and postgresql&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;install &lt;a href=&quot;https://toolbelt.heroku.com/osx&quot;&gt;heroku toolbelt&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;PHP, if you absolutely must&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;PHP came with my Mac! (type &lt;code&gt;php -v&lt;/code&gt; to see if you have it first) but I still had to &lt;a href=&quot;http://coolestguidesontheplanet.com/get-apache-mysql-php-phpmyadmin-working-osx-10-10-yosemite/&quot;&gt;configure it&lt;/a&gt; (scroll down to PHP).&lt;/li&gt;
+&lt;li&gt;if you already installed Rails via instructions above, then you&amp;#39;ll have MySQL... now all you&amp;#39;ll need is &lt;a href=&quot;http://www.phpmyadmin.net/home_page/index.php&quot;&gt;phpmyadmin&lt;/a&gt;. Use &lt;a href=&quot;http://coolestguidesontheplanet.com/get-apache-mysql-php-phpmyadmin-working-osx-10-10-yosemite/&quot;&gt;these instructions&lt;/a&gt; (search for phpmyadmin)&lt;/li&gt;
+&lt;li&gt;install PHPUnit (testing framework) with &lt;a href=&quot;https://phpunit.de/getting-started.html&quot;&gt;these instructions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Jekyll or this blog didn&amp;#39;t happen!&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;instructions here &lt;a href=&quot;http://jekyllrb.com/docs/installation/&quot;&gt;Jekyll&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Other Super Useful Tools!&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;install &lt;a href=&quot;http://www.ricciadams.com/projects/pixel-winch&quot;&gt;Pixel Winch&lt;/a&gt; SUPER easily measure anything in pixels&lt;/li&gt;
+&lt;li&gt;install &lt;a href=&quot;https://kapeli.com/dash&quot;&gt;Dash&lt;/a&gt; read docs on Ruby, JavaScript, etc. even if you&amp;#39;re offline&lt;/li&gt;
+&lt;li&gt;install &lt;a href=&quot;http://mizage.com/divvy/&quot;&gt;Divvy&lt;/a&gt; manage your windows&lt;/li&gt;
+&lt;li&gt;install &lt;a href=&quot;http://www.colordiff.org/&quot;&gt;colordiff&lt;/a&gt; &lt;code&gt;brew install colordiff&lt;/code&gt; and alias diff=&amp;quot;colordiff&amp;quot; in ~./zshrc&lt;/li&gt;
+&lt;li&gt;install &lt;a href=&quot;https://agilebits.com/onepassword&quot;&gt;1Password&lt;/a&gt; for password management&lt;/li&gt;
+&lt;li&gt;install &lt;a href=&quot;http://todotxt.com/&quot;&gt;todo.txt&lt;/a&gt; command line todo list tool!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Phew! Did I miss anything? Do you have any suggestions? Let me know!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
  
  
  <entry>

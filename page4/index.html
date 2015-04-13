@@ -410,6 +410,38 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -423,6 +455,82 @@
 
     <div class="content container">
       <div class="posts">
+  
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/2015/01/20/not-just-words/">
+          Not Just Words
+        </a>
+      </h1>
+
+      <span class="post-date">20 Jan 2015</span>
+
+      <p>I had a whoops! moment the other day. A friend and I were working on a Python program together, and at one point she was asking me how I would do something. And without thinking, I said &quot;Well, we could just pass this variable in,&quot; or &quot;Just put this inside of the loop&quot;. And after a while, she said &quot;Stop saying JUST! You make it sound like it&#39;s supposed to be easy.&quot;</p>
+
+<p>Thank god she said that, because I didn&#39;t even notice what I was doing. I immediately apologized and stopped using that word.</p>
+
+<p>But it&#39;s amazing how (just) one word can be so alienating, and it&#39;s important to be conscious of what we say when we&#39;re learning with others. The thing is, I&#39;ve often been on the other side of that equation--where I felt stupid because I was talking to someone much more experienced, and they were using words that made it seem so easy. And I hated it!</p>
+
+<p>Another thing: when you feel alienated by a word or how someone is saying something, tell them! Because a lot of times they may not be aware of it, and they may have the best of intentions but just not realize what they are doing.</p>
+
+<p>So on that note, what words do you find alienating?</p>
+
+
+      
+      <span class="post-comments-link"><a href="/2015/01/20/not-just-words/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
+      
+    </div>
+    
+  
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/2015/01/19/week-4-oracle-of-bacon/">
+          Week 4: Oracle of Bacon and other stuff
+        </a>
+      </h1>
+
+      <span class="post-date">19 Jan 2015</span>
+
+      <p>This week, I started my <a href="https://www.edx.org/course/engineering-software-service-part-2-uc-berkeleyx-cs169-2x">SaaS Part 2</a> class... I decided to just do the SaaS homework in place of my weekly app. The homework involves the <a href="http://oracleofbacon.org/">Oracle of Bacon</a> website, where you can find the <a href="http://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon">Bacon Number</a> of any actor. It also shows you the linkages along the way... for instance:
+<blockquote>Sean Connery
+was in Der Name der Rose with
+Ron Perlman
+who was in Balto with
+Kevin Bacon.</blockquote>
+So Sean Connery has a Bacon Number of 2. The website also has an API. You can ask it for a connection between any two actors, and it will return that information (if any) in XML format.</p>
+
+<p>Our job was to connect to the API and write a wrapper around the XML that gets returned. Our wrapper would basically detect if the returned value was valid, and if so, it would make it into an object that we can query. The SaaS class (both part 1 and part 2) has been really good at stressing agile practices, and this homework was no different. We were to pair program over Google Hangouts on Air. The tests were written for us in this assignment, but we needed to get them to pass.</p>
+
+<p><strong>Firsts:</strong>
+<ul>
+    <li>writing an abstraction layer / wrapper</li>
+    <li>handling XML with <a href="https://rubygems.org/gems/nokogiri">nokogiri</a></li>
+    <li>writing my own validation method (our class included ActiveModel&#39;s Validation methods, so it got a lot of behavior for free)</li>
+</ul>
+<strong>Homework 2</strong></p>
+
+<p>I finished early so I started on homework 2, which is all about refactoring and working with legacy code. We have to clone an existing repo, the <a href="https://github.com/saasbook/typo">Typo blogging platform</a> and fix a bug in it, but first we have to write tests around the bug. Here&#39;s a Google Hangout video of me trying to work out the first part:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tvMJCXvf7ds" frameborder="0" allowfullscreen></iframe>
+
+<p>I was really confused about half an hour in because I had made some changes and my tests passed, and I was really happy with it. But then all of a sudden all the tests failed even though I hadn&#39;t changed anything since the last time! I finally figured out that I had to run bundle exec rake db:test:prepare. Although I still don&#39;t understand why... I hadn&#39;t changed the database at all since the last time I ran the tests. I thought I only had to run that command when I changed the database.</p>
+
+<p><strong>Other things:</strong></p>
+
+<p><a href="https://leveluprails.com/">Level UP Rails</a> is a project designed to give a common baseline to engineers on the <a href="http://words.steveklabnik.com/rails-has-two-default-stacks">Rails Prime</a> stack. It was designed by Joseph Mastey to help onboard new hires to the Enova team. But guess what? It&#39;s also open source, so I&#39;m taking it even though Enova hasn&#39;t offered me a job yet (what are they waiting for? Fools!). So far I&#39;ve finished the first lesson of the first course, which mostly focuses on server commands and borderline sysadmin skills, many of which have intimidated me in the past. I just started on the second section entitled &#39;Basic Ruby&#39;. The overall course description is: &quot;Learn to build and test a complete Ruby on Rails application. This isn&#39;t a basic intro: you will finish with some serious ruby chops.&quot; I can&#39;t wait to have serious chops! I&#39;m documenting my progress on <a href="https://github.com/jimmylorunning/level-up-rails">github</a>.</p>
+
+<p>Also this week I participated in two <a href="http://www.codenewbie.org/code-club">Code Club</a> sessions (through the <a href="http://www.codenewbie.org/">CodeNewbie</a> website). They were great! It&#39;s sort of like hanging out with cool people while learning a lot. Each session has a host, but the host doesn&#39;t necessarily have to know any more about the subject than anyone else. It&#39;s basically like a study session; everyone is there to learn and encourage others to learn. The first one I took was on <a href="http://javascriptissexy.com/javascript-variable-scope-and-hoisting-explained/">Javascript Variable Scope</a> where I got to hang out with <a href="http://bloggytoons.com/">Saron</a> and <a href="http://cynthialanel.com/">Cynthia</a>. The second one I took was <a href="http://thetechcofounder.com/getting-started-with-ember-js-using-ember-cli/">an introduction to Ember.js</a> with <a href="http://jonathanyeong.com/">Jonathan</a> and Yaw.</p>
+
+<p>And ... and ... and ... I went to a <a href="http://www.meetup.com/atlantaruby/">Ruby Meetup</a> on Wednesday (the featured talk was on Angular JS). I met a lot of nice people. And then I got home just in time to participate in <a href="http://www.codenewbie.org/chat">#CodeNewbie Twitter Chat</a>! I didn&#39;t feel like I did that much this week, but I guess I did!</p>
+
+
+      
+      <span class="post-comments-link"><a href="/2015/01/19/week-4-oracle-of-bacon/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
+      
+    </div>
+    
   
     
     <div class="post">
@@ -555,101 +663,6 @@ Non programming related:
 
       
       <span class="post-comments-link"><a href="/2015/01/12/week-3-round-up-twitter-fitter/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
-      
-    </div>
-    
-  
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="/2015/01/09/self-or-no-self/">
-          self or no self
-        </a>
-      </h1>
-
-      <span class="post-date">09 Jan 2015</span>
-
-      <p>Ruby is sometimes very confusing. For example, when you call an instance method within the same class, you can do so with or without <code>self</code>... it&#39;s optional:</p>
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">instance_method</span> <span class="c1"># works from inside the class</span>
-<span class="nb">self</span><span class="o">.</span><span class="n">instance_method</span> <span class="c1"># also works from inside the class</span>
-<span class="n">other_object</span><span class="o">.</span><span class="n">instance_method</span> <span class="c1"># works from outside the class</span></code></pre></div>
-
-<p>However, if the method is a setter method, <a href="http://www.rubyfleebie.com/use-self-explicitly/">you <em>must</em> use self</a>. The reasoning behind this is that Ruby doesn&#39;t know whether <code>instance_method</code> is an instance method or a local variable, and the <code>self</code> gets rid of that ambiguity. Let&#39;s call this rule A.</p>
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">instance_method</span> <span class="o">=</span> <span class="mi">42</span> <span class="c1"># error</span>
-<span class="nb">self</span><span class="o">.</span><span class="n">instance_method</span> <span class="o">=</span> <span class="mi">42</span> <span class="c1"># works</span></code></pre></div>
-
-<p>However, <a href="http://stackoverflow.com/questions/4293215/understanding-private-methods-in-ruby">private methods can&#39;t use self</a>. Let&#39;s call this rule B. The reasoning behind this is that private methods cannot be called with an explicit receiver, even if <code>self</code> is that receiver.</p>
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">self</span><span class="o">.</span><span class="n">private_method</span> <span class="c1"># error</span>
-<span class="n">private_method</span> <span class="c1"># works</span></code></pre></div>
-
-<p>What happens when rule A butts head with rule B?</p>
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">private_method</span> <span class="o">=</span> <span class="mi">42</span> <span class="c1"># violates rule A - error</span>
-<span class="nb">self</span><span class="o">.</span><span class="n">private_method</span> <span class="o">=</span> <span class="mi">42</span> <span class="c1"># violates rule B - but works!</span></code></pre></div>
-
-<p>Apparently in this case, the second line is the one that&#39;s allowed. <a href="http://devblog.orgsync.com/2013/05/20/private-and-protected-they-might-not-mean-what-you-think-they-mean/">This blog post</a> explains it very clearly:
-<blockquote>When using a setter in Ruby we&#39;re supposed to use an explicit receiver like <code>self</code>. Here we have a private method that doesn&#39;t allow an explicit receiver. We appear to have reached an impasse. <strong>In this case it turns out Ruby breaks its own rule.</strong></blockquote>
-Before I found this, I was trying to get around the impasse by doing jenky things like this:</p>
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">private_method</span><span class="o">=</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span></code></pre></div>
-
-<p>I was surprised this wasn&#39;t a bigger topic, but then <a href="http://heartmindcode.com/2013/04/25/private_accessors_in_ruby/">I read this article</a> about how private and protected methods aren&#39;t even used that much in Ruby!
-<blockquote>For the most part, we just... don’t [write private methods].</blockquote>
-The following is from the book I&#39;m reading, <a href="http://www.poodr.com/">Practical Object Oriented Design in Ruby</a> by Sandi Metz:
-<blockquote>Users of a class can redefine any method to public regardless of its initial declaration. The private and protected keywords are more like flexible barriers than concrete restrictions. ... Using them sends two messages:
-<ul>
-    <li>You believe that you have better information today than programmers will have in the future</li>
-    <li>You believe that those future programmers need to be prevented from accidentally using a method that you currently consider unstable</li>
-</ul>
-These beliefs may be correct but the future is a long way off and one can never be certain... many perfectly  competent Ruby programmers omit them and instead use comments or a special method naming convention (Ruby on Rails, for example, adds a leading &#39;_&#39; to private methods) to indicate public and private parts of interfaces.</blockquote>
-I don&#39;t know what I feel about all this yet, but I might skip over writing private methods for now just because it makes things much easier for me immediately.</p>
-
-
-      
-      <span class="post-comments-link"><a href="/2015/01/09/self-or-no-self/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
-      
-    </div>
-    
-  
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="/2015/01/07/hiding-my-api-keys/">
-          Hiding my API keys
-        </a>
-      </h1>
-
-      <span class="post-date">07 Jan 2015</span>
-
-      <h3>Problem:</h3>
-
-<p>I don&#39;t want to expose API secret keys, but I still want to be able to commit my changes and push to github.</p>
-
-<h3>Solution:</h3>
-
-<ul>
-    <li>Install <a href="https://github.com/laserlemon/figaro">figaro</a> gem</li>
-    <li>set environment variables in config/application.yml
-
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="ss">my_api_key</span><span class="p">:</span> <span class="s1">&#39;weoi23urow234jerow67jerjerjwejr&#39;</span></code></pre></div>
-
-</li>
-  <li>make sure .gitignore ignores config/application.yml</li>
-  <li>in the initializer code, (for my week3 app, I put this in config/initializer/twitter.rb) use ENV['my_api_key'] instead of hardcoding the api key</li>
-  <li>after deploying to heroku, run this command to set heroku's env variables
-</li>
-</ul>
-
-<blockquote>
-<p>figaro heroku:set -e production</p>
-</blockquote>
-
-
-      
-      <span class="post-comments-link"><a href="/2015/01/07/hiding-my-api-keys/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
       
     </div>
     
