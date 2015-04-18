@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us" class="theme-base-09">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      What I Learned Building Only the Models for an App &middot; jlc
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/custom.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="layout-reverse">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          jlc
+        </a>
+      </h1>
+      <p class="lead">jimmylocoding</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/archives/">Archives</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/projects/">Projects</a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+      <a class="sidebar-nav-item" href="/resume">My Resume</a>
+      <div class="social-media">
+        <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
+        <a class="sidebar-nav-item" href="http://twitter.com/jimmylocoding"><i class="fa fa-twitter fa-2x"></i></a>
+      </div>
+    </nav>
+
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">What I Learned Building Only the Models for an App</h1>
+  <span class="post-date">18 Apr 2015</span>
+  <p>Many books and tutorials are designed around building out one feature from the ground up and then moving on to the next one. While I admire that kind of workflow where you focus on creating working tangible features, I also noticed that for almost every feature, the programmer would have to touch the model, controller, and view. That kind of moving back and forth makes it hard to really understand the structure of the app, at least for me. So I decided that for my next app, I was going to do an experiment. </p>
+
+<p>Instead of developing each feature, I developed all the models up front. This allowed me to really think about the data structure behind my app and how each part interacts with the whole. I also aimed to do test driven development, by writing tests for each model and their associations before moving onto the next model. The downside of this approach is that by the end of this experiment, I still didn&#39;t have one tangible feature, at least not from the user&#39;s standpoint. And of course designing the models up front doesn&#39;t mean I won&#39;t have to change them later when I realize the constraints have changed. But I think it&#39;s a good learning experiment, allowing me to not worry about the controllers or views at all, and just focus in on how to connect all the different pieces. </p>
+
+<h3>My App</h3>
+
+<p>I love the site <a href="http://www.goodreads.com">Goodreads</a>. It&#39;s a social network around books. At the core of the app are the following features:</p>
+
+<h4>Around Books</h4>
+
+<ul>
+<li>users have shelves and can create new shelves and can add books to their shelves</li>
+<li>users can read books and update the status of what they&#39;ve read</li>
+<li>users can review and rate books</li>
+</ul>
+
+<h4>Around Users</h4>
+
+<ul>
+<li>users can friend each other creating a 2 way relationship</li>
+<li>a user can follow another user, creating a 1 way relationship</li>
+<li>users can like or comment on another user&#39;s reviews or statuses</li>
+</ul>
+
+<p>There&#39;s <em>much</em> more to it, but those are the very core features. Since I love Goodreads and there are a few things I&#39;d like to change about it, I decided to make my next app be a Goodreads clone. I think part of the reason I could design the complete model first is because I&#39;m so familiar with the existing site and know beforehand exactly how each part is supposed to work. That said, I did make a few changes in my version, which I will talk about later.</p>
+
+<h3>The End Result</h3>
+
+<p>I&#39;m going to start by showing you what I ended up with, and then explain some of the choices I made. The amazing <a href="http://wendybeth.ghost.io/">Wendy Beth</a> told me about the <a href="https://github.com/voormedia/rails-erd">Rails ERD</a> gem which will &quot;allows you to easily generate a diagram based on your application&#39;s Active Record models&quot;. Here is my ERD (entity relationship diagram):</p>
+
+<p><img src="/images/minigr_models.png" alt="Model Diagram" /></p>
+
+<p>What follows isn&#39;t a complete step-by-step tutorial on what I did, but rather a few highlights (or lowlights, depending on how you see it) of my experience building this out.</p>
+
+<h3>Associations and Shoulda</h3>
+
+<p>A huge part of this exercise was figuring out how to work with rails associations. You know, those <code>has_many</code> and <code>belongs_to</code> calls that magically link up your models so that you can simply call <code>school_of_the_sun.editions</code> instead of having to write out complicated sql joins (that&#39;s <a href="https://www.goodreads.com/review/show/781026074">the last book I read and loved</a> by the way). I won&#39;t go over the basic associations, as I think the <a href="http://guides.rubyonrails.org/association_basics.html">documentation</a> is not bad. However, I will talk about some of the more tricky associations that I ended up implementing.</p>
+
+<p>One challenge in terms of associations is testing them. Luckily, there is a gem out there for that. It&#39;s called <a href="https://github.com/thoughtbot/shoulda">Shoulda</a> and it&#39;s really easy to use. I first learned about it in Michael Hartl&#39;s Rails Tutorial, but I quickly forgot about it. </p>
+
+<p>One of the challenges when reading that book without any prior experience was that it presented all these different concepts together, so that I didn&#39;t understand which commands were part of Rails and which were part of Ruby. Similarly, what is part of RSpec and what has been added to it by Shoulda? Over time, much of this has cleared up.</p>
+
+<p>Here are a few examples of Shoulda at work:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Spec</span><span class="o">.</span><span class="n">describe</span> <span class="no">Book</span><span class="p">,</span> <span class="ss">type</span><span class="p">:</span> <span class="ss">:model</span> <span class="k">do</span>
+  <span class="n">it</span> <span class="p">{</span> <span class="n">should</span> <span class="n">have_many</span><span class="p">(</span><span class="ss">:authors</span><span class="p">)</span><span class="o">.</span><span class="n">class_name</span><span class="p">(</span><span class="s1">&#39;Author&#39;</span><span class="p">)</span> <span class="p">}</span>
+  <span class="n">it</span> <span class="p">{</span> <span class="n">should</span> <span class="n">have_many</span><span class="p">(</span><span class="ss">:editions</span><span class="p">)</span><span class="o">.</span><span class="n">class_name</span><span class="p">(</span><span class="s1">&#39;Edition&#39;</span><span class="p">)</span> <span class="p">}</span>
+  <span class="n">it</span> <span class="p">{</span> <span class="n">should</span> <span class="n">have_many</span><span class="p">(</span><span class="ss">:copies</span><span class="p">)</span><span class="o">.</span><span class="n">class_name</span><span class="p">(</span><span class="s1">&#39;Copy&#39;</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span></code></pre></div>
+
+<h3>Implementing Tags</h3>
+
+<p>Goodreads doesn&#39;t have tags. Instead they have shelves. But it&#39;s a bit confusing, because they have two types of shelves. The first type are exclusive shelves. A user must add a book to one and only one exclusive shelf. Examples of exclusive shelves are &quot;read&quot;, &quot;to read&quot;, and &quot;currently reading&quot;. A book cannot be both &quot;to read&quot; and &quot;currently reading&quot; because that doesn&#39;t make sense.</p>
+
+<p>The second type of shelf is just a shelf that acts more like a category. You can add a book to as many non-exclusive shelves as you&#39;d like. Examples would be &quot;travel&quot;, &quot;romance&quot;, &quot;books with blue covers&quot;, etc.</p>
+
+<p>Lastly, each user defines his or her shelves, and gets to set which shelves are exclusive and which non-exclusive.</p>
+
+<p>When it came to implementing my solution, I thought having the same name and 2 different behaviors was confusing. So I created two separate models. One is the shelf model, which acts like Goodread&#39;s exclusive shelves. And one is the tag model, which acts more like tags do on the rest of the web (and kind of like Goodread&#39;s non exclusive shelves).</p>
+
+<p>Shelves were the simpler of the two. A shelf <code>has_many</code> copies (the concept being that you don&#39;t own a book, you own a copy of a book). And a copy <code>belongs_to</code> a shelf.</p>
+
+<p>Tags were a little more complicated. I ended up creating an intermediate Taggings model so that each copy can have many tags and each tag can have many copies. This <a href="http://railscasts.com/episodes/382-tagging">Railscast tutorial</a> explains what I did pretty well.</p>
+
+<h3>Aliasing a has_one relationship</h3>
+
+<p>I want reviews to <code>have_one</code> reviewer, but the name of the class is Reader not Reviewer. And it has to go through several relationships to get there. I could have settled for review.reader, but I wanted my names to be more accurate. After much experimentation, here&#39;s what I ended up with:</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">has_one</span> <span class="ss">:reviewer</span><span class="p">,</span> <span class="ss">through</span><span class="p">:</span> <span class="ss">:copy</span><span class="p">,</span>
+                   <span class="ss">source</span><span class="p">:</span> <span class="ss">:reader</span><span class="p">,</span>
+                   <span class="ss">class_name</span><span class="p">:</span> <span class="s2">&quot;Reader&quot;</span><span class="p">,</span>
+                   <span class="ss">foreign_key</span><span class="p">:</span> <span class="ss">:reader_id</span></code></pre></div>
+
+<h3>Likes and Comments</h3>
+
+<p>A reader can like a review or a following or a status. A reader may also comment on reviews and statuses. I would like to have just one Like model and one Comment model instead of several different ones tied to different tables. For example, I could do ReviewLike, FollowLike, and StatusLike. But that&#39;s so inelegant, and whenever I want to add the capability to like something else, I would have to write a whole new model and migration for it.</p>
+
+<p>Instead, I decided to use <a href="http://guides.rubyonrails.org/association_basics.html#polymorphic-associations">polymorphic associations</a>. It&#39;s a great solution for this situation, I think! Basically a polymorphic association allows you to use one model (Like in this case) and bind it with two or more models through a foreign key <em>and</em> a type (which tells the model which model to bind it to in each case). So when I like a review, that type will be &quot;Review&quot; and when I like a status that type will be &quot;Status&quot;. Comments work the same way.</p>
+
+<h3>Reader Statuses vs. Copy Statuses</h3>
+
+<p>On Goodreads, a user can enter a general status update. This is like &quot;Hey I&#39;m having a great day.&quot; and is not tied to a book. But they can also enter a status update on a book. This is like &quot;Hey I&#39;m reading &#39;Wittgenstein&#39;s Nephew&#39; by Thomas Bernhard and I&#39;m on page 47 and here are my thoughts...&quot;. The second type of status update is tied to a user&#39;s book (copy model in my case) and can include a page number to show progress. Other than that, the two statuses are the same.</p>
+
+<p>So I really wanted an elegant solution here instead of creating two separate models. I read up on <a href="http://eewang.github.io/blog/2013/03/12/how-and-when-to-use-single-table-inheritance-in-rails/">single table inheritance</a> which seems like a really cool use of inheritance to not repeat code. I wasn&#39;t sure this would be the right solution because copy status has two extra data fields. But I liked the idea that a copy status is basically just a status with extra functionality, so therefore it inherits from it. So I decided to implement it.</p>
+
+<p>And I&#39;m glad I did--now I understand why STI is the <em>wrong</em> solution in this case. I had to rollback and start again. The problem in this case is that CopyStatus not only has 2 extra fields, but one of them is a foreign key field that references copy whereas Status has no foreign key fields. This represents not only difference in data, but also difference in behavior. While I think it could still work, this has gone from a somewhat elegant solution to a total hack. It&#39;s even less elegant than the two models I started with.</p>
+
+<h3>Friendships</h3>
+
+<p>While following is a one-way relationship (you can follow someone but they do not have to follow you back), friendships are a two-way relationship. You both agree to be friends.</p>
+
+<p>If we imagine a friends table with &quot;friender&quot; and &quot;friendee&quot; as the two columns, and a friendship is basically any two users that are referenced in this table then...</p>
+
+<p>This poses an interesting problem in that when I say Demetrius.friends I want the model to return all of Demetrius&#39;s friends. That means everyone in the friender column where friendee is Demetrius <em>and</em> everyone in the friendee column where Demetrius is the friender.</p>
+
+<p>Luckily, I found a <a href="http://railscasts.com/episodes/163-self-referential-association">Railscast</a> that showed two ways of doing this. One uses a gem and one a self-rolled solution. I avoided the gem because the self-rolled version seems just as simple and easier to customize (less dependencies, too).</p>
+
+<p>For my purposes, I also have to think about the fact that a friend has to request someone to be their friend, then that person has to agree before the friendship becomes official. I added an <code>accepted</code> field to the table for this purpose. I&#39;m not sure if this will be sufficient or if I&#39;ll have to create a separate FriendRequest model, but I will find out soon when I try to implement it.</p>
+
+<h3>Alternatives?</h3>
+
+<p>So these are the basic models and relationships between them that I&#39;ve come up with. Could they be different? Are there better ways of modelling this? Probably, but I won&#39;t find out until I implement it. (Feel free to give your thoughts in the comments section)</p>
+
+<p>One thing I thought of that could be different is whether or not I needed the copy model. What if I got rid of it? Well then the problem becomes, how does one Edition <code>has_many</code> Readers (through shelves) as well as one Reader <code>has_many</code> Editions? Someone suggested a <code>has_and_belongs_to_many</code> association here as a possible solution.</p>
+
+<p>Another thing I&#39;m wondering is if I could get rid of the rating and review classes. Since they belong to copy, could I just have <code>rating</code> and <code>review</code> as fields in Copy? Do I lose something from doing that?</p>
+
+<h3>Other Things Learned</h3>
+
+<p>I learned that I really like thinking about models and focusing on them exclusively, at least in the beginning. I also made some big mistakes that I will not make again. One is that the model-database connection is not automatically in sync. When I was testing this I was running into some weird problems. I finally figured out that just because I updated something from one model does not mean all the other models have updated from that same set of data in the database automatically. I have to reload the model in order for it to fetch that data again from the database.</p>
+
+<h3>The Future</h3>
+
+<p>I definitely want to start building out the controllers and views and start making this actually work and look good! My models aren&#39;t complete. There are others I need to add eventually, as well as many fields and things like validation that I need to add. But for now it is a good big-picture where I can get started building. There will likely be many challenges in the future and my models will probably have to change and adapt, but that&#39;s all part of the process!</p>
+
+</div>
+<div class="post-metadata">
+
+<div class="tags">
+  <h2>Tags</h2>
+  <ul>
+    
+    <li><a href="/tag/models">models</a></li>
+    
+    <li><a href="/tag/associations">associations</a></li>
+    
+    <li><a href="/tag/shoulda">shoulda</a></li>
+    
+    <li><a href="/tag/polymorphic associations">polymorphic associations</a></li>
+    
+    <li><a href="/tag/single table inheritance">single table inheritance</a></li>
+    
+  </ul>
+</div>
+
+<div class="related">
+
+
+  
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+  
+    <li><a href="/2015/01/05/week-2-round-up-say-anything/">Week 2 Round Up: say-anything</a>
+    <small>05 Jan 2015</small></li>
+  
+
+
+</ul>
+
+</div>
+
+      
+<a name="comments"></a><h2 class="comments">Comments</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'jimmylocoding';
+    var disqus_identifier = "jimmylocoding/what-i-learned-building-models";
+    var disqus_url = "http://jimmylocoding.com/what-i-learned-building-models";
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </div>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4265933-6', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
