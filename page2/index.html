@@ -458,6 +458,18 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -473,6 +485,75 @@
       <div class="posts">
   
     
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/2015/03/10/jekyll-and-hyde/">
+          Jekyll & Hyde
+        </a>
+      </h1>
+
+      <span class="post-date">10 Mar 2015</span>
+
+      <p>If you&#39;re a longtime reader (as in, the 2 months that this blog has been in existence), you may have noticed some changes. That&#39;s because I just changed blogging platforms from WordPress to <a href="http://jekyllrb.com/docs/github-pages/">Jekyll</a>.</p>
+
+<h3 id="why-change?">Why Change?</h3>
+
+<p>In January, I was learning some new things (Rails, Ruby, Agile, etc.) and I had no time to customize a blog the way I liked it. Nevertheless, I needed some place to document what I&#39;ve learned and connect with people. So I decided to put up a blog as quickly as possible. The only requirement was that it must take almost no time to set up. I was already familiar with WordPress, and have set up several WordPress blogs before. So I set it up, downloaded a free theme, and voila! I was in business.</p>
+
+<p>Two and a half months later, I still like my blog a lot, but it looked cluttered. I started to admire a lot of the other blogs for their minimalistic beauty. The content was front and center. Most of these blogs were hosted on either Ghost, Medium, or GitHub Pages. I decided to look into these options.</p>
+
+<h3 id="why-github-pages?-why-jekyll?">Why GitHub Pages? Why Jekyll?</h3>
+
+<p><a href="https://pages.github.com/">GitHub Pages</a> is hosted on GitHub. You automatically get one site per GitHub account, and when you push any changes to it, it gets updated. No further work needed! I was attracted mostly to the convenience of updating the blog where I would update my other code--in my text editor. It reminded me of the early days when the internet was just a bunch of static HTML pages, and I&#39;d log into the server to edit my HTML files directly. On top of GitHub pages, you get Jekyll:</p>
+
+<blockquote>
+<p>GitHub Pages are powered by Jekyll behind the scenes, so in addition to supporting regular HTML content, they’re also a great way to host your Jekyll-powered website for free.</p>
+</blockquote>
+
+<p>Jekyll is so cool! With it, I can write all my posts within my text editor using beautiful <a href="https://help.github.com/articles/markdown-basics/">Markdown</a> instead of ugly HTML or dealing with buggy WYSIWYG interfaces! GitHub Pages and Jekyll provides all the advantages of a static site (speed, simplicity) with all the advantages of a dynamic site (<a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY-ness</a>). Every time you push the site, Jekyll generates all the static pages for you based on the templates and code you&#39;ve written. So despite the fact that it&#39;s a static site, if you want to change the layout or colors or even functionality of your site, you can do it in just one place.</p>
+
+<p>Jekyll works with regular HTML pages too, so I didn&#39;t have to convert all my old posts to Markdown.</p>
+
+<p>Here are the other advantages of using GitHub Pages / Jekyll:</p>
+
+<ul>
+<li>since content is static instead of in a database, all my blog content is version controlled and backed up on GitHub</li>
+<li>static pages mean non-executable and secure pages! I don&#39;t have to worry about someone hacking into my blog if I didn&#39;t update to the latest WordPress release</li>
+<li>design-wise, it is so simple. I can do anything I want to the site, it&#39;s simply a matter of changing HTML, Markdown, and CSS files</li>
+</ul>
+
+<h3 id="setting-it-up">Setting it up</h3>
+
+<p>There&#39;s nothing that technically extraordinary about my set-up that I need to write a whole blog post about it. I followed <a href="http://joshualande.com/jekyll-github-pages-poole/">this tutorial</a>, but instead of only using <a href="https://github.com/poole/poole">Poole</a>, I also used a Poole theme called <a href="http://hyde.getpoole.com/">Hyde</a>. The difference? Poole isn&#39;t exactly a theme; it comes with all types of default settings on top of Jekyll to give you a solid foundation to build upon. Hyde, on the other hand, <i>is</i> a theme and is built on top of Poole.</p>
+
+<p>The second tutorial I used was <a href="http://charliepark.org/tags-in-jekyll/">this blog post</a> which helped me implement tags.</p>
+
+<h3 id="downsides">Downsides</h3>
+
+<p>The only downside is that I&#39;ve now lost all of the great comments you&#39;ve left on my blog. I still <i>have</i> them, of course. But they are no longer on this version of the blog for everyone to see. But since I&#39;ve implemented comments using <a href="https://disqus.com/">Disqus</a>, it will be pretty easy for you to leave comments on this site from here on out. You don&#39;t even need a Disqus account, as you can use OAuth to log in through Twitter or any of the other social networks.</p>
+
+<h3 id="one-additional-note">One additional note</h3>
+
+<p>OK maybe two. First, the related_posts method that comes with Jekyll is sorely lacking. Luckily, I was able to find <a href="http://www.chrisyin.com/2014/08/23/jekyll-related-posts/">a plugin</a> for it, and since Jekyll is written in Ruby, plugins are just Ruby classes that <a href="http://en.wikipedia.org/wiki/Monkey_patch">monkey patch</a> existing classes. This means that if I didn&#39;t like this plugin, I could change it without having to learn a new language.</p>
+
+<p>Second, and this is the unfortunate part, GitHub Pages disables all plugins by default, for security reasons. So even though the related posts and tags plugins work fine on my local Jekyll server, it doesn&#39;t work when pushed to GitHub.</p>
+
+<p>Here&#39;s the workaround: When you run Jekyll, it generates a static site. When you push to GitHub, GitHub Pages knows to run Jekyll on those files and publish the static files that it generates. But we don&#39;t want GitHub to run Jekyll for us because its version of Jekyll ignores plugins. We want to run our own Jekyll and tell GitHub to use our own statically generated pages instead!</p>
+
+<p>So what we need are two repos. One to hold the Jekyll site, and one to hold our own statically generated site.</p>
+
+<p>This second repo <i>must</i> be named github-username.github.io because that&#39;s how GitHub Pages knows its the repo to publish. So what I had to do was rename the current jimmylorunning.github.io repo to jimmylocoding.com. This will be the first repo mentioned above.</p>
+
+<p>For the second repo, I go to GitHub and create one named jimmylorunning.github.io. I go to my local _site folder (which is where Jekyll stores the statically generated site) and type <code>git init</code>. I add all the files, commit them, and push to jimmylorunning.github.io as its origin. From now on, whenever I make any changes to my blog, I will have to commit my jekyll files to the jimmylocoding.com repo, run <code>jekyll serve</code> or <code>jekyll build</code> (which I should run anyway, just to test my changes before pushing), then commit all my generated _site files to jimmylorunning.github.io.</p>
+
+
+      
+      <span class="post-comments-link"><a href="/2015/03/10/jekyll-and-hyde/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
+      
+    </div>
+    
+  
+    
   
     
     <div class="post">
@@ -486,7 +567,7 @@
 
       <p>I said I&#39;d write a little bit about some of the challenges I encountered while writing the <a href="https://github.com/codeforatlanta/csv_geocoder">CSV Geocoder</a> utility. So here&#39;s a small problem and solution:</p>
 
-<h3>Problem:</h3>
+<h3 id="problem:">Problem:</h3>
 
 <p>The purpose of the class is very simple. I want to add geocode data to the CSV, then write it to a file. So I write a method like <code>write_csv_with_geocode(file)</code> that joins the CSV with the geocode data and then writes it to a file. However, this violates the <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility</a> per method principle. It does two things: adds the geocode data, then writes it to a file.</p>
 
@@ -509,7 +590,7 @@
 
 <p>The upside of having it all in one method is that I can accomplish two related tasks in one method call instead of having to call both of them separately every time.</p>
 
-<h3>Solution:</h3>
+<h3 id="solution:">Solution:</h3>
 
 <p>Chaining! I make add_geocode assign the new value to an instance variable, then return self (returning self is the key to making methods chainable). Then the write method takes the instance variable and writes it to a CSV file. So now the user can do the simple task in one line, and the operations are also separated into their own methods. Best of both worlds! In fact, I realized I could do the same with all of the methods in the class, so that you could now write the following line:</p>
 
@@ -530,7 +611,7 @@
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
-<h3>What do you think?</h3>
+<h3 id="what-do-you-think?">What do you think?</h3>
 
 <p>Is chaining a good solution to this problem? How would you have done it? Also: are there other ways I could improve this class?</p>
 
@@ -579,7 +660,7 @@ I joined the second group because I was interested in mapping and because I felt
 
 <p><img src="/images/southdowntown2.jpg" alt="Screenshot of South Downtown Asset Map" /></p>
 
-<h3>Day 2</h3>
+<h3 id="day-2">Day 2</h3>
 
 <p>Things began slowly with coffee at 9am. A few folks stared into their laptops like zombies. I was one of those. My CSV Geocoder was working, but I couldn&#39;t help tinkering with it, refactoring and improving it (in fact, I was still doing that earlier today). But more of the data was coming in in different formats. I was looking for a new task to do.</p>
 
@@ -620,7 +701,7 @@ I joined the second group because I was interested in mapping and because I felt
     <li>My controller was getting pretty fat, and I had to look at it long and hard and figure out how to refactor it. I decided to make a Feeds class, which now lives in the lib folder. It wasn&#39;t easy breaking apart the fat methods in the controller, but I&#39;m glad I did because it looks much cleaner this way.</li>
 </ol></p>
 
-<h3>To Do</h3>
+<h3 id="to-do">To Do</h3>
 
 <p>Tests! For the Feed class and for the controller. I&#39;m not very good at writing tests before the code, but as long as I write the tests some time, that&#39;s probably better than never.</p>
 
@@ -629,33 +710,6 @@ I joined the second group because I was interested in mapping and because I felt
 
       
       <span class="post-comments-link"><a href="/2015/02/13/twitter-fitter-v2/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
-      
-    </div>
-    
-  
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="/2015/02/10/week-7-in-review/">
-          Week 7 in Review
-        </a>
-      </h1>
-
-      <span class="post-date">10 Feb 2015</span>
-
-      <p>Didn&#39;t get anything (app-wise) presentable to the world out this week. However, I did finish off a bunch of loose-ends at my freelance jobs and such, so I&#39;m feeling pretty good about that. Just a quick round-up. I&#39;ll have a longer blog post about other topics soon.
-<ul>
-    <li>made a lot of changes to the library site code... mostly refactorings, but also fixed some bugs</li>
-    <li>another freelance project is coming to the end; it feels good to be in the home stretch</li>
-    <li>SaaS - no homework this week, just a pretty extensive quiz that I didn&#39;t do very good on. The topic is design patterns, and I feel like it would be better as a homework assignment so we could actually practice them rather than quiz questions, because patterns are already such abstract concepts, it&#39;s hard to answer questions about them without tying them to a real app. I had a lot of trouble with the wording and terminology of many of the questions. I feel like I understood the concepts pretty well, but the wording always gets me to pick the wrong thing. But the bigger picture, that of design patterns, was still very useful, and is one area that I&#39;ll need to get better at (both recognizing when to use them and actually implementing them well)</li>
-    <li>My <a href="http://jimmylocoding.com/resume">resume</a>. I&#39;m still working on my portfolio site when I can find a spare second, but until it&#39;s done <a href="http://jimmylocoding.com/resume">this resume</a> will be my face on the job market. It was made in <a href="https://jsonresume.org/">JSON Resume</a> (an open source solution). Fellow #codenewbie Jonathan told me about it, and it&#39;s really saved me a lot of time by separating the presentation layer from the content (which is coded in JSON).</li>
-    <li>Rails API + Ember - I worked on following <a href="https://devmynd.com/blog/2014-7-rails-ember-js-with-the-ember-cli-redux">this tutorial</a> which is pretty straight forward, although probably not written for Rails newbies. There were a few things it did where I felt happy that it worked without knowing why it worked. Going back over it, I feel like I understand the main concepts well, but the details would be hard to reproduce in another app without following each step over again.</li>
-    <li>I started a #codenewbie <a href="http://www.codenewbie.org/code-club">Code Club</a> on making pull requests. Code Club is a great one-hour study session where we tackle a problem (doing a pull request in this case) and teach each other. We went through <a href="http://www.codenewbie.org/blogs/how-to-make-a-pull-request">this helpful article</a> on doing pull requests as well as putting what it said into practice on my <a href="https://still-sands-5922.herokuapp.com/index.php">Exquisite Source</a> repo <a href="https://github.com/jimmylorunning/exquisite-source">on github</a>.</li>
-</ul></p>
-
-
-      
-      <span class="post-comments-link"><a href="/2015/02/10/week-7-in-review/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
       
     </div>
     

@@ -458,6 +458,18 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -471,6 +483,51 @@
 
     <div class="content container">
       <div class="posts">
+  
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/2015/01/27/overwhelmed/">
+          Overwhelmed!
+        </a>
+      </h1>
+
+      <span class="post-date">27 Jan 2015</span>
+
+      <p>I didn&#39;t finish my app this week! I tried to do too much. But here&#39;s what I did finish:</p>
+
+<h3 id="my-saas-homework">My SaaS homework</h3>
+
+<p>I talked a little about this last week. We had to refactor and fix some bugs in a legacy codebase (Typo). I figured out that I had to run bundle exec rake db:test:prepare if I want to run Rspec after I run Cucumber. For some reason Cucumber messes up the database. Then, the biggest road block was writing tests and then getting them to pass. I ended up overly fixing it... and the autograder was not giving me credit because it was expecting this form to be submitted to an edit action when in fact it&#39;s really a new action, so I had changed it to new in order to be more accurate.</p>
+
+<h3 id="my-portfolio">My portfolio</h3>
+
+<p>I got it into my head that I can bang out <a href="https://github.com/jimmylorunning/portfolio">a portfolio webpage</a> real quick. But quickly got stuck in a rut. Had a hard time setting up gulp. And it&#39;s still working weirdly. When I run &quot;gulp sass&quot; it might more might not give me an error. Then if I change some tab inside the gulpfile... or if I just run &quot;gulp&quot; without any task specified, then run &quot;gulp sass&quot; again, it may or may not just work. It&#39;s so erratic that I was tearing my hair out trying to figure it out. But I finally just gave up and wrote a shell script that does the same thing. Maybe I&#39;ll try grunt next time.</p>
+
+<h3 id="my-app">My app</h3>
+
+<p><a href="https://github.com/jimmylorunning/om-nom-nom">Started but didn&#39;t finish it</a>. <span style="line-height: 1.5;">But the original idea for it was pretty good. It&#39;s basically going to be a social network for yoga lovers. Yoga lovers can add yoga poses. And then they can create yoga routines by putting poses together in a certain order. Yoga poses that are shared publicly can be added on other people&#39;s routines. There will be many other features, but that&#39;s the core functionality. For example, when a routine is done, you can play it back and it will guide you through the routine in real time.</span></p>
+
+<p>I was basing yoga poses/routines off of Youtube&#39;s videos / playlists. So I might work on it in the future. I feel like I need to at least learn a front end javascript framework before attacking this because there are pages that would be really awkward without loading things dynamically on the page without reloading the page.</p>
+
+<h3 id="level-up-rails">Level UP Rails</h3>
+
+<p>made some progress on this curriculum. Although I started over-engineering one of the exercises, so my time was all sucked up in that. You can see it here. It&#39;s still not finished (there are some improvements I am planning) but it&#39;s basically a program that reads in two comma separated value files (CSV) of dinosaur data and creates an object that you can query. For example, you can say dinosaur.big to get a list of all the big ones. or dinosaur.bipeds. The cool thing is that you can also chain them together in any order like dinosaur.big.bipeds to get an intersection. You can see <a href="https://github.com/jimmylorunning/level-up-exercises/tree/master/dino_catalog">my code here</a> (comments and suggestions welcome)</p>
+
+<h3 id="my-work">My work</h3>
+
+<p>I&#39;m still doing some freelance work for the library. Did a lot of refactoring of code this past week and that was oddly satisfying.</p>
+
+<h3 id="meetups">Meetups</h3>
+
+<p>went to a Ruby meetup where everyone just socialized and worked on their projects at a coffeeshop. It&#39;s not the main meetup they do (with an official speaker) but the other one where it&#39;s more just like casual hanging out.</p>
+
+
+      
+      <span class="post-comments-link"><a href="/2015/01/27/overwhelmed/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
+      
+    </div>
+    
   
     
     <div class="post">
@@ -569,7 +626,7 @@ So Sean Connery has a Bacon Number of 2. The website also has an API. You can a
     <li>Since I am also taking the EdX SaaS class, on weeks where my SaaS homework is pretty involved, I can substitute that homework assignment for my weekly app</li>
 </ul>
 </li>
-    <li><a href="https://leveluprails.com/">Level UP Rails</a> -- I heard about this curriculum through the Ruby Rogues podcast episode <a href="http://devchat.tv/ruby-rogues/190-rr-apprenticeship-with-joseph-mastey-and-jill-lynch-of-enova">&quot;Apprenticeship with Joseph Mastey and Jill Lynch of Enova&quot;</a> where Joseph talks about implementing an apprenticeship program at his company for onboarding new hires who show a lot of potential but who may not be as technically proficient. These apprentices spend the first few months just learning the company&#39;s stack, codebase, and a lot of other basic skills. Joseph also mentioned that the curriculum that he designed is now open source! It&#39;s available at <a href="https://leveluprails.com/">https://leveluprails.com/</a>. So far I&#39;m really enjoying this curriculum. It provides just enough guidance and links about each topic so that you know what you should learn, without providing too much more. Then it&#39;s your responsibility to Google it if you want to know more. There are also exercises at the end of each section. I also find the way the exercise titles are phrased to be amusing... I&#39;m not sure if this was a conscious decision but they&#39;re phrased to sound like unit test describe blocks..., for example &quot;Knows what ports are and can use netstat to find them&quot;. You can follow <a href="https://github.com/jimmylorunning/level-up-rails">my progress on github</a>, where I&#39;ll record my answers to the exercises as well as whatever personal notes I want to remember for later.</li>
+    <li><a href="https://leveluprails.com/">Level UP Rails</a> -- I heard about this curriculum through the Ruby Rogues podcast episode <a href="http://devchat.tv/ruby-rogues/190-rr-apprenticeship-with-joseph-mastey-and-jill-lynch-of-enova">&quot;Apprenticeship with Joseph Mastey and Jill Lynch of Enova&quot;</a> where Joseph talks about implementing an apprenticeship program at his company for onboarding new hires who show a lot of potential but who may not be as technically proficient. These apprentices spend the first few months just learning the company&#39;s stack, codebase, and a lot of other basic skills. Joseph also mentioned that the curriculum that he designed is now open source! It&#39;s available at <a href="https://leveluprails.com/"><a href="https://leveluprails.com/">https://leveluprails.com/</a></a>. So far I&#39;m really enjoying this curriculum. It provides just enough guidance and links about each topic so that you know what you should learn, without providing too much more. Then it&#39;s your responsibility to Google it if you want to know more. There are also exercises at the end of each section. I also find the way the exercise titles are phrased to be amusing... I&#39;m not sure if this was a conscious decision but they&#39;re phrased to sound like unit test describe blocks..., for example &quot;Knows what ports are and can use netstat to find them&quot;. You can follow <a href="https://github.com/jimmylorunning/level-up-rails">my progress on github</a>, where I&#39;ll record my answers to the exercises as well as whatever personal notes I want to remember for later.</li>
     <li><a href="http://www.poodr.com/">Read Practical Object Oriented Design in Ruby</a> by Sandi Metz - this is a great book so far. If you haven&#39;t already, go watch <a href="https://www.youtube.com/results?search_query=sandi+metz">Sandi Metz&#39;s talks</a> on YouTube. I&#39;ve learned so much from her.</li>
     <li>Continue to blog at least once a week.</li>
 </ul>
@@ -627,58 +684,6 @@ Non programming related:
 
       
       <span class="post-comments-link"><a href="/2015/01/14/my-coding-journey/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
-      
-    </div>
-    
-  
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="/2015/01/12/week-3-round-up-twitter-fitter/">
-          Week 3 Round Up: Twitter Fitter&#8212;the tweet generator!
-        </a>
-      </h1>
-
-      <span class="post-date">12 Jan 2015</span>
-
-      <p>So there&#39;s still a lot more work I want to do on my week 3 app <a href="https://secret-brushlands-4139.herokuapp.com/">Twitter Fitter</a>. But the general idea is there--it&#39;s a <a href="http://en.wikipedia.org/wiki/Markov_chain">Markov generator</a>. You type in a twitter handle, and it spits back a generated tweet (or tweet-like string) that is in the style of that user. (Try @DATABASE_HULK, @StephenAtHome, @BarackObama, or @kimkardashian) Part of the app/week project is that I want to learn something new each time. So what did I learn this week?</p>
-
-<h3>Firsts:</h3>
-
-<p>Well, this was my first app where I had to connect to another service (in this case it was the <a href="https://dev.twitter.com/rest/public">Twitter API</a> through the <a href="https://github.com/sferik/twitter">Twitter gem</a>) and also the first app where I wrote my own POROs (plain old Ruby objects) inside of Rails. In fact, this was barely a Rails app. It doesn&#39;t even have a model. It&#39;s mostly just a single page that connects to Twitter and then runs the MarkovChain object that I wrote for it. I also obviously learned a lot about Markov generators and how they work. (I knew about them generally but never thought about how to write one before)</p>
-
-<h3>Testing:</h3>
-
-<p>I was able to write <a href="https://github.com/jimmylorunning/twitter-fitter/blob/master/spec/lib/markov_chain_spec.rb">tests for my MarkovChain object</a>. I&#39;m pretty proud of this. But I haven&#39;t written tests for the actual controller code yet (which is currently very messy).</p>
-
-<h3>To do:</h3>
-
-<p>As always there are still many things I want to do to improve it:
-<ul>
-    <li>Needs major styling. Looks really ugly right now. I want it to look good!</li>
-    <li>I want you to be able to retweet the generated tweets. Maybe it will retweet it from a custom account, maybe @TwitterFitter</li>
-    <li>I want to make a gem out of the MarkovChain object. There are already similar gems out there (and my algorithm isn&#39;t all that unique), but I think it would be a learning experience to create my own gem.</li>
-    <li>Tweak my generator code. Currently it&#39;s pretty simple, and the results are either pretty funny / nonsensical or else they&#39;re pretty boring (like almost word for word of an existing tweet rather than a mix-match of different tweets)</li>
-</ul></p>
-
-<h3>Challenges:</h3>
-
-<ul>
-    <li>writing the <a href="https://github.com/jimmylorunning/twitter-fitter/blob/master/lib/markov_chain.rb">actual Markov generator</a>, and making it perform okay as well as be open to modification in the future if I wanted to change the way it works later. For example, I thought it would be cool if I could pass it a lambda so that it picks the next word based on running that lambda code. The default is just random, but maybe someone would want to tweak it themselves without having to go into my code.</li>
-    <li>figuring out how to call private / public methods within my class, and whether or not to even use private methods. <a title="self or no self" href="http://jimmylocoding.com/2015/01/09/self-or-no-self/">Here's a blog post I wrote</a> about this topic.</li>
-    <li>tweaking the generator. When I use a prefix length of 2, I get back text that's very similar to the original text, so much so that it's kind of boring. If I set it to 1, I get back things that are sometimes very nonsensical. I decided on 1. But it would be nice to come up with a different algorithm so that it's between totally nonsensical and completely boring.</li>
-    <li>figuring out how to include my ruby object in the lib directory and have rails auto include it. I was not naming my file correctly, so it didn't include it when autoloading! Took me some extra googling to figure out why.</li>
-    <li>writing test code. I'm not sure I did it right, but testing code that's supposed to be random was also kind of tricky. I had to <a href="http://ruby-doc.org/core-2.2.0/Random.html#method-c-srand">seed the generator</a> with values so that it would be predictable/testable.</li>
-    <li>using the Twitter gem. I had to figure out how to give it my API keys and secrets without exposing it through github. I wrote a <a title="Hiding my API keys" href="http://jimmylocoding.com/2015/01/07/hiding-my-api-keys/">blog post about this here</a>.</li>
-</ul>
-
-<h3>Next week(s):</h3>
-
-<p>I&#39;ve mentioned taking the incredibly helpful <a href="https://www.edx.org/course/engineering-software-service-uc-berkeleyx-cs169-1x">edX.org SaaS class</a> (Software as a Service) before. Well, <a href="https://www.edx.org/course/engineering-software-service-part-2-uc-berkeleyx-cs169-2x">part 2 of the class</a> has just started, so instead of continuing with my own apps, I will be doing the SaaS homework apps every week for the next few weeks. It&#39;s only a few weeks, and there&#39;s not a homework for <em>every</em> week, so it won&#39;t be taking over this project completely, but its presence will definitely be felt. I will still be blogging about my discoveries, though! Hope you&#39;ll keep reading.</p>
-
-
-      
-      <span class="post-comments-link"><a href="/2015/01/12/week-3-round-up-twitter-fitter/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
       
     </div>
     

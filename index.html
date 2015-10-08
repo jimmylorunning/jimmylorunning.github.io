@@ -458,6 +458,18 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -475,6 +487,108 @@
     
     <div class="post">
       <h1 class="post-title">
+        <a href="/a-laravel-rails-dictionary">
+          A Laravel-Rails Dictionary
+        </a>
+      </h1>
+
+      <span class="post-date">08 Oct 2015</span>
+
+      <p>Sometimes you struggle for a long time to learn something, and you don&#39;t feel like you&#39;ve really made much progress. But when you learn something new and somewhat similar to it, the learning curve is greatly reduced. It&#39;s a great feeling. That&#39;s what happened with me recently when I tried to learn Laravel for a work project. Because of the time I spent with Rails, it made learning Laravel so much easier! Laravel is a MVC framework for PHP very similar to the way Rails is for Ruby.</p>
+
+<p>Because a lot of the concepts are similar, I created a chart of equivalent syntaxes that could get someone who is already familiar with Rails started in Laravel much quicker. </p>
+
+<table><thead>
+<tr>
+<th>Laravel</th>
+<th>Rails</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>composer install (or php composer.phar install)</td>
+<td>gem install</td>
+</tr>
+<tr>
+<td>composer create-project laravel/laravel your-project-name</td>
+<td>rails new your-project-name</td>
+</tr>
+<tr>
+<td>composer.json</td>
+<td>Gemfile</td>
+</tr>
+<tr>
+<td>composer.lock</td>
+<td>Gemfile.lock</td>
+</tr>
+<tr>
+<td>packagist.org</td>
+<td>rubygems.org</td>
+</tr>
+<tr>
+<td>blade</td>
+<td>erb or haml</td>
+</tr>
+<tr>
+<td>Eloquent</td>
+<td>ActiveRecord</td>
+</tr>
+<tr>
+<td>php artisan serve</td>
+<td>rails serve</td>
+</tr>
+<tr>
+<td>php artisan make:controller PagesController</td>
+<td>rails generate controller Pages</td>
+</tr>
+<tr>
+<td>php artisan make:model Article</td>
+<td>rails generate model Article</td>
+</tr>
+<tr>
+<td>php artisan make:migration add_column_to_table</td>
+<td>rails generate migration AddColumnToTable</td>
+</tr>
+<tr>
+<td>php artisan migrate</td>
+<td>bundle exec rake db:migrate</td>
+</tr>
+<tr>
+<td>php artisan tinker</td>
+<td>rails console</td>
+</tr>
+<tr>
+<td>php -a</td>
+<td>irb</td>
+</tr>
+<tr>
+<td>php artisan route:list</td>
+<td>bundle exec rake routes</td>
+</tr>
+</tbody></table>
+
+<p>Overall, I really love Laravel. In fact, I think I like Laravel more than Rails (while I still like Ruby way more than PHP). There are obviously a lot of similarities to Rails, and you can&#39;t take away the fact that Rails changed the landscape and paved the way for Laravel. But there are also many things that are different as well, and make Laravel really shine. I&#39;ll try to write about those in a future post. </p>
+
+<p>Meanwhile, here are a few shout-outs:</p>
+
+<ul>
+<li><a href="https://blog.udemy.com/ruby-on-rails-tutorial-learn-from-scratch/">Udemy&#39;s RoR Tutorial: Learn from Scratch</a> I was turned onto this tutorial by Molly Elizabeth, who works at Udemy. I haven&#39;t gone through the tutorial myself, but it looks like a very good resource if you&#39;re just starting out in Rails. If you try it, let me know what you think.</li>
+<li><a href="http://www.phptherightway.com/">PHP: The Right Way</a> a very good 10,000 feet birds eye view of the somewhat gnarly PHP scene. It&#39;s not the prettiest language, but recent iterations have been able to salvage it a bit. This site is a super useful resource if you have to do PHP, and it covers best practices, how to organize your code, pitfalls you can avoid, etc.</li>
+<li><a href="https://laracasts.com/">Laracast</a> these video tutorials are clear, concise, and very useful when learning Laravel. Jeffrey is a really good teacher and communicator, and he covers the topics at just the right speed. Highly recommended.</li>
+<li><a href="https://buildwithcraft.com/">Craft CMS</a> I&#39;ve been working with ExpressionEngine for a while, and while very powerful, it is still a bit frustrating and inflexible at certain things. Craft was designed by people who used to design plugins for ExpressionEngine, so they know all the painpoints and they have been able to create a really amazing product. Check it out if you&#39;re looking for a really well thought-out CMS.</li>
+<li><a href="https://www.digitalocean.com/?refcode=af3f55393a0b">DigitalOcean</a> paired with <a href="https://serverpilot.io/">ServerPilot</a>. Setting up your stack can&#39;t be simpler than with these two tools working together. DigitalOcean provides the servers on the cloud and ServerPilot gives you a really nice control panel to configure them. And the interface of both sites are simple and elegant, and much less headache-inducing than AWS.</li>
+<li>... speaking of which, if you have to deal with <a href="https://aws.amazon.com/">AWS</a>, here&#39;s a really great resource: <a href="https://www.expeditedssl.com/aws-in-plain-english">AWS in Plain English</a>. It comically translates AWS services into what they should have been named in the first place. Nice intuitive names rather than EC2 or S3.</li>
+</ul>
+
+
+      
+      <span class="post-comments-link"><a href="/a-laravel-rails-dictionary#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
+      
+    </div>
+    
+  
+    
+    <div class="post">
+      <h1 class="post-title">
         <a href="/what-i-learned-building-models">
           What I Learned Building Only the Models for an App
         </a>
@@ -486,11 +600,11 @@
 
 <p>Instead of developing each feature, I developed all the models up front. This allowed me to really think about the data structure behind my app and how each part interacts with the whole. I also aimed to do test driven development, by writing tests for each model and their associations before moving onto the next model. The downside of this approach is that by the end of this experiment, I still didn&#39;t have one tangible feature, at least not from the user&#39;s standpoint. And of course designing the models up front doesn&#39;t mean I won&#39;t have to change them later when I realize the constraints have changed. But I think it&#39;s a good learning experiment, allowing me to not worry about the controllers or views at all, and just focus in on how to connect all the different pieces. </p>
 
-<h3>My App</h3>
+<h3 id="my-app">My App</h3>
 
 <p>I love the site <a href="http://www.goodreads.com">Goodreads</a>. It&#39;s a social network around books. At the core of the app are the following features:</p>
 
-<h4>Around Books</h4>
+<h4 id="around-books">Around Books</h4>
 
 <ul>
 <li>users have shelves and can create new shelves and can add books to their shelves</li>
@@ -498,7 +612,7 @@
 <li>users can review and rate books</li>
 </ul>
 
-<h4>Around Users</h4>
+<h4 id="around-users">Around Users</h4>
 
 <ul>
 <li>users can friend each other creating a 2 way relationship</li>
@@ -508,7 +622,7 @@
 
 <p>There&#39;s <em>much</em> more to it, but those are the very core features. Since I love Goodreads and there are a few things I&#39;d like to change about it, I decided to make my next app be a Goodreads clone. I think part of the reason I could design the complete model first is because I&#39;m so familiar with the existing site and know beforehand exactly how each part is supposed to work. That said, I did make a few changes in my version, which I will talk about later.</p>
 
-<h3>The End Result</h3>
+<h3 id="the-end-result">The End Result</h3>
 
 <p>I&#39;m going to start by showing you what I ended up with, and then explain some of the choices I made. The amazing <a href="http://wendybeth.ghost.io/">Wendy Beth</a> told me about the <a href="https://github.com/voormedia/rails-erd">Rails ERD</a> gem which will &quot;allows you to easily generate a diagram based on your application&#39;s Active Record models&quot;. Here is my ERD (entity relationship diagram):</p>
 
@@ -516,7 +630,7 @@
 
 <p>What follows isn&#39;t a complete step-by-step tutorial on what I did, but rather a few highlights (or lowlights, depending on how you see it) of my experience building this out.</p>
 
-<h3>Associations and Shoulda</h3>
+<h3 id="associations-and-shoulda">Associations and Shoulda</h3>
 
 <p>A huge part of this exercise was figuring out how to work with rails associations. You know, those <code>has_many</code> and <code>belongs_to</code> calls that magically link up your models so that you can simply call <code>school_of_the_sun.editions</code> instead of having to write out complicated sql joins (that&#39;s <a href="https://www.goodreads.com/review/show/781026074">the last book I read and loved</a> by the way). I won&#39;t go over the basic associations, as I think the <a href="http://guides.rubyonrails.org/association_basics.html">documentation</a> is not bad. However, I will talk about some of the more tricky associations that I ended up implementing.</p>
 
@@ -532,7 +646,7 @@
   <span class="n">it</span> <span class="p">{</span> <span class="n">should</span> <span class="n">have_many</span><span class="p">(</span><span class="ss">:copies</span><span class="p">)</span><span class="o">.</span><span class="n">class_name</span><span class="p">(</span><span class="s1">&#39;Copy&#39;</span><span class="p">)</span> <span class="p">}</span>
 <span class="k">end</span></code></pre></div>
 
-<h3>Implementing Tags</h3>
+<h3 id="implementing-tags">Implementing Tags</h3>
 
 <p>Goodreads doesn&#39;t have tags. Instead they have shelves. But it&#39;s a bit confusing, because they have two types of shelves. The first type are exclusive shelves. A user must add a book to one and only one exclusive shelf. Examples of exclusive shelves are &quot;read&quot;, &quot;to read&quot;, and &quot;currently reading&quot;. A book cannot be both &quot;to read&quot; and &quot;currently reading&quot; because that doesn&#39;t make sense.</p>
 
@@ -546,7 +660,7 @@
 
 <p>Tags were a little more complicated. I ended up creating an intermediate Taggings model so that each copy can have many tags and each tag can have many copies. This <a href="http://railscasts.com/episodes/382-tagging">Railscast tutorial</a> explains what I did pretty well.</p>
 
-<h3>Aliasing a has_one relationship</h3>
+<h3 id="aliasing-a-has_one-relationship">Aliasing a has_one relationship</h3>
 
 <p>I want reviews to <code>have_one</code> reviewer, but the name of the class is Reader not Reviewer. And it has to go through several relationships to get there. I could have settled for review.reader, but I wanted my names to be more accurate. After much experimentation, here&#39;s what I ended up with:</p>
 
@@ -555,13 +669,13 @@
                    <span class="ss">class_name</span><span class="p">:</span> <span class="s2">&quot;Reader&quot;</span><span class="p">,</span>
                    <span class="ss">foreign_key</span><span class="p">:</span> <span class="ss">:reader_id</span></code></pre></div>
 
-<h3>Likes and Comments</h3>
+<h3 id="likes-and-comments">Likes and Comments</h3>
 
 <p>A reader can like a review or a following or a status. A reader may also comment on reviews and statuses. I would like to have just one Like model and one Comment model instead of several different ones tied to different tables. For example, I could do ReviewLike, FollowLike, and StatusLike. But that&#39;s so inelegant, and whenever I want to add the capability to like something else, I would have to write a whole new model and migration for it.</p>
 
 <p>Instead, I decided to use <a href="http://guides.rubyonrails.org/association_basics.html#polymorphic-associations">polymorphic associations</a>. It&#39;s a great solution for this situation, I think! Basically a polymorphic association allows you to use one model (Like in this case) and bind it with two or more models through a foreign key <em>and</em> a type (which tells the model which model to bind it to in each case). So when I like a review, that type will be &quot;Review&quot; and when I like a status that type will be &quot;Status&quot;. Comments work the same way.</p>
 
-<h3>Reader Statuses vs. Copy Statuses</h3>
+<h3 id="reader-statuses-vs.-copy-statuses">Reader Statuses vs. Copy Statuses</h3>
 
 <p>On Goodreads, a user can enter a general status update. This is like &quot;Hey I&#39;m having a great day.&quot; and is not tied to a book. But they can also enter a status update on a book. This is like &quot;Hey I&#39;m reading &#39;Wittgenstein&#39;s Nephew&#39; by Thomas Bernhard and I&#39;m on page 47 and here are my thoughts...&quot;. The second type of status update is tied to a user&#39;s book (copy model in my case) and can include a page number to show progress. Other than that, the two statuses are the same.</p>
 
@@ -569,7 +683,7 @@
 
 <p>And I&#39;m glad I did--now I understand why STI is the <em>wrong</em> solution in this case. I had to rollback and start again. The problem in this case is that CopyStatus not only has 2 extra fields, but one of them is a foreign key field that references copy whereas Status has no foreign key fields. This represents not only difference in data, but also difference in behavior. While I think it could still work, this has gone from a somewhat elegant solution to a total hack. It&#39;s even less elegant than the two models I started with.</p>
 
-<h3>Friendships</h3>
+<h3 id="friendships">Friendships</h3>
 
 <p>While following is a one-way relationship (you can follow someone but they do not have to follow you back), friendships are a two-way relationship. You both agree to be friends.</p>
 
@@ -581,7 +695,7 @@
 
 <p>For my purposes, I also have to think about the fact that a friend has to request someone to be their friend, then that person has to agree before the friendship becomes official. I added an <code>accepted</code> field to the table for this purpose. I&#39;m not sure if this will be sufficient or if I&#39;ll have to create a separate FriendRequest model, but I will find out soon when I try to implement it.</p>
 
-<h3>Alternatives?</h3>
+<h3 id="alternatives?">Alternatives?</h3>
 
 <p>So these are the basic models and relationships between them that I&#39;ve come up with. Could they be different? Are there better ways of modelling this? Probably, but I won&#39;t find out until I implement it. (Feel free to give your thoughts in the comments section)</p>
 
@@ -589,11 +703,11 @@
 
 <p>Another thing I&#39;m wondering is if I could get rid of the rating and review classes. Since they belong to copy, could I just have <code>rating</code> and <code>review</code> as fields in Copy? Do I lose something from doing that?</p>
 
-<h3>Other Things Learned</h3>
+<h3 id="other-things-learned">Other Things Learned</h3>
 
 <p>I learned that I really like thinking about models and focusing on them exclusively, at least in the beginning. I also made some big mistakes that I will not make again. One is that the model-database connection is not automatically in sync. When I was testing this I was running into some weird problems. I finally figured out that just because I updated something from one model does not mean all the other models have updated from that same set of data in the database automatically. I have to reload the model in order for it to fetch that data again from the database.</p>
 
-<h3>The Future</h3>
+<h3 id="the-future">The Future</h3>
 
 <p>I definitely want to start building out the controllers and views and start making this actually work and look good! My models aren&#39;t complete. There are others I need to add eventually, as well as many fields and things like validation that I need to add. But for now it is a good big-picture where I can get started building. There will likely be many challenges in the future and my models will probably have to change and adapt, but that&#39;s all part of the process!</p>
 
@@ -618,7 +732,7 @@
 
 <p>I recently got a new MacBook Pro! So I spent a day installing and setting up my system for the perfect workflow. I experimented with different set ups, and ended up installing and un-installing several things. Also sometimes I&#39;d install something, and realize I had to install something else first, etc. So here I will try to just show you how I would do it if I had to do it again, without all the mistakes.</p>
 
-<h3>The Terminal and the Shell</h3>
+<h3 id="the-terminal-and-the-shell">The Terminal and the Shell</h3>
 
 <ul>
 <li>install <a href="http://iterm.sourceforge.net/index.shtml">iTerm</a></li>
@@ -631,7 +745,7 @@
 </ul></li>
 </ul>
 
-<h3>Get ALL OF THE PACKAGE MANAGERZZZ!</h3>
+<h3 id="get-all-of-the-package-managerzzz!">Get ALL OF THE PACKAGE MANAGERZZZ!</h3>
 
 <ul>
 <li>haha j/k, there are so many that it&#39;s confusing. I&#39;ll try to explain...
@@ -651,7 +765,7 @@
 </ul></li>
 </ul>
 
-<h3>tmux it up!</h3>
+<h3 id="tmux-it-up!">tmux it up!</h3>
 
 <ul>
 <li>install tmux: <a href="https://robots.thoughtbot.com/love-hate-tmux">simple instructions</a></li>
@@ -660,7 +774,7 @@
 <li><a href="https://robots.thoughtbot.com/a-tmux-crash-course">learn more</a> about tmux</li>
 </ul>
 
-<h3>Git, GitHub, etc.</h3>
+<h3 id="git,-github,-etc.">Git, GitHub, etc.</h3>
 
 <ul>
 <li>set up XCode and git (I just typed <code>git</code> and it asked me if I wanted to install XCode etc., so easy)</li>
@@ -669,7 +783,7 @@
 <li>optionally install <a href="http://gitx.frim.nl/">GitX</a> or <a href="http://www.sourcetreeapp.com/">Source Tree</a> for GUI visualization</li>
 </ul>
 
-<h3>Set up localhost</h3>
+<h3 id="set-up-localhost">Set up localhost</h3>
 
 <ul>
 <li>set up <a href="https://discussions.apple.com/docs/DOC-3083">localhost with userdir</a>
@@ -682,7 +796,7 @@
 </ul></li>
 </ul>
 
-<h3>Edit Them Texts!</h3>
+<h3 id="edit-them-texts!">Edit Them Texts!</h3>
 
 <ul>
 <li>no need to install vim (comes with Mac), but it&#39;s nice to configure vim:
@@ -697,14 +811,14 @@
 <li>install <a href="http://www.sublimetext.com/">Sublime Text</a> and <a href="https://www.sublimetext.com/docs/2/osx_command_line.html">linked subl</a> so it can be used on the command line</li>
 </ul>
 
-<h3>Set up Rails</h3>
+<h3 id="set-up-rails">Set up Rails</h3>
 
 <ul>
 <li>install <a href="https://gorails.com/setup/osx/10.10-yosemite">rbenv, ruby, rails, mysql, and postgresql</a></li>
 <li>install <a href="https://toolbelt.heroku.com/osx">heroku toolbelt</a></li>
 </ul>
 
-<h3>PHP, if you absolutely must</h3>
+<h3 id="php,-if-you-absolutely-must">PHP, if you absolutely must</h3>
 
 <ul>
 <li>PHP came with my Mac! (type <code>php -v</code> to see if you have it first) but I still had to <a href="http://coolestguidesontheplanet.com/get-apache-mysql-php-phpmyadmin-working-osx-10-10-yosemite/">configure it</a> (scroll down to PHP).</li>
@@ -712,13 +826,13 @@
 <li>install PHPUnit (testing framework) with <a href="https://phpunit.de/getting-started.html">these instructions</a></li>
 </ul>
 
-<h3>Jekyll or this blog didn&#39;t happen!</h3>
+<h3 id="jekyll-or-this-blog-didn&#39;t-happen!">Jekyll or this blog didn&#39;t happen!</h3>
 
 <ul>
 <li>instructions here <a href="http://jekyllrb.com/docs/installation/">Jekyll</a></li>
 </ul>
 
-<h3>Other Super Useful Tools!</h3>
+<h3 id="other-super-useful-tools!">Other Super Useful Tools!</h3>
 
 <ul>
 <li>install <a href="http://www.ricciadams.com/projects/pixel-winch">Pixel Winch</a> SUPER easily measure anything in pixels</li>
@@ -792,13 +906,13 @@
 
 <p>One of the things we talked about was whether the logic of the cell living or dying should go into the board or the cell. There were good arguments on both sides, and at the end of the day I had attempted it both ways and am <em>still</em> undecided about which way is better. As with everything, it&#39;s a matter of understanding tradeoffs.</p>
 
-<h3>Looking Back</h3>
+<h3 id="looking-back">Looking Back</h3>
 
 <p>If I could do code retreat all over again, I would try not to design the entire game every time. Instead, figure out what the constraint is getting me to reconsider, and only design/program that part. For example, we had a constraint where we couldn&#39;t use if statements. The method that it would affect most would be the main logic of the program--whether a cell lives or dies.</p>
 
 <p>But we ended up on several tangents, spending a lot of time talking about other aspects of the program, like different ways of seeding it, or how to find neighboring cells and such. And because we only had 45 minutes, I didn&#39;t feel like I got enough time to really explore the main issues of that exercise. If I could do it again, I would have just hardcoded a method that returned the same number of neighbors every time, just so that I didn&#39;t have to think about that part, and could focus on the really good parts of that exercise.</p>
 
-<h3>Looking Forward</h3>
+<h3 id="looking-forward">Looking Forward</h3>
 
 <p>Coderetreat was a great experience, and I loved meeting people in the spirit of learning. Everyone was kind and helpful, and the ideas we shared will continue to help me in my everyday work. But this is just the beginning:</p>
 
@@ -825,19 +939,19 @@
 
 <p>There are many tutorials that go through the motions of using git without telling you how to think about what&#39;s going on. On the other hand, resources that teach you how to think about git aren&#39;t nearly as prevalent as those beginner tutorials that teach you what to type. So here are three of the most useful resources that helped me level up on git beyond the very basics.</p>
 
-<h3>Think Like a Git</h3>
+<h3 id="think-like-a-git">Think Like a Git</h3>
 
 <p><a href="http://think-like-a-git.net/">Think Like a Git</a> is a website dedicated to that &quot;aha&quot; moment. Do you think there&#39;s something magical about git? There really isn&#39;t. It&#39;s just that you don&#39;t have a mental model of git yet, so everything that happens seems like magic and kind of mysterious. Reading this tutorial was enlightening and really put me on the track of being comfortable with git, even when I messed up and didn&#39;t follow a normal workflow.</p>
 
-<h3>Git for Ages 4 and Up</h3>
+<h3 id="git-for-ages-4-and-up">Git for Ages 4 and Up</h3>
 
 <p>In <a href="https://www.youtube.com/watch?v=1ffBJ4sVUb4">Git for Ages 4 and Up</a> Michael Schwern walks you through adding, committing, pushing, and a whole bunch of other git commands while playing with Tinkertoys! The visual element really makes this a wonderful resource. Unfortunately, the video isn&#39;t of the highest quality, and there are a lot of interuptions and tangents. But overall, it&#39;s really helpful.</p>
 
-<h3>Git Happens</h3>
+<h3 id="git-happens">Git Happens</h3>
 
 <p>Jessica Kerr <a href="http://twitter.com/jessitron">@jessitron</a> is a great speaker and in <a href="https://www.youtube.com/watch?v=Dv8I_kfrFWw">Git Happens</a>, she not only leads us through a few more difficult commands but also helps us understand <em>why</em> git is hard, and why it&#39;s worth it. I loved how she talked about how git not only allows you to save your work, but also allows you to tell the story of what you did any way you like. Please note that Jessica actually prefers <a href="https://vimeo.com/46010208">this version</a> of her talk, but the one above was the one that I originally watched (and I still prefer it).</p>
 
-<h3>A few visualization tools</h3>
+<h3 id="a-few-visualization-tools">A few visualization tools</h3>
 
 <p>I haven&#39;t really used many of these extensively, but since we&#39;re talking about visualizing and mental models, these can come in handy:</p>
 
@@ -850,75 +964,6 @@
 
       
       <span class="post-comments-link"><a href="/getting-git#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
-      
-    </div>
-    
-  
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="/2015/03/10/jekyll-and-hyde/">
-          Jekyll & Hyde
-        </a>
-      </h1>
-
-      <span class="post-date">10 Mar 2015</span>
-
-      <p>If you&#39;re a longtime reader (as in, the 2 months that this blog has been in existence), you may have noticed some changes. That&#39;s because I just changed blogging platforms from WordPress to <a href="http://jekyllrb.com/docs/github-pages/">Jekyll</a>.</p>
-
-<h3>Why Change?</h3>
-
-<p>In January, I was learning some new things (Rails, Ruby, Agile, etc.) and I had no time to customize a blog the way I liked it. Nevertheless, I needed some place to document what I&#39;ve learned and connect with people. So I decided to put up a blog as quickly as possible. The only requirement was that it must take almost no time to set up. I was already familiar with WordPress, and have set up several WordPress blogs before. So I set it up, downloaded a free theme, and voila! I was in business.</p>
-
-<p>Two and a half months later, I still like my blog a lot, but it looked cluttered. I started to admire a lot of the other blogs for their minimalistic beauty. The content was front and center. Most of these blogs were hosted on either Ghost, Medium, or GitHub Pages. I decided to look into these options.</p>
-
-<h3>Why GitHub Pages? Why Jekyll?</h3>
-
-<p><a href="https://pages.github.com/">GitHub Pages</a> is hosted on GitHub. You automatically get one site per GitHub account, and when you push any changes to it, it gets updated. No further work needed! I was attracted mostly to the convenience of updating the blog where I would update my other code--in my text editor. It reminded me of the early days when the internet was just a bunch of static HTML pages, and I&#39;d log into the server to edit my HTML files directly. On top of GitHub pages, you get Jekyll:</p>
-
-<blockquote>
-<p>GitHub Pages are powered by Jekyll behind the scenes, so in addition to supporting regular HTML content, they’re also a great way to host your Jekyll-powered website for free.</p>
-</blockquote>
-
-<p>Jekyll is so cool! With it, I can write all my posts within my text editor using beautiful <a href="https://help.github.com/articles/markdown-basics/">Markdown</a> instead of ugly HTML or dealing with buggy WYSIWYG interfaces! GitHub Pages and Jekyll provides all the advantages of a static site (speed, simplicity) with all the advantages of a dynamic site (<a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY-ness</a>). Every time you push the site, Jekyll generates all the static pages for you based on the templates and code you&#39;ve written. So despite the fact that it&#39;s a static site, if you want to change the layout or colors or even functionality of your site, you can do it in just one place.</p>
-
-<p>Jekyll works with regular HTML pages too, so I didn&#39;t have to convert all my old posts to Markdown.</p>
-
-<p>Here are the other advantages of using GitHub Pages / Jekyll:</p>
-
-<ul>
-<li>since content is static instead of in a database, all my blog content is version controlled and backed up on GitHub</li>
-<li>static pages mean non-executable and secure pages! I don&#39;t have to worry about someone hacking into my blog if I didn&#39;t update to the latest WordPress release</li>
-<li>design-wise, it is so simple. I can do anything I want to the site, it&#39;s simply a matter of changing HTML, Markdown, and CSS files</li>
-</ul>
-
-<h3>Setting it up</h3>
-
-<p>There&#39;s nothing that technically extraordinary about my set-up that I need to write a whole blog post about it. I followed <a href="http://joshualande.com/jekyll-github-pages-poole/">this tutorial</a>, but instead of only using <a href="https://github.com/poole/poole">Poole</a>, I also used a Poole theme called <a href="http://hyde.getpoole.com/">Hyde</a>. The difference? Poole isn&#39;t exactly a theme; it comes with all types of default settings on top of Jekyll to give you a solid foundation to build upon. Hyde, on the other hand, <i>is</i> a theme and is built on top of Poole.</p>
-
-<p>The second tutorial I used was <a href="http://charliepark.org/tags-in-jekyll/">this blog post</a> which helped me implement tags.</p>
-
-<h3>Downsides</h3>
-
-<p>The only downside is that I&#39;ve now lost all of the great comments you&#39;ve left on my blog. I still <i>have</i> them, of course. But they are no longer on this version of the blog for everyone to see. But since I&#39;ve implemented comments using <a href="https://disqus.com/">Disqus</a>, it will be pretty easy for you to leave comments on this site from here on out. You don&#39;t even need a Disqus account, as you can use OAuth to log in through Twitter or any of the other social networks.</p>
-
-<h3>One additional note</h3>
-
-<p>OK maybe two. First, the related_posts method that comes with Jekyll is sorely lacking. Luckily, I was able to find <a href="http://www.chrisyin.com/2014/08/23/jekyll-related-posts/">a plugin</a> for it, and since Jekyll is written in Ruby, plugins are just Ruby classes that <a href="http://en.wikipedia.org/wiki/Monkey_patch">monkey patch</a> existing classes. This means that if I didn&#39;t like this plugin, I could change it without having to learn a new language.</p>
-
-<p>Second, and this is the unfortunate part, GitHub Pages disables all plugins by default, for security reasons. So even though the related posts and tags plugins work fine on my local Jekyll server, it doesn&#39;t work when pushed to GitHub.</p>
-
-<p>Here&#39;s the workaround: When you run Jekyll, it generates a static site. When you push to GitHub, GitHub Pages knows to run Jekyll on those files and publish the static files that it generates. But we don&#39;t want GitHub to run Jekyll for us because its version of Jekyll ignores plugins. We want to run our own Jekyll and tell GitHub to use our own statically generated pages instead!</p>
-
-<p>So what we need are two repos. One to hold the Jekyll site, and one to hold our own statically generated site.</p>
-
-<p>This second repo <i>must</i> be named github-username.github.io because that&#39;s how GitHub Pages knows its the repo to publish. So what I had to do was rename the current jimmylorunning.github.io repo to jimmylocoding.com. This will be the first repo mentioned above.</p>
-
-<p>For the second repo, I go to GitHub and create one named jimmylorunning.github.io. I go to my local _site folder (which is where Jekyll stores the statically generated site) and type <code>git init</code>. I add all the files, commit them, and push to jimmylorunning.github.io as its origin. From now on, whenever I make any changes to my blog, I will have to commit my jekyll files to the jimmylocoding.com repo, run <code>jekyll serve</code> or <code>jekyll build</code> (which I should run anyway, just to test my changes before pushing), then commit all my generated _site files to jimmylorunning.github.io.</p>
-
-
-      
-      <span class="post-comments-link"><a href="/2015/03/10/jekyll-and-hyde/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
       
     </div>
     

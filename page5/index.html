@@ -458,6 +458,18 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -471,6 +483,58 @@
 
     <div class="content container">
       <div class="posts">
+  
+    
+    <div class="post">
+      <h1 class="post-title">
+        <a href="/2015/01/12/week-3-round-up-twitter-fitter/">
+          Week 3 Round Up: Twitter Fitter&#8212;the tweet generator!
+        </a>
+      </h1>
+
+      <span class="post-date">12 Jan 2015</span>
+
+      <p>So there&#39;s still a lot more work I want to do on my week 3 app <a href="https://secret-brushlands-4139.herokuapp.com/">Twitter Fitter</a>. But the general idea is there--it&#39;s a <a href="http://en.wikipedia.org/wiki/Markov_chain">Markov generator</a>. You type in a twitter handle, and it spits back a generated tweet (or tweet-like string) that is in the style of that user. (Try @DATABASE_HULK, @StephenAtHome, @BarackObama, or @kimkardashian) Part of the app/week project is that I want to learn something new each time. So what did I learn this week?</p>
+
+<h3 id="firsts:">Firsts:</h3>
+
+<p>Well, this was my first app where I had to connect to another service (in this case it was the <a href="https://dev.twitter.com/rest/public">Twitter API</a> through the <a href="https://github.com/sferik/twitter">Twitter gem</a>) and also the first app where I wrote my own POROs (plain old Ruby objects) inside of Rails. In fact, this was barely a Rails app. It doesn&#39;t even have a model. It&#39;s mostly just a single page that connects to Twitter and then runs the MarkovChain object that I wrote for it. I also obviously learned a lot about Markov generators and how they work. (I knew about them generally but never thought about how to write one before)</p>
+
+<h3 id="testing:">Testing:</h3>
+
+<p>I was able to write <a href="https://github.com/jimmylorunning/twitter-fitter/blob/master/spec/lib/markov_chain_spec.rb">tests for my MarkovChain object</a>. I&#39;m pretty proud of this. But I haven&#39;t written tests for the actual controller code yet (which is currently very messy).</p>
+
+<h3 id="to-do:">To do:</h3>
+
+<p>As always there are still many things I want to do to improve it:
+<ul>
+    <li>Needs major styling. Looks really ugly right now. I want it to look good!</li>
+    <li>I want you to be able to retweet the generated tweets. Maybe it will retweet it from a custom account, maybe @TwitterFitter</li>
+    <li>I want to make a gem out of the MarkovChain object. There are already similar gems out there (and my algorithm isn&#39;t all that unique), but I think it would be a learning experience to create my own gem.</li>
+    <li>Tweak my generator code. Currently it&#39;s pretty simple, and the results are either pretty funny / nonsensical or else they&#39;re pretty boring (like almost word for word of an existing tweet rather than a mix-match of different tweets)</li>
+</ul></p>
+
+<h3 id="challenges:">Challenges:</h3>
+
+<ul>
+    <li>writing the <a href="https://github.com/jimmylorunning/twitter-fitter/blob/master/lib/markov_chain.rb">actual Markov generator</a>, and making it perform okay as well as be open to modification in the future if I wanted to change the way it works later. For example, I thought it would be cool if I could pass it a lambda so that it picks the next word based on running that lambda code. The default is just random, but maybe someone would want to tweak it themselves without having to go into my code.</li>
+    <li>figuring out how to call private / public methods within my class, and whether or not to even use private methods. <a title="self or no self" href="http://jimmylocoding.com/2015/01/09/self-or-no-self/">Here's a blog post I wrote</a> about this topic.</li>
+    <li>tweaking the generator. When I use a prefix length of 2, I get back text that's very similar to the original text, so much so that it's kind of boring. If I set it to 1, I get back things that are sometimes very nonsensical. I decided on 1. But it would be nice to come up with a different algorithm so that it's between totally nonsensical and completely boring.</li>
+    <li>figuring out how to include my ruby object in the lib directory and have rails auto include it. I was not naming my file correctly, so it didn't include it when autoloading! Took me some extra googling to figure out why.</li>
+    <li>writing test code. I'm not sure I did it right, but testing code that's supposed to be random was also kind of tricky. I had to <a href="http://ruby-doc.org/core-2.2.0/Random.html#method-c-srand">seed the generator</a> with values so that it would be predictable/testable.</li>
+    <li>using the Twitter gem. I had to figure out how to give it my API keys and secrets without exposing it through github. I wrote a <a title="Hiding my API keys" href="http://jimmylocoding.com/2015/01/07/hiding-my-api-keys/">blog post about this here</a>.</li>
+</ul>
+
+<h3 id="next-week(s):">Next week(s):</h3>
+
+<p>I&#39;ve mentioned taking the incredibly helpful <a href="https://www.edx.org/course/engineering-software-service-uc-berkeleyx-cs169-1x">edX.org SaaS class</a> (Software as a Service) before. Well, <a href="https://www.edx.org/course/engineering-software-service-part-2-uc-berkeleyx-cs169-2x">part 2 of the class</a> has just started, so instead of continuing with my own apps, I will be doing the SaaS homework apps every week for the next few weeks. It&#39;s only a few weeks, and there&#39;s not a homework for <em>every</em> week, so it won&#39;t be taking over this project completely, but its presence will definitely be felt. I will still be blogging about my discoveries, though! Hope you&#39;ll keep reading.</p>
+
+
+      
+      <span class="post-comments-link"><a href="/2015/01/12/week-3-round-up-twitter-fitter/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
+      
+    </div>
+    
   
     
     <div class="post">
@@ -537,11 +601,11 @@ I don&#39;t know what I feel about all this yet, but I might skip over writing p
 
       <span class="post-date">07 Jan 2015</span>
 
-      <h3>Problem:</h3>
+      <h3 id="problem:">Problem:</h3>
 
 <p>I don&#39;t want to expose API secret keys, but I still want to be able to commit my changes and push to github.</p>
 
-<h3>Solution:</h3>
+<h3 id="solution:">Solution:</h3>
 
 <ul>
     <li>Install <a href="https://github.com/laserlemon/figaro">figaro</a> gem</li>
@@ -605,7 +669,7 @@ What I wasn&#39;t able to finish this time around:
     <li>The <a href="http://guides.rubyonrails.org/asset_pipeline.html">asset pipeline</a> -- had to figure some assets out and so I read a little bit about this, but I need to read way more when I have time</li>
 </ul></p>
 
-<h3>Unsolved problems:</h3>
+<h3 id="unsolved-problems:">Unsolved problems:</h3>
 
 <p>When testing, I had to run some tests as a signed in user and some as signed out. How do I do this? After some reading, I figured out that I had to stub the authentication in the specs. I followed <a href="https://github.com/plataformatec/devise/wiki/How-To:-Stub-authentication-in-controller-specs">these directions</a> and put the ControllerHelpers module in spec/support/controller_helpers.rb as well as the accompanying config. But it kept complaining: &quot;undefined method sign_in&quot;.</p>
 
@@ -636,7 +700,7 @@ What I wasn&#39;t able to finish this time around:
 
 <p>There are many other smaller things I could blog about, but I don&#39;t have time and you probably don&#39;t have patience. I may write up a few of these smaller issues later if I feel like it.</p>
 
-<h3>Next Week</h3>
+<h3 id="next-week">Next Week</h3>
 
 <p>Any ideas? I&#39;m thinking about writing an app that would involve pulling from some API... maybe the Twitter API and doing something with the data. Stay tuned.</p>
 
@@ -679,52 +743,11 @@ What I wasn&#39;t able to finish this time around:
     </div>
     
   
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="/2015/01/01/blogging-in-the-new-year/">
-          Blogging in the New Year
-        </a>
-      </h1>
-
-      <span class="post-date">01 Jan 2015</span>
-
-      <p>Happy new year and welcome to jimmylocoding! This will be a space for me to document my journey learning Ruby on Rails (and inevitably many other things along the way and beyond). Hopefully it will be somewhat interesting/educational for others.</p>
-
-<p>My Rails journey started around January 2014, but life took over before I could get through Michael Hartl&#39;s Rails Tutorial. About two months ago, I decided to pick up where I left off--here are some of the things I&#39;ve done since:
-<ul>
-  <li>Started going to <a href="http://www.meetup.com/atlantaruby/">Ruby meetups</a></li>
-  <li>Started going to <a href="http://www.meetup.com/codeforatlanta/">codeforatlanta</a> (civic hacking) meeups/hackathons</li>
-  <li>Did a bunch of katas on <a href="http://codewars.com/">codewars.com</a> -- I highly recommend this, it made me start to &quot;think Ruby&quot;</li>
-  <li>Took this <a href="https://www.edx.org/course/engineering-software-service-uc-berkeleyx-cs169-1x">EdX.org class on SaaS</a> -- this was super helpful, and I will blog about this more in the future</li>
-  <li>Got really comfortable with git/github, at least the very basic common commands</li>
-  <li>Listened to a bunch of podcasts. My favorites are <a href="http://devchat.tv/ruby-rogues/">Ruby Rogues</a> and <a href="http://www.codenewbie.org/">Code Newbie</a>. Code Newbie also has an online community of friendly encouraging folks.</li>
-  <li>Recently resolved to write a new app every week, even if it&#39;s a very simple app</li>
-</ul>
-This is my second week writing an app per week. Last week, I finally made my very first app outside of following tutorials. It was a bit scary at first to not have that reassuring set of instructions to fall back on.</p>
-
-<p>For my first app, I chose a very simple, some may even say <em>boring</em>, app: a to do list! People kept telling me &quot;Just write an app for practice,&quot; and I had planned to do this. But I couldn&#39;t think of any good ideas!</p>
-
-<p>Or my ideas were <em>too</em> good and <em>too</em> ambitious, and therefore too intimidating for a first project. Then I realized it doesn&#39;t have to be a good idea! I decided that since my first few apps will suck anyway, I should just keep it simple and focus on getting them out as quickly as possible and try to learn as much as I can from them.</p>
-
-<p>If you&#39;re curious, you can see the <a href="https://github.com/jimmylorunning/muchtodo">source code</a> of my first app on github or play with it <a href="https://intense-beyond-1562.herokuapp.com/todos">on Heroku</a>. I learned a lot. And even though it could be a lot better, I need to move on to Week Two!</p>
-
-<p>This week, I am working on a message board app, based on the <a href="http://docs.railsbridge.org/intermediate-rails/">RailsBridge curriculum</a>. The curriculum is perfect because it gives me a guide to follow in terms of what to do next without giving me any of the technical hand-holding that tutorials give. So it&#39;s still challenging, but with a bit of structure thrown in.</p>
-
-<p>You can see it <a href="https://github.com/jimmylorunning/say-something">on github here</a> and play with it (even in its half finished state) <a href="https://aqueous-sierra-5780.herokuapp.com/">on Heroku</a>. I will be continually deploying it as I finish each part, and blogging about it too. So stay tuned!</p>
-
-
-      
-      <span class="post-comments-link"><a href="/2015/01/01/blogging-in-the-new-year/#comments"><i class="fa fa-comments"></i> Drop some knowledge!</a></span>
-      
-    </div>
-    
-  
 </div>
 
 <div class="pagination">
   
-    <span class="pagination-item older">Older</span>
+    <a class="pagination-item older" href="/page6">Older</a>
   
   
     

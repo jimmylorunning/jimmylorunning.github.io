@@ -458,6 +458,18 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -475,15 +487,15 @@
   <span class="post-date">12 Jan 2015</span>
   <p>So there&#39;s still a lot more work I want to do on my week 3 app <a href="https://secret-brushlands-4139.herokuapp.com/">Twitter Fitter</a>. But the general idea is there--it&#39;s a <a href="http://en.wikipedia.org/wiki/Markov_chain">Markov generator</a>. You type in a twitter handle, and it spits back a generated tweet (or tweet-like string) that is in the style of that user. (Try @DATABASE_HULK, @StephenAtHome, @BarackObama, or @kimkardashian) Part of the app/week project is that I want to learn something new each time. So what did I learn this week?</p>
 
-<h3>Firsts:</h3>
+<h3 id="firsts:">Firsts:</h3>
 
 <p>Well, this was my first app where I had to connect to another service (in this case it was the <a href="https://dev.twitter.com/rest/public">Twitter API</a> through the <a href="https://github.com/sferik/twitter">Twitter gem</a>) and also the first app where I wrote my own POROs (plain old Ruby objects) inside of Rails. In fact, this was barely a Rails app. It doesn&#39;t even have a model. It&#39;s mostly just a single page that connects to Twitter and then runs the MarkovChain object that I wrote for it. I also obviously learned a lot about Markov generators and how they work. (I knew about them generally but never thought about how to write one before)</p>
 
-<h3>Testing:</h3>
+<h3 id="testing:">Testing:</h3>
 
 <p>I was able to write <a href="https://github.com/jimmylorunning/twitter-fitter/blob/master/spec/lib/markov_chain_spec.rb">tests for my MarkovChain object</a>. I&#39;m pretty proud of this. But I haven&#39;t written tests for the actual controller code yet (which is currently very messy).</p>
 
-<h3>To do:</h3>
+<h3 id="to-do:">To do:</h3>
 
 <p>As always there are still many things I want to do to improve it:
 <ul>
@@ -493,7 +505,7 @@
     <li>Tweak my generator code. Currently it&#39;s pretty simple, and the results are either pretty funny / nonsensical or else they&#39;re pretty boring (like almost word for word of an existing tweet rather than a mix-match of different tweets)</li>
 </ul></p>
 
-<h3>Challenges:</h3>
+<h3 id="challenges:">Challenges:</h3>
 
 <ul>
     <li>writing the <a href="https://github.com/jimmylorunning/twitter-fitter/blob/master/lib/markov_chain.rb">actual Markov generator</a>, and making it perform okay as well as be open to modification in the future if I wanted to change the way it works later. For example, I thought it would be cool if I could pass it a lambda so that it picks the next word based on running that lambda code. The default is just random, but maybe someone would want to tweak it themselves without having to go into my code.</li>
@@ -504,7 +516,7 @@
     <li>using the Twitter gem. I had to figure out how to give it my API keys and secrets without exposing it through github. I wrote a <a title="Hiding my API keys" href="http://jimmylocoding.com/2015/01/07/hiding-my-api-keys/">blog post about this here</a>.</li>
 </ul>
 
-<h3>Next week(s):</h3>
+<h3 id="next-week(s):">Next week(s):</h3>
 
 <p>I&#39;ve mentioned taking the incredibly helpful <a href="https://www.edx.org/course/engineering-software-service-uc-berkeleyx-cs169-1x">edX.org SaaS class</a> (Software as a Service) before. Well, <a href="https://www.edx.org/course/engineering-software-service-part-2-uc-berkeleyx-cs169-2x">part 2 of the class</a> has just started, so instead of continuing with my own apps, I will be doing the SaaS homework apps every week for the next few weeks. It&#39;s only a few weeks, and there&#39;s not a homework for <em>every</em> week, so it won&#39;t be taking over this project completely, but its presence will definitely be felt. I will still be blogging about my discoveries, though! Hope you&#39;ll keep reading.</p>
 

@@ -458,6 +458,18 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -477,11 +489,11 @@
 
 <p>Instead of developing each feature, I developed all the models up front. This allowed me to really think about the data structure behind my app and how each part interacts with the whole. I also aimed to do test driven development, by writing tests for each model and their associations before moving onto the next model. The downside of this approach is that by the end of this experiment, I still didn&#39;t have one tangible feature, at least not from the user&#39;s standpoint. And of course designing the models up front doesn&#39;t mean I won&#39;t have to change them later when I realize the constraints have changed. But I think it&#39;s a good learning experiment, allowing me to not worry about the controllers or views at all, and just focus in on how to connect all the different pieces. </p>
 
-<h3>My App</h3>
+<h3 id="my-app">My App</h3>
 
 <p>I love the site <a href="http://www.goodreads.com">Goodreads</a>. It&#39;s a social network around books. At the core of the app are the following features:</p>
 
-<h4>Around Books</h4>
+<h4 id="around-books">Around Books</h4>
 
 <ul>
 <li>users have shelves and can create new shelves and can add books to their shelves</li>
@@ -489,7 +501,7 @@
 <li>users can review and rate books</li>
 </ul>
 
-<h4>Around Users</h4>
+<h4 id="around-users">Around Users</h4>
 
 <ul>
 <li>users can friend each other creating a 2 way relationship</li>
@@ -499,7 +511,7 @@
 
 <p>There&#39;s <em>much</em> more to it, but those are the very core features. Since I love Goodreads and there are a few things I&#39;d like to change about it, I decided to make my next app be a Goodreads clone. I think part of the reason I could design the complete model first is because I&#39;m so familiar with the existing site and know beforehand exactly how each part is supposed to work. That said, I did make a few changes in my version, which I will talk about later.</p>
 
-<h3>The End Result</h3>
+<h3 id="the-end-result">The End Result</h3>
 
 <p>I&#39;m going to start by showing you what I ended up with, and then explain some of the choices I made. The amazing <a href="http://wendybeth.ghost.io/">Wendy Beth</a> told me about the <a href="https://github.com/voormedia/rails-erd">Rails ERD</a> gem which will &quot;allows you to easily generate a diagram based on your application&#39;s Active Record models&quot;. Here is my ERD (entity relationship diagram):</p>
 
@@ -507,7 +519,7 @@
 
 <p>What follows isn&#39;t a complete step-by-step tutorial on what I did, but rather a few highlights (or lowlights, depending on how you see it) of my experience building this out.</p>
 
-<h3>Associations and Shoulda</h3>
+<h3 id="associations-and-shoulda">Associations and Shoulda</h3>
 
 <p>A huge part of this exercise was figuring out how to work with rails associations. You know, those <code>has_many</code> and <code>belongs_to</code> calls that magically link up your models so that you can simply call <code>school_of_the_sun.editions</code> instead of having to write out complicated sql joins (that&#39;s <a href="https://www.goodreads.com/review/show/781026074">the last book I read and loved</a> by the way). I won&#39;t go over the basic associations, as I think the <a href="http://guides.rubyonrails.org/association_basics.html">documentation</a> is not bad. However, I will talk about some of the more tricky associations that I ended up implementing.</p>
 
@@ -523,7 +535,7 @@
   <span class="n">it</span> <span class="p">{</span> <span class="n">should</span> <span class="n">have_many</span><span class="p">(</span><span class="ss">:copies</span><span class="p">)</span><span class="o">.</span><span class="n">class_name</span><span class="p">(</span><span class="s1">&#39;Copy&#39;</span><span class="p">)</span> <span class="p">}</span>
 <span class="k">end</span></code></pre></div>
 
-<h3>Implementing Tags</h3>
+<h3 id="implementing-tags">Implementing Tags</h3>
 
 <p>Goodreads doesn&#39;t have tags. Instead they have shelves. But it&#39;s a bit confusing, because they have two types of shelves. The first type are exclusive shelves. A user must add a book to one and only one exclusive shelf. Examples of exclusive shelves are &quot;read&quot;, &quot;to read&quot;, and &quot;currently reading&quot;. A book cannot be both &quot;to read&quot; and &quot;currently reading&quot; because that doesn&#39;t make sense.</p>
 
@@ -537,7 +549,7 @@
 
 <p>Tags were a little more complicated. I ended up creating an intermediate Taggings model so that each copy can have many tags and each tag can have many copies. This <a href="http://railscasts.com/episodes/382-tagging">Railscast tutorial</a> explains what I did pretty well.</p>
 
-<h3>Aliasing a has_one relationship</h3>
+<h3 id="aliasing-a-has_one-relationship">Aliasing a has_one relationship</h3>
 
 <p>I want reviews to <code>have_one</code> reviewer, but the name of the class is Reader not Reviewer. And it has to go through several relationships to get there. I could have settled for review.reader, but I wanted my names to be more accurate. After much experimentation, here&#39;s what I ended up with:</p>
 
@@ -546,13 +558,13 @@
                    <span class="ss">class_name</span><span class="p">:</span> <span class="s2">&quot;Reader&quot;</span><span class="p">,</span>
                    <span class="ss">foreign_key</span><span class="p">:</span> <span class="ss">:reader_id</span></code></pre></div>
 
-<h3>Likes and Comments</h3>
+<h3 id="likes-and-comments">Likes and Comments</h3>
 
 <p>A reader can like a review or a following or a status. A reader may also comment on reviews and statuses. I would like to have just one Like model and one Comment model instead of several different ones tied to different tables. For example, I could do ReviewLike, FollowLike, and StatusLike. But that&#39;s so inelegant, and whenever I want to add the capability to like something else, I would have to write a whole new model and migration for it.</p>
 
 <p>Instead, I decided to use <a href="http://guides.rubyonrails.org/association_basics.html#polymorphic-associations">polymorphic associations</a>. It&#39;s a great solution for this situation, I think! Basically a polymorphic association allows you to use one model (Like in this case) and bind it with two or more models through a foreign key <em>and</em> a type (which tells the model which model to bind it to in each case). So when I like a review, that type will be &quot;Review&quot; and when I like a status that type will be &quot;Status&quot;. Comments work the same way.</p>
 
-<h3>Reader Statuses vs. Copy Statuses</h3>
+<h3 id="reader-statuses-vs.-copy-statuses">Reader Statuses vs. Copy Statuses</h3>
 
 <p>On Goodreads, a user can enter a general status update. This is like &quot;Hey I&#39;m having a great day.&quot; and is not tied to a book. But they can also enter a status update on a book. This is like &quot;Hey I&#39;m reading &#39;Wittgenstein&#39;s Nephew&#39; by Thomas Bernhard and I&#39;m on page 47 and here are my thoughts...&quot;. The second type of status update is tied to a user&#39;s book (copy model in my case) and can include a page number to show progress. Other than that, the two statuses are the same.</p>
 
@@ -560,7 +572,7 @@
 
 <p>And I&#39;m glad I did--now I understand why STI is the <em>wrong</em> solution in this case. I had to rollback and start again. The problem in this case is that CopyStatus not only has 2 extra fields, but one of them is a foreign key field that references copy whereas Status has no foreign key fields. This represents not only difference in data, but also difference in behavior. While I think it could still work, this has gone from a somewhat elegant solution to a total hack. It&#39;s even less elegant than the two models I started with.</p>
 
-<h3>Friendships</h3>
+<h3 id="friendships">Friendships</h3>
 
 <p>While following is a one-way relationship (you can follow someone but they do not have to follow you back), friendships are a two-way relationship. You both agree to be friends.</p>
 
@@ -572,7 +584,7 @@
 
 <p>For my purposes, I also have to think about the fact that a friend has to request someone to be their friend, then that person has to agree before the friendship becomes official. I added an <code>accepted</code> field to the table for this purpose. I&#39;m not sure if this will be sufficient or if I&#39;ll have to create a separate FriendRequest model, but I will find out soon when I try to implement it.</p>
 
-<h3>Alternatives?</h3>
+<h3 id="alternatives?">Alternatives?</h3>
 
 <p>So these are the basic models and relationships between them that I&#39;ve come up with. Could they be different? Are there better ways of modelling this? Probably, but I won&#39;t find out until I implement it. (Feel free to give your thoughts in the comments section)</p>
 
@@ -580,11 +592,11 @@
 
 <p>Another thing I&#39;m wondering is if I could get rid of the rating and review classes. Since they belong to copy, could I just have <code>rating</code> and <code>review</code> as fields in Copy? Do I lose something from doing that?</p>
 
-<h3>Other Things Learned</h3>
+<h3 id="other-things-learned">Other Things Learned</h3>
 
 <p>I learned that I really like thinking about models and focusing on them exclusively, at least in the beginning. I also made some big mistakes that I will not make again. One is that the model-database connection is not automatically in sync. When I was testing this I was running into some weird problems. I finally figured out that just because I updated something from one model does not mean all the other models have updated from that same set of data in the database automatically. I have to reload the model in order for it to fetch that data again from the database.</p>
 
-<h3>The Future</h3>
+<h3 id="the-future">The Future</h3>
 
 <p>I definitely want to start building out the controllers and views and start making this actually work and look good! My models aren&#39;t complete. There are others I need to add eventually, as well as many fields and things like validation that I need to add. But for now it is a good big-picture where I can get started building. There will likely be many challenges in the future and my models will probably have to change and adapt, but that&#39;s all part of the process!</p>
 

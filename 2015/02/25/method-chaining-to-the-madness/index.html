@@ -458,6 +458,18 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
       <a class="sidebar-nav-item" href="/resume">My Resume</a>
       <div class="social-media">
         <a class="sidebar-nav-item" href="https://github.com/jimmylorunning"><i class="fa fa-github fa-2x"></i></a>
@@ -475,7 +487,7 @@
   <span class="post-date">25 Feb 2015</span>
   <p>I said I&#39;d write a little bit about some of the challenges I encountered while writing the <a href="https://github.com/codeforatlanta/csv_geocoder">CSV Geocoder</a> utility. So here&#39;s a small problem and solution:</p>
 
-<h3>Problem:</h3>
+<h3 id="problem:">Problem:</h3>
 
 <p>The purpose of the class is very simple. I want to add geocode data to the CSV, then write it to a file. So I write a method like <code>write_csv_with_geocode(file)</code> that joins the CSV with the geocode data and then writes it to a file. However, this violates the <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility</a> per method principle. It does two things: adds the geocode data, then writes it to a file.</p>
 
@@ -498,7 +510,7 @@
 
 <p>The upside of having it all in one method is that I can accomplish two related tasks in one method call instead of having to call both of them separately every time.</p>
 
-<h3>Solution:</h3>
+<h3 id="solution:">Solution:</h3>
 
 <p>Chaining! I make add_geocode assign the new value to an instance variable, then return self (returning self is the key to making methods chainable). Then the write method takes the instance variable and writes it to a CSV file. So now the user can do the simple task in one line, and the operations are also separated into their own methods. Best of both worlds! In fact, I realized I could do the same with all of the methods in the class, so that you could now write the following line:</p>
 
@@ -519,7 +531,7 @@
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div>
 
-<h3>What do you think?</h3>
+<h3 id="what-do-you-think?">What do you think?</h3>
 
 <p>Is chaining a good solution to this problem? How would you have done it? Also: are there other ways I could improve this class?</p>
 

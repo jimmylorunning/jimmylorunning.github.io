@@ -4,13 +4,107 @@
  <title>jlc</title>
  <link href="http://jimmylocoding.com/atom.xml" rel="self"/>
  <link href="http://jimmylocoding.com/"/>
- <updated>2015-08-30T22:06:31-04:00</updated>
+ <updated>2015-10-08T17:28:24-04:00</updated>
  <id>http://jimmylocoding.com</id>
  <author>
    <name>Jimmy Lo</name>
    <email></email>
  </author>
 
+ 
+ 
+ <entry>
+   <title>A Laravel-Rails Dictionary</title>
+   <link href="http://jimmylocoding.com/a-laravel-rails-dictionary"/>
+   <updated>2015-10-08T00:00:00-04:00</updated>
+   <id>http://jimmylocoding.com/a-laravel-rails-dictionary</id>
+   <content type="html">&lt;p&gt;Sometimes you struggle for a long time to learn something, and you don&amp;#39;t feel like you&amp;#39;ve really made much progress. But when you learn something new and somewhat similar to it, the learning curve is greatly reduced. It&amp;#39;s a great feeling. That&amp;#39;s what happened with me recently when I tried to learn Laravel for a work project. Because of the time I spent with Rails, it made learning Laravel so much easier! Laravel is a MVC framework for PHP very similar to the way Rails is for Ruby.&lt;/p&gt;
+
+&lt;p&gt;Because a lot of the concepts are similar, I created a chart of equivalent syntaxes that could get someone who is already familiar with Rails started in Laravel much quicker. &lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Laravel&lt;/th&gt;
+&lt;th&gt;Rails&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;composer install (or php composer.phar install)&lt;/td&gt;
+&lt;td&gt;gem install&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;composer create-project laravel/laravel your-project-name&lt;/td&gt;
+&lt;td&gt;rails new your-project-name&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;composer.json&lt;/td&gt;
+&lt;td&gt;Gemfile&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;composer.lock&lt;/td&gt;
+&lt;td&gt;Gemfile.lock&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;packagist.org&lt;/td&gt;
+&lt;td&gt;rubygems.org&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;blade&lt;/td&gt;
+&lt;td&gt;erb or haml&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Eloquent&lt;/td&gt;
+&lt;td&gt;ActiveRecord&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;php artisan serve&lt;/td&gt;
+&lt;td&gt;rails serve&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;php artisan make:controller PagesController&lt;/td&gt;
+&lt;td&gt;rails generate controller Pages&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;php artisan make:model Article&lt;/td&gt;
+&lt;td&gt;rails generate model Article&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;php artisan make:migration add_column_to_table&lt;/td&gt;
+&lt;td&gt;rails generate migration AddColumnToTable&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;php artisan migrate&lt;/td&gt;
+&lt;td&gt;bundle exec rake db:migrate&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;php artisan tinker&lt;/td&gt;
+&lt;td&gt;rails console&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;php -a&lt;/td&gt;
+&lt;td&gt;irb&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;php artisan route:list&lt;/td&gt;
+&lt;td&gt;bundle exec rake routes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;Overall, I really love Laravel. In fact, I think I like Laravel more than Rails (while I still like Ruby way more than PHP). There are obviously a lot of similarities to Rails, and you can&amp;#39;t take away the fact that Rails changed the landscape and paved the way for Laravel. But there are also many things that are different as well, and make Laravel really shine. I&amp;#39;ll try to write about those in a future post. &lt;/p&gt;
+
+&lt;p&gt;Meanwhile, here are a few shout-outs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.udemy.com/ruby-on-rails-tutorial-learn-from-scratch/&quot;&gt;Udemy&amp;#39;s RoR Tutorial: Learn from Scratch&lt;/a&gt; I was turned onto this tutorial by Molly Elizabeth, who works at Udemy. I haven&amp;#39;t gone through the tutorial myself, but it looks like a very good resource if you&amp;#39;re just starting out in Rails. If you try it, let me know what you think.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.phptherightway.com/&quot;&gt;PHP: The Right Way&lt;/a&gt; a very good 10,000 feet birds eye view of the somewhat gnarly PHP scene. It&amp;#39;s not the prettiest language, but recent iterations have been able to salvage it a bit. This site is a super useful resource if you have to do PHP, and it covers best practices, how to organize your code, pitfalls you can avoid, etc.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://laracasts.com/&quot;&gt;Laracast&lt;/a&gt; these video tutorials are clear, concise, and very useful when learning Laravel. Jeffrey is a really good teacher and communicator, and he covers the topics at just the right speed. Highly recommended.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://buildwithcraft.com/&quot;&gt;Craft CMS&lt;/a&gt; I&amp;#39;ve been working with ExpressionEngine for a while, and while very powerful, it is still a bit frustrating and inflexible at certain things. Craft was designed by people who used to design plugins for ExpressionEngine, so they know all the painpoints and they have been able to create a really amazing product. Check it out if you&amp;#39;re looking for a really well thought-out CMS.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/?refcode=af3f55393a0b&quot;&gt;DigitalOcean&lt;/a&gt; paired with &lt;a href=&quot;https://serverpilot.io/&quot;&gt;ServerPilot&lt;/a&gt;. Setting up your stack can&amp;#39;t be simpler than with these two tools working together. DigitalOcean provides the servers on the cloud and ServerPilot gives you a really nice control panel to configure them. And the interface of both sites are simple and elegant, and much less headache-inducing than AWS.&lt;/li&gt;
+&lt;li&gt;... speaking of which, if you have to deal with &lt;a href=&quot;https://aws.amazon.com/&quot;&gt;AWS&lt;/a&gt;, here&amp;#39;s a really great resource: &lt;a href=&quot;https://www.expeditedssl.com/aws-in-plain-english&quot;&gt;AWS in Plain English&lt;/a&gt;. It comically translates AWS services into what they should have been named in the first place. Nice intuitive names rather than EC2 or S3.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
  
  
  <entry>
@@ -22,11 +116,11 @@
 
 &lt;p&gt;Instead of developing each feature, I developed all the models up front. This allowed me to really think about the data structure behind my app and how each part interacts with the whole. I also aimed to do test driven development, by writing tests for each model and their associations before moving onto the next model. The downside of this approach is that by the end of this experiment, I still didn&amp;#39;t have one tangible feature, at least not from the user&amp;#39;s standpoint. And of course designing the models up front doesn&amp;#39;t mean I won&amp;#39;t have to change them later when I realize the constraints have changed. But I think it&amp;#39;s a good learning experiment, allowing me to not worry about the controllers or views at all, and just focus in on how to connect all the different pieces. &lt;/p&gt;
 
-&lt;h3&gt;My App&lt;/h3&gt;
+&lt;h3 id=&quot;my-app&quot;&gt;My App&lt;/h3&gt;
 
 &lt;p&gt;I love the site &lt;a href=&quot;http://www.goodreads.com&quot;&gt;Goodreads&lt;/a&gt;. It&amp;#39;s a social network around books. At the core of the app are the following features:&lt;/p&gt;
 
-&lt;h4&gt;Around Books&lt;/h4&gt;
+&lt;h4 id=&quot;around-books&quot;&gt;Around Books&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;users have shelves and can create new shelves and can add books to their shelves&lt;/li&gt;
@@ -34,7 +128,7 @@
 &lt;li&gt;users can review and rate books&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4&gt;Around Users&lt;/h4&gt;
+&lt;h4 id=&quot;around-users&quot;&gt;Around Users&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;users can friend each other creating a 2 way relationship&lt;/li&gt;
@@ -44,7 +138,7 @@
 
 &lt;p&gt;There&amp;#39;s &lt;em&gt;much&lt;/em&gt; more to it, but those are the very core features. Since I love Goodreads and there are a few things I&amp;#39;d like to change about it, I decided to make my next app be a Goodreads clone. I think part of the reason I could design the complete model first is because I&amp;#39;m so familiar with the existing site and know beforehand exactly how each part is supposed to work. That said, I did make a few changes in my version, which I will talk about later.&lt;/p&gt;
 
-&lt;h3&gt;The End Result&lt;/h3&gt;
+&lt;h3 id=&quot;the-end-result&quot;&gt;The End Result&lt;/h3&gt;
 
 &lt;p&gt;I&amp;#39;m going to start by showing you what I ended up with, and then explain some of the choices I made. The amazing &lt;a href=&quot;http://wendybeth.ghost.io/&quot;&gt;Wendy Beth&lt;/a&gt; told me about the &lt;a href=&quot;https://github.com/voormedia/rails-erd&quot;&gt;Rails ERD&lt;/a&gt; gem which will &amp;quot;allows you to easily generate a diagram based on your application&amp;#39;s Active Record models&amp;quot;. Here is my ERD (entity relationship diagram):&lt;/p&gt;
 
@@ -52,7 +146,7 @@
 
 &lt;p&gt;What follows isn&amp;#39;t a complete step-by-step tutorial on what I did, but rather a few highlights (or lowlights, depending on how you see it) of my experience building this out.&lt;/p&gt;
 
-&lt;h3&gt;Associations and Shoulda&lt;/h3&gt;
+&lt;h3 id=&quot;associations-and-shoulda&quot;&gt;Associations and Shoulda&lt;/h3&gt;
 
 &lt;p&gt;A huge part of this exercise was figuring out how to work with rails associations. You know, those &lt;code&gt;has_many&lt;/code&gt; and &lt;code&gt;belongs_to&lt;/code&gt; calls that magically link up your models so that you can simply call &lt;code&gt;school_of_the_sun.editions&lt;/code&gt; instead of having to write out complicated sql joins (that&amp;#39;s &lt;a href=&quot;https://www.goodreads.com/review/show/781026074&quot;&gt;the last book I read and loved&lt;/a&gt; by the way). I won&amp;#39;t go over the basic associations, as I think the &lt;a href=&quot;http://guides.rubyonrails.org/association_basics.html&quot;&gt;documentation&lt;/a&gt; is not bad. However, I will talk about some of the more tricky associations that I ended up implementing.&lt;/p&gt;
 
@@ -68,7 +162,7 @@
   &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;should&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;have_many&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:copies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Copy&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3&gt;Implementing Tags&lt;/h3&gt;
+&lt;h3 id=&quot;implementing-tags&quot;&gt;Implementing Tags&lt;/h3&gt;
 
 &lt;p&gt;Goodreads doesn&amp;#39;t have tags. Instead they have shelves. But it&amp;#39;s a bit confusing, because they have two types of shelves. The first type are exclusive shelves. A user must add a book to one and only one exclusive shelf. Examples of exclusive shelves are &amp;quot;read&amp;quot;, &amp;quot;to read&amp;quot;, and &amp;quot;currently reading&amp;quot;. A book cannot be both &amp;quot;to read&amp;quot; and &amp;quot;currently reading&amp;quot; because that doesn&amp;#39;t make sense.&lt;/p&gt;
 
@@ -82,7 +176,7 @@
 
 &lt;p&gt;Tags were a little more complicated. I ended up creating an intermediate Taggings model so that each copy can have many tags and each tag can have many copies. This &lt;a href=&quot;http://railscasts.com/episodes/382-tagging&quot;&gt;Railscast tutorial&lt;/a&gt; explains what I did pretty well.&lt;/p&gt;
 
-&lt;h3&gt;Aliasing a has_one relationship&lt;/h3&gt;
+&lt;h3 id=&quot;aliasing-a-has_one-relationship&quot;&gt;Aliasing a has_one relationship&lt;/h3&gt;
 
 &lt;p&gt;I want reviews to &lt;code&gt;have_one&lt;/code&gt; reviewer, but the name of the class is Reader not Reviewer. And it has to go through several relationships to get there. I could have settled for review.reader, but I wanted my names to be more accurate. After much experimentation, here&amp;#39;s what I ended up with:&lt;/p&gt;
 
@@ -91,13 +185,13 @@
                    &lt;span class=&quot;ss&quot;&gt;class_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Reader&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
                    &lt;span class=&quot;ss&quot;&gt;foreign_key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:reader_id&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3&gt;Likes and Comments&lt;/h3&gt;
+&lt;h3 id=&quot;likes-and-comments&quot;&gt;Likes and Comments&lt;/h3&gt;
 
 &lt;p&gt;A reader can like a review or a following or a status. A reader may also comment on reviews and statuses. I would like to have just one Like model and one Comment model instead of several different ones tied to different tables. For example, I could do ReviewLike, FollowLike, and StatusLike. But that&amp;#39;s so inelegant, and whenever I want to add the capability to like something else, I would have to write a whole new model and migration for it.&lt;/p&gt;
 
 &lt;p&gt;Instead, I decided to use &lt;a href=&quot;http://guides.rubyonrails.org/association_basics.html#polymorphic-associations&quot;&gt;polymorphic associations&lt;/a&gt;. It&amp;#39;s a great solution for this situation, I think! Basically a polymorphic association allows you to use one model (Like in this case) and bind it with two or more models through a foreign key &lt;em&gt;and&lt;/em&gt; a type (which tells the model which model to bind it to in each case). So when I like a review, that type will be &amp;quot;Review&amp;quot; and when I like a status that type will be &amp;quot;Status&amp;quot;. Comments work the same way.&lt;/p&gt;
 
-&lt;h3&gt;Reader Statuses vs. Copy Statuses&lt;/h3&gt;
+&lt;h3 id=&quot;reader-statuses-vs.-copy-statuses&quot;&gt;Reader Statuses vs. Copy Statuses&lt;/h3&gt;
 
 &lt;p&gt;On Goodreads, a user can enter a general status update. This is like &amp;quot;Hey I&amp;#39;m having a great day.&amp;quot; and is not tied to a book. But they can also enter a status update on a book. This is like &amp;quot;Hey I&amp;#39;m reading &amp;#39;Wittgenstein&amp;#39;s Nephew&amp;#39; by Thomas Bernhard and I&amp;#39;m on page 47 and here are my thoughts...&amp;quot;. The second type of status update is tied to a user&amp;#39;s book (copy model in my case) and can include a page number to show progress. Other than that, the two statuses are the same.&lt;/p&gt;
 
@@ -105,7 +199,7 @@
 
 &lt;p&gt;And I&amp;#39;m glad I did--now I understand why STI is the &lt;em&gt;wrong&lt;/em&gt; solution in this case. I had to rollback and start again. The problem in this case is that CopyStatus not only has 2 extra fields, but one of them is a foreign key field that references copy whereas Status has no foreign key fields. This represents not only difference in data, but also difference in behavior. While I think it could still work, this has gone from a somewhat elegant solution to a total hack. It&amp;#39;s even less elegant than the two models I started with.&lt;/p&gt;
 
-&lt;h3&gt;Friendships&lt;/h3&gt;
+&lt;h3 id=&quot;friendships&quot;&gt;Friendships&lt;/h3&gt;
 
 &lt;p&gt;While following is a one-way relationship (you can follow someone but they do not have to follow you back), friendships are a two-way relationship. You both agree to be friends.&lt;/p&gt;
 
@@ -117,7 +211,7 @@
 
 &lt;p&gt;For my purposes, I also have to think about the fact that a friend has to request someone to be their friend, then that person has to agree before the friendship becomes official. I added an &lt;code&gt;accepted&lt;/code&gt; field to the table for this purpose. I&amp;#39;m not sure if this will be sufficient or if I&amp;#39;ll have to create a separate FriendRequest model, but I will find out soon when I try to implement it.&lt;/p&gt;
 
-&lt;h3&gt;Alternatives?&lt;/h3&gt;
+&lt;h3 id=&quot;alternatives?&quot;&gt;Alternatives?&lt;/h3&gt;
 
 &lt;p&gt;So these are the basic models and relationships between them that I&amp;#39;ve come up with. Could they be different? Are there better ways of modelling this? Probably, but I won&amp;#39;t find out until I implement it. (Feel free to give your thoughts in the comments section)&lt;/p&gt;
 
@@ -125,11 +219,11 @@
 
 &lt;p&gt;Another thing I&amp;#39;m wondering is if I could get rid of the rating and review classes. Since they belong to copy, could I just have &lt;code&gt;rating&lt;/code&gt; and &lt;code&gt;review&lt;/code&gt; as fields in Copy? Do I lose something from doing that?&lt;/p&gt;
 
-&lt;h3&gt;Other Things Learned&lt;/h3&gt;
+&lt;h3 id=&quot;other-things-learned&quot;&gt;Other Things Learned&lt;/h3&gt;
 
 &lt;p&gt;I learned that I really like thinking about models and focusing on them exclusively, at least in the beginning. I also made some big mistakes that I will not make again. One is that the model-database connection is not automatically in sync. When I was testing this I was running into some weird problems. I finally figured out that just because I updated something from one model does not mean all the other models have updated from that same set of data in the database automatically. I have to reload the model in order for it to fetch that data again from the database.&lt;/p&gt;
 
-&lt;h3&gt;The Future&lt;/h3&gt;
+&lt;h3 id=&quot;the-future&quot;&gt;The Future&lt;/h3&gt;
 
 &lt;p&gt;I definitely want to start building out the controllers and views and start making this actually work and look good! My models aren&amp;#39;t complete. There are others I need to add eventually, as well as many fields and things like validation that I need to add. But for now it is a good big-picture where I can get started building. There will likely be many challenges in the future and my models will probably have to change and adapt, but that&amp;#39;s all part of the process!&lt;/p&gt;
 </content>
@@ -146,7 +240,7 @@
 
 &lt;p&gt;I recently got a new MacBook Pro! So I spent a day installing and setting up my system for the perfect workflow. I experimented with different set ups, and ended up installing and un-installing several things. Also sometimes I&amp;#39;d install something, and realize I had to install something else first, etc. So here I will try to just show you how I would do it if I had to do it again, without all the mistakes.&lt;/p&gt;
 
-&lt;h3&gt;The Terminal and the Shell&lt;/h3&gt;
+&lt;h3 id=&quot;the-terminal-and-the-shell&quot;&gt;The Terminal and the Shell&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;install &lt;a href=&quot;http://iterm.sourceforge.net/index.shtml&quot;&gt;iTerm&lt;/a&gt;&lt;/li&gt;
@@ -159,7 +253,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;Get ALL OF THE PACKAGE MANAGERZZZ!&lt;/h3&gt;
+&lt;h3 id=&quot;get-all-of-the-package-managerzzz!&quot;&gt;Get ALL OF THE PACKAGE MANAGERZZZ!&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;haha j/k, there are so many that it&amp;#39;s confusing. I&amp;#39;ll try to explain...
@@ -179,7 +273,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;tmux it up!&lt;/h3&gt;
+&lt;h3 id=&quot;tmux-it-up!&quot;&gt;tmux it up!&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;install tmux: &lt;a href=&quot;https://robots.thoughtbot.com/love-hate-tmux&quot;&gt;simple instructions&lt;/a&gt;&lt;/li&gt;
@@ -188,7 +282,7 @@
 &lt;li&gt;&lt;a href=&quot;https://robots.thoughtbot.com/a-tmux-crash-course&quot;&gt;learn more&lt;/a&gt; about tmux&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;Git, GitHub, etc.&lt;/h3&gt;
+&lt;h3 id=&quot;git,-github,-etc.&quot;&gt;Git, GitHub, etc.&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;set up XCode and git (I just typed &lt;code&gt;git&lt;/code&gt; and it asked me if I wanted to install XCode etc., so easy)&lt;/li&gt;
@@ -197,7 +291,7 @@
 &lt;li&gt;optionally install &lt;a href=&quot;http://gitx.frim.nl/&quot;&gt;GitX&lt;/a&gt; or &lt;a href=&quot;http://www.sourcetreeapp.com/&quot;&gt;Source Tree&lt;/a&gt; for GUI visualization&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;Set up localhost&lt;/h3&gt;
+&lt;h3 id=&quot;set-up-localhost&quot;&gt;Set up localhost&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;set up &lt;a href=&quot;https://discussions.apple.com/docs/DOC-3083&quot;&gt;localhost with userdir&lt;/a&gt;
@@ -210,7 +304,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;Edit Them Texts!&lt;/h3&gt;
+&lt;h3 id=&quot;edit-them-texts!&quot;&gt;Edit Them Texts!&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;no need to install vim (comes with Mac), but it&amp;#39;s nice to configure vim:
@@ -225,14 +319,14 @@
 &lt;li&gt;install &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt; and &lt;a href=&quot;https://www.sublimetext.com/docs/2/osx_command_line.html&quot;&gt;linked subl&lt;/a&gt; so it can be used on the command line&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;Set up Rails&lt;/h3&gt;
+&lt;h3 id=&quot;set-up-rails&quot;&gt;Set up Rails&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;install &lt;a href=&quot;https://gorails.com/setup/osx/10.10-yosemite&quot;&gt;rbenv, ruby, rails, mysql, and postgresql&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;install &lt;a href=&quot;https://toolbelt.heroku.com/osx&quot;&gt;heroku toolbelt&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;PHP, if you absolutely must&lt;/h3&gt;
+&lt;h3 id=&quot;php,-if-you-absolutely-must&quot;&gt;PHP, if you absolutely must&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;PHP came with my Mac! (type &lt;code&gt;php -v&lt;/code&gt; to see if you have it first) but I still had to &lt;a href=&quot;http://coolestguidesontheplanet.com/get-apache-mysql-php-phpmyadmin-working-osx-10-10-yosemite/&quot;&gt;configure it&lt;/a&gt; (scroll down to PHP).&lt;/li&gt;
@@ -240,13 +334,13 @@
 &lt;li&gt;install PHPUnit (testing framework) with &lt;a href=&quot;https://phpunit.de/getting-started.html&quot;&gt;these instructions&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;Jekyll or this blog didn&amp;#39;t happen!&lt;/h3&gt;
+&lt;h3 id=&quot;jekyll-or-this-blog-didn&amp;#39;t-happen!&quot;&gt;Jekyll or this blog didn&amp;#39;t happen!&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;instructions here &lt;a href=&quot;http://jekyllrb.com/docs/installation/&quot;&gt;Jekyll&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;Other Super Useful Tools!&lt;/h3&gt;
+&lt;h3 id=&quot;other-super-useful-tools!&quot;&gt;Other Super Useful Tools!&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;install &lt;a href=&quot;http://www.ricciadams.com/projects/pixel-winch&quot;&gt;Pixel Winch&lt;/a&gt; SUPER easily measure anything in pixels&lt;/li&gt;
@@ -312,13 +406,13 @@
 
 &lt;p&gt;One of the things we talked about was whether the logic of the cell living or dying should go into the board or the cell. There were good arguments on both sides, and at the end of the day I had attempted it both ways and am &lt;em&gt;still&lt;/em&gt; undecided about which way is better. As with everything, it&amp;#39;s a matter of understanding tradeoffs.&lt;/p&gt;
 
-&lt;h3&gt;Looking Back&lt;/h3&gt;
+&lt;h3 id=&quot;looking-back&quot;&gt;Looking Back&lt;/h3&gt;
 
 &lt;p&gt;If I could do code retreat all over again, I would try not to design the entire game every time. Instead, figure out what the constraint is getting me to reconsider, and only design/program that part. For example, we had a constraint where we couldn&amp;#39;t use if statements. The method that it would affect most would be the main logic of the program--whether a cell lives or dies.&lt;/p&gt;
 
 &lt;p&gt;But we ended up on several tangents, spending a lot of time talking about other aspects of the program, like different ways of seeding it, or how to find neighboring cells and such. And because we only had 45 minutes, I didn&amp;#39;t feel like I got enough time to really explore the main issues of that exercise. If I could do it again, I would have just hardcoded a method that returned the same number of neighbors every time, just so that I didn&amp;#39;t have to think about that part, and could focus on the really good parts of that exercise.&lt;/p&gt;
 
-&lt;h3&gt;Looking Forward&lt;/h3&gt;
+&lt;h3 id=&quot;looking-forward&quot;&gt;Looking Forward&lt;/h3&gt;
 
 &lt;p&gt;Coderetreat was a great experience, and I loved meeting people in the spirit of learning. Everyone was kind and helpful, and the ideas we shared will continue to help me in my everyday work. But this is just the beginning:&lt;/p&gt;
 
@@ -337,19 +431,19 @@
 
 &lt;p&gt;There are many tutorials that go through the motions of using git without telling you how to think about what&amp;#39;s going on. On the other hand, resources that teach you how to think about git aren&amp;#39;t nearly as prevalent as those beginner tutorials that teach you what to type. So here are three of the most useful resources that helped me level up on git beyond the very basics.&lt;/p&gt;
 
-&lt;h3&gt;Think Like a Git&lt;/h3&gt;
+&lt;h3 id=&quot;think-like-a-git&quot;&gt;Think Like a Git&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://think-like-a-git.net/&quot;&gt;Think Like a Git&lt;/a&gt; is a website dedicated to that &amp;quot;aha&amp;quot; moment. Do you think there&amp;#39;s something magical about git? There really isn&amp;#39;t. It&amp;#39;s just that you don&amp;#39;t have a mental model of git yet, so everything that happens seems like magic and kind of mysterious. Reading this tutorial was enlightening and really put me on the track of being comfortable with git, even when I messed up and didn&amp;#39;t follow a normal workflow.&lt;/p&gt;
 
-&lt;h3&gt;Git for Ages 4 and Up&lt;/h3&gt;
+&lt;h3 id=&quot;git-for-ages-4-and-up&quot;&gt;Git for Ages 4 and Up&lt;/h3&gt;
 
 &lt;p&gt;In &lt;a href=&quot;https://www.youtube.com/watch?v=1ffBJ4sVUb4&quot;&gt;Git for Ages 4 and Up&lt;/a&gt; Michael Schwern walks you through adding, committing, pushing, and a whole bunch of other git commands while playing with Tinkertoys! The visual element really makes this a wonderful resource. Unfortunately, the video isn&amp;#39;t of the highest quality, and there are a lot of interuptions and tangents. But overall, it&amp;#39;s really helpful.&lt;/p&gt;
 
-&lt;h3&gt;Git Happens&lt;/h3&gt;
+&lt;h3 id=&quot;git-happens&quot;&gt;Git Happens&lt;/h3&gt;
 
 &lt;p&gt;Jessica Kerr &lt;a href=&quot;http://twitter.com/jessitron&quot;&gt;@jessitron&lt;/a&gt; is a great speaker and in &lt;a href=&quot;https://www.youtube.com/watch?v=Dv8I_kfrFWw&quot;&gt;Git Happens&lt;/a&gt;, she not only leads us through a few more difficult commands but also helps us understand &lt;em&gt;why&lt;/em&gt; git is hard, and why it&amp;#39;s worth it. I loved how she talked about how git not only allows you to save your work, but also allows you to tell the story of what you did any way you like. Please note that Jessica actually prefers &lt;a href=&quot;https://vimeo.com/46010208&quot;&gt;this version&lt;/a&gt; of her talk, but the one above was the one that I originally watched (and I still prefer it).&lt;/p&gt;
 
-&lt;h3&gt;A few visualization tools&lt;/h3&gt;
+&lt;h3 id=&quot;a-few-visualization-tools&quot;&gt;A few visualization tools&lt;/h3&gt;
 
 &lt;p&gt;I haven&amp;#39;t really used many of these extensively, but since we&amp;#39;re talking about visualizing and mental models, these can come in handy:&lt;/p&gt;
 
@@ -370,13 +464,13 @@
    <id>http://jimmylocoding.com/2015/03/10/jekyll-and-hyde</id>
    <content type="html">&lt;p&gt;If you&amp;#39;re a longtime reader (as in, the 2 months that this blog has been in existence), you may have noticed some changes. That&amp;#39;s because I just changed blogging platforms from WordPress to &lt;a href=&quot;http://jekyllrb.com/docs/github-pages/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3&gt;Why Change?&lt;/h3&gt;
+&lt;h3 id=&quot;why-change?&quot;&gt;Why Change?&lt;/h3&gt;
 
 &lt;p&gt;In January, I was learning some new things (Rails, Ruby, Agile, etc.) and I had no time to customize a blog the way I liked it. Nevertheless, I needed some place to document what I&amp;#39;ve learned and connect with people. So I decided to put up a blog as quickly as possible. The only requirement was that it must take almost no time to set up. I was already familiar with WordPress, and have set up several WordPress blogs before. So I set it up, downloaded a free theme, and voila! I was in business.&lt;/p&gt;
 
 &lt;p&gt;Two and a half months later, I still like my blog a lot, but it looked cluttered. I started to admire a lot of the other blogs for their minimalistic beauty. The content was front and center. Most of these blogs were hosted on either Ghost, Medium, or GitHub Pages. I decided to look into these options.&lt;/p&gt;
 
-&lt;h3&gt;Why GitHub Pages? Why Jekyll?&lt;/h3&gt;
+&lt;h3 id=&quot;why-github-pages?-why-jekyll?&quot;&gt;Why GitHub Pages? Why Jekyll?&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; is hosted on GitHub. You automatically get one site per GitHub account, and when you push any changes to it, it gets updated. No further work needed! I was attracted mostly to the convenience of updating the blog where I would update my other code--in my text editor. It reminded me of the early days when the internet was just a bunch of static HTML pages, and I&amp;#39;d log into the server to edit my HTML files directly. On top of GitHub pages, you get Jekyll:&lt;/p&gt;
 
@@ -396,17 +490,17 @@
 &lt;li&gt;design-wise, it is so simple. I can do anything I want to the site, it&amp;#39;s simply a matter of changing HTML, Markdown, and CSS files&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;Setting it up&lt;/h3&gt;
+&lt;h3 id=&quot;setting-it-up&quot;&gt;Setting it up&lt;/h3&gt;
 
 &lt;p&gt;There&amp;#39;s nothing that technically extraordinary about my set-up that I need to write a whole blog post about it. I followed &lt;a href=&quot;http://joshualande.com/jekyll-github-pages-poole/&quot;&gt;this tutorial&lt;/a&gt;, but instead of only using &lt;a href=&quot;https://github.com/poole/poole&quot;&gt;Poole&lt;/a&gt;, I also used a Poole theme called &lt;a href=&quot;http://hyde.getpoole.com/&quot;&gt;Hyde&lt;/a&gt;. The difference? Poole isn&amp;#39;t exactly a theme; it comes with all types of default settings on top of Jekyll to give you a solid foundation to build upon. Hyde, on the other hand, &lt;i&gt;is&lt;/i&gt; a theme and is built on top of Poole.&lt;/p&gt;
 
 &lt;p&gt;The second tutorial I used was &lt;a href=&quot;http://charliepark.org/tags-in-jekyll/&quot;&gt;this blog post&lt;/a&gt; which helped me implement tags.&lt;/p&gt;
 
-&lt;h3&gt;Downsides&lt;/h3&gt;
+&lt;h3 id=&quot;downsides&quot;&gt;Downsides&lt;/h3&gt;
 
 &lt;p&gt;The only downside is that I&amp;#39;ve now lost all of the great comments you&amp;#39;ve left on my blog. I still &lt;i&gt;have&lt;/i&gt; them, of course. But they are no longer on this version of the blog for everyone to see. But since I&amp;#39;ve implemented comments using &lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus&lt;/a&gt;, it will be pretty easy for you to leave comments on this site from here on out. You don&amp;#39;t even need a Disqus account, as you can use OAuth to log in through Twitter or any of the other social networks.&lt;/p&gt;
 
-&lt;h3&gt;One additional note&lt;/h3&gt;
+&lt;h3 id=&quot;one-additional-note&quot;&gt;One additional note&lt;/h3&gt;
 
 &lt;p&gt;OK maybe two. First, the related_posts method that comes with Jekyll is sorely lacking. Luckily, I was able to find &lt;a href=&quot;http://www.chrisyin.com/2014/08/23/jekyll-related-posts/&quot;&gt;a plugin&lt;/a&gt; for it, and since Jekyll is written in Ruby, plugins are just Ruby classes that &lt;a href=&quot;http://en.wikipedia.org/wiki/Monkey_patch&quot;&gt;monkey patch&lt;/a&gt; existing classes. This means that if I didn&amp;#39;t like this plugin, I could change it without having to learn a new language.&lt;/p&gt;
 
@@ -433,7 +527,7 @@
    <id>http://jimmylocoding.com/2015/02/25/method-chaining-to-the-madness</id>
    <content type="html">&lt;p&gt;I said I&amp;#39;d write a little bit about some of the challenges I encountered while writing the &lt;a href=&quot;https://github.com/codeforatlanta/csv_geocoder&quot;&gt;CSV Geocoder&lt;/a&gt; utility. So here&amp;#39;s a small problem and solution:&lt;/p&gt;
 
-&lt;h3&gt;Problem:&lt;/h3&gt;
+&lt;h3 id=&quot;problem:&quot;&gt;Problem:&lt;/h3&gt;
 
 &lt;p&gt;The purpose of the class is very simple. I want to add geocode data to the CSV, then write it to a file. So I write a method like &lt;code&gt;write_csv_with_geocode(file)&lt;/code&gt; that joins the CSV with the geocode data and then writes it to a file. However, this violates the &lt;a href=&quot;http://en.wikipedia.org/wiki/Single_responsibility_principle&quot;&gt;single responsibility&lt;/a&gt; per method principle. It does two things: adds the geocode data, then writes it to a file.&lt;/p&gt;
 
@@ -456,7 +550,7 @@
 
 &lt;p&gt;The upside of having it all in one method is that I can accomplish two related tasks in one method call instead of having to call both of them separately every time.&lt;/p&gt;
 
-&lt;h3&gt;Solution:&lt;/h3&gt;
+&lt;h3 id=&quot;solution:&quot;&gt;Solution:&lt;/h3&gt;
 
 &lt;p&gt;Chaining! I make add_geocode assign the new value to an instance variable, then return self (returning self is the key to making methods chainable). Then the write method takes the instance variable and writes it to a CSV file. So now the user can do the simple task in one line, and the operations are also separated into their own methods. Best of both worlds! In fact, I realized I could do the same with all of the methods in the class, so that you could now write the following line:&lt;/p&gt;
 
@@ -477,7 +571,7 @@
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3&gt;What do you think?&lt;/h3&gt;
+&lt;h3 id=&quot;what-do-you-think?&quot;&gt;What do you think?&lt;/h3&gt;
 
 &lt;p&gt;Is chaining a good solution to this problem? How would you have done it? Also: are there other ways I could improve this class?&lt;/p&gt;
 </content>
@@ -518,7 +612,7 @@ I joined the second group because I was interested in mapping and because I felt
 
 &lt;p&gt;&lt;img src=&quot;/images/southdowntown2.jpg&quot; alt=&quot;Screenshot of South Downtown Asset Map&quot; /&gt;&lt;/p&gt;
 
-&lt;h3&gt;Day 2&lt;/h3&gt;
+&lt;h3 id=&quot;day-2&quot;&gt;Day 2&lt;/h3&gt;
 
 &lt;p&gt;Things began slowly with coffee at 9am. A few folks stared into their laptops like zombies. I was one of those. My CSV Geocoder was working, but I couldn&amp;#39;t help tinkering with it, refactoring and improving it (in fact, I was still doing that earlier today). But more of the data was coming in in different formats. I was looking for a new task to do.&lt;/p&gt;
 
@@ -551,7 +645,7 @@ I joined the second group because I was interested in mapping and because I felt
     &lt;li&gt;My controller was getting pretty fat, and I had to look at it long and hard and figure out how to refactor it. I decided to make a Feeds class, which now lives in the lib folder. It wasn&amp;#39;t easy breaking apart the fat methods in the controller, but I&amp;#39;m glad I did because it looks much cleaner this way.&lt;/li&gt;
 &lt;/ol&gt;&lt;/p&gt;
 
-&lt;h3&gt;To Do&lt;/h3&gt;
+&lt;h3 id=&quot;to-do&quot;&gt;To Do&lt;/h3&gt;
 
 &lt;p&gt;Tests! For the Feed class and for the controller. I&amp;#39;m not very good at writing tests before the code, but as long as I write the tests some time, that&amp;#39;s probably better than never.&lt;/p&gt;
 
@@ -661,8 +755,8 @@ I joined the second group because I was interested in mapping and because I felt
 
 &lt;p&gt;A few SPECIFIC things I learned:
 &lt;ul&gt;
-    &lt;li&gt;in the controller, the redirect&lt;em&gt;to method does not redirect immediately. The rest of your method will continue running unless you specifically say &amp;quot;return&amp;quot; after redirecting&lt;/li&gt;
-    &lt;li&gt;if you want to redirect inside of a helper method (instead of a main controller action), then set that helper method as a before&lt;/em&gt;filter of your main action method or else it won&amp;#39;t redirect (return will just return to your main action method which will continue running)&lt;/li&gt;
+    &lt;li&gt;in the controller, the redirect_to method does not redirect immediately. The rest of your method will continue running unless you specifically say &amp;quot;return&amp;quot; after redirecting&lt;/li&gt;
+    &lt;li&gt;if you want to redirect inside of a helper method (instead of a main controller action), then set that helper method as a before_filter of your main action method or else it won&amp;#39;t redirect (return will just return to your main action method which will continue running)&lt;/li&gt;
     &lt;li&gt;when using Capybara to find the xpath of an input element with a certain id=“name”, use &amp;#39;input[@id=“name”]&amp;#39; rather than &amp;#39;input#name&amp;#39;&lt;/li&gt;
     &lt;li&gt;use &lt;code&gt;text_field_tag&lt;/code&gt; to create a simple input element with a normal name like &lt;code&gt;merge_with&lt;/code&gt;.. I was trying to use the &lt;code&gt;text_field&lt;/code&gt; helper method and it kept making names like &amp;quot;merge[with]&amp;quot;. This is because text_field is &amp;quot;tailored for accessing a specified attribute (identified by method) on an object assigned to the template&amp;quot; -- so it&amp;#39;s really good if you want to create input fields that correspond to your model, but if not, then it may be too complicated for your needs&lt;/li&gt;
     &lt;li&gt;use &amp;quot;tables&amp;quot; to set up a bunch of values in Cucumber. I&amp;#39;ve used them in previous apps but they always seemed like a mystery to me. But this time I played around with them in the debugger gem. You can &lt;a href=&quot;https://thomassundberg.wordpress.com/2014/06/30/cucumber-data-tables/&quot;&gt;find out more here&lt;/a&gt;.&lt;/li&gt;
@@ -682,29 +776,29 @@ And if you&amp;#39;re curious about the code I wrote for this week&amp;#39;s hom
    <id>http://jimmylocoding.com/2015/01/27/overwhelmed</id>
    <content type="html">&lt;p&gt;I didn&amp;#39;t finish my app this week! I tried to do too much. But here&amp;#39;s what I did finish:&lt;/p&gt;
 
-&lt;h3&gt;My SaaS homework&lt;/h3&gt;
+&lt;h3 id=&quot;my-saas-homework&quot;&gt;My SaaS homework&lt;/h3&gt;
 
 &lt;p&gt;I talked a little about this last week. We had to refactor and fix some bugs in a legacy codebase (Typo). I figured out that I had to run bundle exec rake db:test:prepare if I want to run Rspec after I run Cucumber. For some reason Cucumber messes up the database. Then, the biggest road block was writing tests and then getting them to pass. I ended up overly fixing it... and the autograder was not giving me credit because it was expecting this form to be submitted to an edit action when in fact it&amp;#39;s really a new action, so I had changed it to new in order to be more accurate.&lt;/p&gt;
 
-&lt;h3&gt;My portfolio&lt;/h3&gt;
+&lt;h3 id=&quot;my-portfolio&quot;&gt;My portfolio&lt;/h3&gt;
 
 &lt;p&gt;I got it into my head that I can bang out &lt;a href=&quot;https://github.com/jimmylorunning/portfolio&quot;&gt;a portfolio webpage&lt;/a&gt; real quick. But quickly got stuck in a rut. Had a hard time setting up gulp. And it&amp;#39;s still working weirdly. When I run &amp;quot;gulp sass&amp;quot; it might more might not give me an error. Then if I change some tab inside the gulpfile... or if I just run &amp;quot;gulp&amp;quot; without any task specified, then run &amp;quot;gulp sass&amp;quot; again, it may or may not just work. It&amp;#39;s so erratic that I was tearing my hair out trying to figure it out. But I finally just gave up and wrote a shell script that does the same thing. Maybe I&amp;#39;ll try grunt next time.&lt;/p&gt;
 
-&lt;h3&gt;My app&lt;/h3&gt;
+&lt;h3 id=&quot;my-app&quot;&gt;My app&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/jimmylorunning/om-nom-nom&quot;&gt;Started but didn&amp;#39;t finish it&lt;/a&gt;. &lt;span style=&quot;line-height: 1.5;&quot;&gt;But the original idea for it was pretty good. It&amp;#39;s basically going to be a social network for yoga lovers. Yoga lovers can add yoga poses. And then they can create yoga routines by putting poses together in a certain order. Yoga poses that are shared publicly can be added on other people&amp;#39;s routines. There will be many other features, but that&amp;#39;s the core functionality. For example, when a routine is done, you can play it back and it will guide you through the routine in real time.&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;I was basing yoga poses/routines off of Youtube&amp;#39;s videos / playlists. So I might work on it in the future. I feel like I need to at least learn a front end javascript framework before attacking this because there are pages that would be really awkward without loading things dynamically on the page without reloading the page.&lt;/p&gt;
 
-&lt;h3&gt;Level UP Rails&lt;/h3&gt;
+&lt;h3 id=&quot;level-up-rails&quot;&gt;Level UP Rails&lt;/h3&gt;
 
 &lt;p&gt;made some progress on this curriculum. Although I started over-engineering one of the exercises, so my time was all sucked up in that. You can see it here. It&amp;#39;s still not finished (there are some improvements I am planning) but it&amp;#39;s basically a program that reads in two comma separated value files (CSV) of dinosaur data and creates an object that you can query. For example, you can say dinosaur.big to get a list of all the big ones. or dinosaur.bipeds. The cool thing is that you can also chain them together in any order like dinosaur.big.bipeds to get an intersection. You can see &lt;a href=&quot;https://github.com/jimmylorunning/level-up-exercises/tree/master/dino_catalog&quot;&gt;my code here&lt;/a&gt; (comments and suggestions welcome)&lt;/p&gt;
 
-&lt;h3&gt;My work&lt;/h3&gt;
+&lt;h3 id=&quot;my-work&quot;&gt;My work&lt;/h3&gt;
 
 &lt;p&gt;I&amp;#39;m still doing some freelance work for the library. Did a lot of refactoring of code this past week and that was oddly satisfying.&lt;/p&gt;
 
-&lt;h3&gt;Meetups&lt;/h3&gt;
+&lt;h3 id=&quot;meetups&quot;&gt;Meetups&lt;/h3&gt;
 
 &lt;p&gt;went to a Ruby meetup where everyone just socialized and worked on their projects at a coffeeshop. It&amp;#39;s not the main meetup they do (with an official speaker) but the other one where it&amp;#39;s more just like casual hanging out.&lt;/p&gt;
 </content>
@@ -788,7 +882,7 @@ So Sean Connery has a Bacon Number of 2. The website also has an API. You can a
     &lt;li&gt;Since I am also taking the EdX SaaS class, on weeks where my SaaS homework is pretty involved, I can substitute that homework assignment for my weekly app&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;https://leveluprails.com/&quot;&gt;Level UP Rails&lt;/a&gt; -- I heard about this curriculum through the Ruby Rogues podcast episode &lt;a href=&quot;http://devchat.tv/ruby-rogues/190-rr-apprenticeship-with-joseph-mastey-and-jill-lynch-of-enova&quot;&gt;&amp;quot;Apprenticeship with Joseph Mastey and Jill Lynch of Enova&amp;quot;&lt;/a&gt; where Joseph talks about implementing an apprenticeship program at his company for onboarding new hires who show a lot of potential but who may not be as technically proficient. These apprentices spend the first few months just learning the company&amp;#39;s stack, codebase, and a lot of other basic skills. Joseph also mentioned that the curriculum that he designed is now open source! It&amp;#39;s available at &lt;a href=&quot;https://leveluprails.com/&quot;&gt;https://leveluprails.com/&lt;/a&gt;. So far I&amp;#39;m really enjoying this curriculum. It provides just enough guidance and links about each topic so that you know what you should learn, without providing too much more. Then it&amp;#39;s your responsibility to Google it if you want to know more. There are also exercises at the end of each section. I also find the way the exercise titles are phrased to be amusing... I&amp;#39;m not sure if this was a conscious decision but they&amp;#39;re phrased to sound like unit test describe blocks..., for example &amp;quot;Knows what ports are and can use netstat to find them&amp;quot;. You can follow &lt;a href=&quot;https://github.com/jimmylorunning/level-up-rails&quot;&gt;my progress on github&lt;/a&gt;, where I&amp;#39;ll record my answers to the exercises as well as whatever personal notes I want to remember for later.&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://leveluprails.com/&quot;&gt;Level UP Rails&lt;/a&gt; -- I heard about this curriculum through the Ruby Rogues podcast episode &lt;a href=&quot;http://devchat.tv/ruby-rogues/190-rr-apprenticeship-with-joseph-mastey-and-jill-lynch-of-enova&quot;&gt;&amp;quot;Apprenticeship with Joseph Mastey and Jill Lynch of Enova&amp;quot;&lt;/a&gt; where Joseph talks about implementing an apprenticeship program at his company for onboarding new hires who show a lot of potential but who may not be as technically proficient. These apprentices spend the first few months just learning the company&amp;#39;s stack, codebase, and a lot of other basic skills. Joseph also mentioned that the curriculum that he designed is now open source! It&amp;#39;s available at &lt;a href=&quot;https://leveluprails.com/&quot;&gt;&lt;a href=&quot;https://leveluprails.com/&quot;&gt;https://leveluprails.com/&lt;/a&gt;&lt;/a&gt;. So far I&amp;#39;m really enjoying this curriculum. It provides just enough guidance and links about each topic so that you know what you should learn, without providing too much more. Then it&amp;#39;s your responsibility to Google it if you want to know more. There are also exercises at the end of each section. I also find the way the exercise titles are phrased to be amusing... I&amp;#39;m not sure if this was a conscious decision but they&amp;#39;re phrased to sound like unit test describe blocks..., for example &amp;quot;Knows what ports are and can use netstat to find them&amp;quot;. You can follow &lt;a href=&quot;https://github.com/jimmylorunning/level-up-rails&quot;&gt;my progress on github&lt;/a&gt;, where I&amp;#39;ll record my answers to the exercises as well as whatever personal notes I want to remember for later.&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;http://www.poodr.com/&quot;&gt;Read Practical Object Oriented Design in Ruby&lt;/a&gt; by Sandi Metz - this is a great book so far. If you haven&amp;#39;t already, go watch &lt;a href=&quot;https://www.youtube.com/results?search_query=sandi+metz&quot;&gt;Sandi Metz&amp;#39;s talks&lt;/a&gt; on YouTube. I&amp;#39;ve learned so much from her.&lt;/li&gt;
     &lt;li&gt;Continue to blog at least once a week.&lt;/li&gt;
 &lt;/ul&gt;
@@ -846,15 +940,15 @@ Non programming related:
    <id>http://jimmylocoding.com/2015/01/12/week-3-round-up-twitter-fitter</id>
    <content type="html">&lt;p&gt;So there&amp;#39;s still a lot more work I want to do on my week 3 app &lt;a href=&quot;https://secret-brushlands-4139.herokuapp.com/&quot;&gt;Twitter Fitter&lt;/a&gt;. But the general idea is there--it&amp;#39;s a &lt;a href=&quot;http://en.wikipedia.org/wiki/Markov_chain&quot;&gt;Markov generator&lt;/a&gt;. You type in a twitter handle, and it spits back a generated tweet (or tweet-like string) that is in the style of that user. (Try @DATABASE_HULK, @StephenAtHome, @BarackObama, or @kimkardashian) Part of the app/week project is that I want to learn something new each time. So what did I learn this week?&lt;/p&gt;
 
-&lt;h3&gt;Firsts:&lt;/h3&gt;
+&lt;h3 id=&quot;firsts:&quot;&gt;Firsts:&lt;/h3&gt;
 
 &lt;p&gt;Well, this was my first app where I had to connect to another service (in this case it was the &lt;a href=&quot;https://dev.twitter.com/rest/public&quot;&gt;Twitter API&lt;/a&gt; through the &lt;a href=&quot;https://github.com/sferik/twitter&quot;&gt;Twitter gem&lt;/a&gt;) and also the first app where I wrote my own POROs (plain old Ruby objects) inside of Rails. In fact, this was barely a Rails app. It doesn&amp;#39;t even have a model. It&amp;#39;s mostly just a single page that connects to Twitter and then runs the MarkovChain object that I wrote for it. I also obviously learned a lot about Markov generators and how they work. (I knew about them generally but never thought about how to write one before)&lt;/p&gt;
 
-&lt;h3&gt;Testing:&lt;/h3&gt;
+&lt;h3 id=&quot;testing:&quot;&gt;Testing:&lt;/h3&gt;
 
 &lt;p&gt;I was able to write &lt;a href=&quot;https://github.com/jimmylorunning/twitter-fitter/blob/master/spec/lib/markov_chain_spec.rb&quot;&gt;tests for my MarkovChain object&lt;/a&gt;. I&amp;#39;m pretty proud of this. But I haven&amp;#39;t written tests for the actual controller code yet (which is currently very messy).&lt;/p&gt;
 
-&lt;h3&gt;To do:&lt;/h3&gt;
+&lt;h3 id=&quot;to-do:&quot;&gt;To do:&lt;/h3&gt;
 
 &lt;p&gt;As always there are still many things I want to do to improve it:
 &lt;ul&gt;
@@ -864,7 +958,7 @@ Non programming related:
     &lt;li&gt;Tweak my generator code. Currently it&amp;#39;s pretty simple, and the results are either pretty funny / nonsensical or else they&amp;#39;re pretty boring (like almost word for word of an existing tweet rather than a mix-match of different tweets)&lt;/li&gt;
 &lt;/ul&gt;&lt;/p&gt;
 
-&lt;h3&gt;Challenges:&lt;/h3&gt;
+&lt;h3 id=&quot;challenges:&quot;&gt;Challenges:&lt;/h3&gt;
 
 &lt;ul&gt;
     &lt;li&gt;writing the &lt;a href=&quot;https://github.com/jimmylorunning/twitter-fitter/blob/master/lib/markov_chain.rb&quot;&gt;actual Markov generator&lt;/a&gt;, and making it perform okay as well as be open to modification in the future if I wanted to change the way it works later. For example, I thought it would be cool if I could pass it a lambda so that it picks the next word based on running that lambda code. The default is just random, but maybe someone would want to tweak it themselves without having to go into my code.&lt;/li&gt;
@@ -875,7 +969,7 @@ Non programming related:
     &lt;li&gt;using the Twitter gem. I had to figure out how to give it my API keys and secrets without exposing it through github. I wrote a &lt;a title=&quot;Hiding my API keys&quot; href=&quot;http://jimmylocoding.com/2015/01/07/hiding-my-api-keys/&quot;&gt;blog post about this here&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3&gt;Next week(s):&lt;/h3&gt;
+&lt;h3 id=&quot;next-week(s):&quot;&gt;Next week(s):&lt;/h3&gt;
 
 &lt;p&gt;I&amp;#39;ve mentioned taking the incredibly helpful &lt;a href=&quot;https://www.edx.org/course/engineering-software-service-uc-berkeleyx-cs169-1x&quot;&gt;edX.org SaaS class&lt;/a&gt; (Software as a Service) before. Well, &lt;a href=&quot;https://www.edx.org/course/engineering-software-service-part-2-uc-berkeleyx-cs169-2x&quot;&gt;part 2 of the class&lt;/a&gt; has just started, so instead of continuing with my own apps, I will be doing the SaaS homework apps every week for the next few weeks. It&amp;#39;s only a few weeks, and there&amp;#39;s not a homework for &lt;em&gt;every&lt;/em&gt; week, so it won&amp;#39;t be taking over this project completely, but its presence will definitely be felt. I will still be blogging about my discoveries, though! Hope you&amp;#39;ll keep reading.&lt;/p&gt;
 </content>
@@ -935,11 +1029,11 @@ I don&amp;#39;t know what I feel about all this yet, but I might skip over writi
    <link href="http://jimmylocoding.com/2015/01/07/hiding-my-api-keys/"/>
    <updated>2015-01-07T00:00:00-05:00</updated>
    <id>http://jimmylocoding.com/2015/01/07/hiding-my-api-keys</id>
-   <content type="html">&lt;h3&gt;Problem:&lt;/h3&gt;
+   <content type="html">&lt;h3 id=&quot;problem:&quot;&gt;Problem:&lt;/h3&gt;
 
 &lt;p&gt;I don&amp;#39;t want to expose API secret keys, but I still want to be able to commit my changes and push to github.&lt;/p&gt;
 
-&lt;h3&gt;Solution:&lt;/h3&gt;
+&lt;h3 id=&quot;solution:&quot;&gt;Solution:&lt;/h3&gt;
 
 &lt;ul&gt;
     &lt;li&gt;Install &lt;a href=&quot;https://github.com/laserlemon/figaro&quot;&gt;figaro&lt;/a&gt; gem&lt;/li&gt;
@@ -995,7 +1089,7 @@ What I wasn&amp;#39;t able to finish this time around:
     &lt;li&gt;The &lt;a href=&quot;http://guides.rubyonrails.org/asset_pipeline.html&quot;&gt;asset pipeline&lt;/a&gt; -- had to figure some assets out and so I read a little bit about this, but I need to read way more when I have time&lt;/li&gt;
 &lt;/ul&gt;&lt;/p&gt;
 
-&lt;h3&gt;Unsolved problems:&lt;/h3&gt;
+&lt;h3 id=&quot;unsolved-problems:&quot;&gt;Unsolved problems:&lt;/h3&gt;
 
 &lt;p&gt;When testing, I had to run some tests as a signed in user and some as signed out. How do I do this? After some reading, I figured out that I had to stub the authentication in the specs. I followed &lt;a href=&quot;https://github.com/plataformatec/devise/wiki/How-To:-Stub-authentication-in-controller-specs&quot;&gt;these directions&lt;/a&gt; and put the ControllerHelpers module in spec/support/controller_helpers.rb as well as the accompanying config. But it kept complaining: &amp;quot;undefined method sign_in&amp;quot;.&lt;/p&gt;
 
@@ -1026,7 +1120,7 @@ What I wasn&amp;#39;t able to finish this time around:
 
 &lt;p&gt;There are many other smaller things I could blog about, but I don&amp;#39;t have time and you probably don&amp;#39;t have patience. I may write up a few of these smaller issues later if I feel like it.&lt;/p&gt;
 
-&lt;h3&gt;Next Week&lt;/h3&gt;
+&lt;h3 id=&quot;next-week&quot;&gt;Next Week&lt;/h3&gt;
 
 &lt;p&gt;Any ideas? I&amp;#39;m thinking about writing an app that would involve pulling from some API... maybe the Twitter API and doing something with the data. Stay tuned.&lt;/p&gt;
 </content>
